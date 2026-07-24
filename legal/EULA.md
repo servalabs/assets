@@ -1,0 +1,432 @@
+# Master Hardware, Software & Sovereign Infrastructure Use Agreement
+
+**(End User License Agreement)**
+
+**Version 1.4 | Effective Date: 2026-07-02**
+
+THIS AGREEMENT is made by and between:
+
+**ServaLabs Private Limited** — CIN: U74904GJ2026PTC171683, Registered Address: A-21 Shardul Co. Op. H. Soc. Ltd, Paldi, Ahmedabad – 380007, Gujarat, India (hereinafter "**ServaLabs**" or "**Supplier**")
+
+AND
+
+The entity or individual identified in the applicable Order, or who downloads, installs, or uses the Software (hereinafter the "**Customer**").
+
+**JURISDICTION:** This Agreement is governed exclusively by the laws of India, regardless of the Customer's location or the country from which the Software is obtained or used. The courts at Ahmedabad, Gujarat, shall have exclusive jurisdiction over any disputes arising hereunder, subject to Section 22 (Dispute Resolution). Where mandatory law in the Customer's jurisdiction (including, where applicable, Indian consumer-protection law) confers rights that cannot be waived by contract, nothing in this Agreement limits those non-waivable rights.
+
+
+## 1. Purpose & Intended Use (Defensive Use Only)
+
+The Product and the Software are supplied solely to enable Customers to implement **lawful** data security, data minimization, privacy protection, business continuity, counter-extortion, and DPDP-compliant data governance within their own premises, devices, or infrastructure.
+
+The Product and the Software are **not** designed, licensed, or intended for:
+
+- Evading lawful obligations;
+- Obstructing justice;
+- Facilitating criminal activity;
+- Circumventing court orders;
+- Concealing proceeds of crime.
+
+The Customer agrees to use the Product and the Software only for lawful purposes and in compliance with all applicable laws — including the laws of India and the laws applicable in the Customer's own jurisdiction.
+
+## 2. Definitions
+
+- **"Product"** means ServaLabs-supplied hardware and/or software systems, including pre-configured servers, network appliances, and personal or mobile devices, and associated utilities.
+- **"Software"** means ServaLabs-provided software in any form — including the WinCommander and TuxCommander applications, the ServaLabs OS management layer (dashboard, app store, and orchestration components), system software pre-loaded on a Product, Fleet Software, ServaLabs-hosted application/update repositories, and any other ServaLabs-provided software — in its no-charge ("Free") and paid ("Pro") tiers, whether obtained by download, in-app installer, or pre-loaded on a Product. Any open-source components of the Software are additionally governed by their respective open-source licenses.
+- **"Fleet Software"** means ServaLabs-provided server or console components that the Customer installs and operates on its own infrastructure to manage, configure, or trigger actions on endpoint devices enrolled by the Customer. Fleet Software is self-hosted by the Customer; ServaLabs does not operate it, has no access to it, and receives no data from it.
+- **"Authorized Users"** means employees, contractors, or other individuals whom the Customer permits to use the Product or Software, or whose devices the Customer enrols in Fleet Software. The Customer shall ensure Authorized Users comply with this Agreement and remains fully responsible for their acts and omissions.
+
+- **"Services"** means initial configuration, installation, and hardening services, if any.
+- **"Zero-Access Architecture"** means a system design under which ServaLabs has no technical ability to access Customer data.
+- **"Order"** means the invoice, quotation, or purchase document governing commercial terms (where applicable; the Free tier requires no Order).
+
+## 3. Confidential Information
+
+For the purposes of this Agreement, "**Confidential Information**" means any non-public information disclosed, directly or indirectly, by ServaLabs to the Customer, whether orally, visually, electronically, or in writing, including but not limited to: the Product's and Software's architecture, system design, workflows, configurations, scripts, deployment logic, and operational assumptions; security mechanisms, credential-handling logic, access-control designs, compliance tools, and data-protection workflows; proprietary configurations, scripts, installation procedures, and hardening practices provided by ServaLabs; information disclosed during demonstrations, onboarding, installation, documentation, troubleshooting, or support interactions; and any information that a reasonable person would understand to be confidential given the nature of the information and the circumstances of disclosure.
+
+Confidential Information does **not** include information that the Customer can demonstrate, with written evidence: is publicly available without breach of this Agreement; was lawfully known to the Customer prior to disclosure by ServaLabs; or was independently developed by the Customer without reference to or use of ServaLabs' Confidential Information.
+
+Publicly released open-source code is not Confidential Information.
+
+## 4. Nature of Goods & Role of ServaLabs
+
+### 4.1 Value-Added Reseller & Integrator
+
+ServaLabs acts as a value-added reseller and integrator of hardware and software components. ServaLabs does not manufacture underlying hardware components unless explicitly stated.
+
+### 4.2 General-Purpose, Dual-Use Technology
+
+The Product and the Software constitute general-purpose computing technology with standard security capabilities such as encryption, access controls, privacy hardening, secure deletion, and data-loss-prevention safeguards. These capabilities are **neutral tools** whose lawful or unlawful use depends solely on the Customer. The Software is general-purpose endpoint software; it is not marketed as, and is not, a means to defeat lawful investigation, destroy evidence, or evade lawful process.
+
+### 4.3 Business Use
+
+The Customer represents that it is acquiring hardware Products primarily for business, professional, or commercial purposes. Where, notwithstanding this representation, a Customer qualifies as a "consumer" under the Consumer Protection Act, 2019 or other applicable law, nothing in this Agreement excludes or limits any right or remedy that cannot lawfully be excluded or limited by contract, and the warranty in Section 14.1 is in addition to (not in place of) any such non-waivable statutory rights.
+
+### 4.4 Purchases via Authorized Resellers
+
+Where the Customer purchases a Product or the Software through an authorized ServaLabs reseller, this Agreement nonetheless governs the Customer's use of the Product and the Software, the licence, and the warranty. Commercial terms (price, payment, delivery schedule) are solely between the Customer and the reseller. Resellers are independent businesses and are not agents of ServaLabs; ServaLabs is not bound by, and accepts no liability for, any representation, promise, or warranty made by a reseller beyond ServaLabs' official published documentation.
+
+## 5. Commercial Terms & Payment
+
+### 5.1 Price & Currency
+
+Price shall be as specified in the Order or at the point of sale, plus applicable taxes. Hardware **Product** pricing is in Indian Rupees (INR); the **Software is sold worldwide** and may be priced in INR or other currencies as shown at checkout or in the Order, with applicable taxes (e.g., GST for Indian customers, or VAT/sales tax where required) added as applicable. *(The Free tier is provided at no charge and is not subject to this Section.)*
+
+### 5.2 Payment Terms
+
+Unless otherwise specified in the Order: 50% advance payment upon Order confirmation, and 50% upon successful installation and handover. Payment shall be made via bank transfer or other methods specified in the Order.
+
+### 5.3 Non-Refundability
+
+All payments are non-refundable. ServaLabs operates a replacement-only remedy policy: the Customer's remedies for defective or non-conforming Products are repair or replacement as provided in Section 7 and Section 14.1. For Software delivered electronically, the Customer requests and consents to immediate delivery upon purchase and acknowledges that, where applicable law ties any withdrawal or cancellation right for digital content to the start of delivery, that right is lost once delivery begins. Nothing in this Section limits any non-waivable statutory right (Section 4.3).
+
+## 6. Delivery, Title, and Risk of Loss
+
+### 6.1 Territory — Hardware Products (India only) · Software (worldwide)
+
+**Hardware Products** are delivered and installed exclusively within India and shall not be exported, re-exported, or shipped outside India. **The Software is delivered electronically and may be purchased, downloaded, and used worldwide**, subject to Section 6.5 (Export Control & Sanctions Compliance) and to all export-control, encryption, and sanctions laws applicable to the Customer and the Customer's jurisdiction.
+
+### 6.2 Delivery & Installation
+
+ServaLabs shall deliver and install the Product at the Customer's site within India as specified in the Order.
+
+### 6.3 Title & Risk Transfer
+
+Title and risk of loss shall transfer to the Customer upon delivery and completion of installation.
+
+### 6.4 Customer Environment
+
+The Customer shall provide a safe electrical and physical environment for the Product, including protection from water exposure, physical shock, excessive vibration, improper voltage, and temperature extremes.
+
+### 6.5 Export Control & Sanctions Compliance
+
+The Customer represents and warrants that:
+
+- **Sanctions Compliance:** The Customer is not, and is not owned or controlled by, any person or entity that is subject to sanctions administered by the Government of India, the United Nations, or other applicable authorities; designated on any restricted-party list (including terrorist watch lists or denied-persons lists); or located in, organized under the laws of, or ordinarily resident in any comprehensively sanctioned country or territory;
+- **Export Compliance (Hardware Products):** The Customer will not export, re-export, transfer, or ship a hardware Product outside India, or provide a Product to any foreign national or entity outside India;
+- **Export Compliance (Software):** The Software may be obtained and used worldwide, but the Customer will not download, use, resell, sublicense, or transfer it in violation of any applicable export-control, encryption, or economic-sanctions law, and will not make it available to any sanctioned or restricted party or to any comprehensively embargoed country or territory;
+- **Ongoing Compliance:** The Customer will immediately notify ServaLabs of any change affecting these representations;
+- **Certification:** Upon request, the Customer shall provide written certification of compliance with this Section.
+
+Any violation of this Section is a material breach entitling ServaLabs to immediately terminate this Agreement and all associated services without refund or liability.
+
+## 7. Inspection, Acceptance, and Replacement-Only Policy
+
+### 7.1 No Returns or Refunds; Replacement Remedy
+
+Products are configured to order. All sales are final: ServaLabs does not accept returns or provide refunds for change of mind or for any reason not required by non-waivable law. Products that are dead on arrival (DOA) or that fail to conform to the Order shall be repaired or replaced at ServaLabs' option under the warranty and RMA process in Section 14.1. Repair or replacement is the Customer's sole and exclusive remedy for defects, subject to Section 4.3.
+
+### 7.2 Inspection & Acceptance
+
+The Customer shall have five (5) business days from delivery (the "**Inspection Period**") to inspect a Product and provide written notice of any non-conformity. A Product is deemed accepted upon the earliest of: (a) the Customer's written acceptance; (b) expiry of the Inspection Period without notice of non-conformity; or (c) completion of the Handover Protocol (Section 8). Acceptance does not limit the Customer's rights under the warranty in Section 14.1.
+
+## 8. System Architecture & Zero-Access Design
+
+For the purposes of this Agreement, "**Handover Protocol**" means completion of installation and mandatory credential change as described in this Section.
+
+### 8.1 Zero Logs, Zero Access
+
+The Customer expressly acknowledges that:
+
+- ServaLabs does not generate, collect, retain, or store any logs, telemetry, usage data, or metadata relating to Customer activity or Customer data, other than minimal technical data inherent in Customer-initiated licence-validation or update requests — an IP address transmitted as part of any standard internet request and, for paid-licence activation and refresh, the licence key, application identifier and version, and a one-way hashed device identifier retained solely to enforce the licensed device or seat count — none of which includes Customer content and none of which is profiled or correlated with Customer activity;
+- ServaLabs does not possess, store, or have the ability to derive administrative passwords, encryption keys, or recovery secrets;
+- The Product is technically designed to require compulsory modification of all default credentials before operation, without which it will not function; if a user loses their new credentials, ServaLabs has no "backdoor" or reset capability, ensuring the technical impossibility of data recovery;
+- Upon completion of the mandatory credential-change protocol, ServaLabs is permanently and irreversibly excluded from access to the Product and all data therein.
+
+These characteristics are technical constraints, not policy choices, and cannot be overridden by ServaLabs.
+
+### 8.2 Hosted Management Consoles (Managed Services)
+
+The representations in Section 8.1 and Sections 15.6 and 17 describe Products and Software installed and operated on the Customer's own devices and infrastructure. Where ServaLabs expressly provides a **hosted management console** for a managed service (for example, a management console for a third-party DNS-filtering service), ServaLabs necessarily creates and holds the account, authentication, service-configuration, and service-administration records (including console audit logs and anti-abuse security logs) required to operate that console, as described in the Privacy Policy; ServaLabs may also display service analytics retrieved from the third-party provider in order to render the console. The underlying network service itself (e.g., DNS resolution) is performed by its third-party provider under that provider's own terms and privacy policy (Section 15.5). In all cases, ServaLabs has no access to content on the Customer's devices or servers.
+
+## 9. Data Protection & DPDP Act Acknowledgment
+
+### 9.1 Customer Data on the Product (Customer as Data Fiduciary)
+
+The Parties expressly acknowledge that, with respect to all data stored or processed using the Product or the Software: ServaLabs is not a Data Fiduciary or Data Processor as defined under the Digital Personal Data Protection Act, 2023 ("DPDP Act"); ServaLabs does not determine the purpose or means of processing of any Personal Data; ServaLabs has no access to Personal Data and cannot exercise control over such data; and the Customer is the sole Data Fiduciary and/or Data Controller with respect to all Personal Data stored or processed using the Product or Software. All obligations under the DPDP Act — and under any other data-protection law applicable to the Customer or its data subjects (such as the EU/UK GDPR or other regional regimes), as applicable — including consent, notice, purpose limitation, security safeguards, breach reporting, and data-principal/data-subject rights, rest exclusively with the Customer.
+
+### 9.2 ServaLabs' Limited Collection of Customer Business Data
+
+ServaLabs collects only the minimal information necessary to fulfil an Order and meet its legal obligations: the Customer's name, billing and delivery address, contact details, and order/invoice records (including tax particulars). This information is used solely for order fulfilment, delivery, installation, warranty service, invoicing, and statutory tax and accounting compliance; it is retained only as long as required for those purposes and by law, and is never sold, and never shared except as required by law or as needed for delivery and accounting. ServaLabs' handling of this information is described in the ServaLabs Privacy Policy (https://servalabs.com/privacy), which is incorporated by reference. With respect to this limited business-contact data only, ServaLabs acts as a Data Fiduciary under the DPDP Act.
+
+## 10. Government, Regulatory & Law-Enforcement Requests
+
+The Customer acknowledges that ServaLabs: cannot access, decrypt, recover, or disclose Customer data; cannot provide logs, keys, or usage records because none are generated or retained; and cannot assist in bypassing authentication or encryption controls. Any legal, regulatory, or law-enforcement request relating to Customer data shall be redirected to the Customer as the sole custodian and controller of such data. ServaLabs shall not be liable for inability to comply with any request due to technical impossibility, but **will** comply with lawful obligations applicable to it (see Section 19.7).
+
+## 11. Sole Responsibility & Legal Compliance
+
+The Customer bears exclusive civil and criminal responsibility for all data stored, processed, encrypted, concealed, or deleted using the Product or Software.
+
+The Customer expressly agrees that ServaLabs does not aid, abet, facilitate, or have knowledge of any unlawful activity conducted using the Product or Software, within the meaning of applicable criminal laws including the **Bharatiya Nyaya Sanhita, 2023 (BNS)**, the **Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS)**, the **Bharatiya Sakshya Adhiniyam, 2023 (BSA)**, the **Information Technology Act, 2000**, and the **Prevention of Money-Laundering Act, 2002 (PMLA)**.
+
+## 12. Irreversibility & Data Loss Acknowledgment
+
+The Customer acknowledges that loss of credentials, misconfiguration, or execution of data-destruction or sanitization mechanisms may result in permanent and irreversible data loss. The Customer accepts full responsibility for such outcomes and waives all claims against ServaLabs arising from data loss, inaccessibility, or destruction.
+
+## 13. Prohibited Uses
+
+The Product and the Software shall not be used for:
+
+- Terrorism or terror financing;
+- Money laundering;
+- Child sexual abuse material (CSAM);
+- Hosting illegal marketplaces or services;
+- Use by sanctioned individuals or entities;
+- Export or operation outside India (Products);
+- Circumventing lawful court orders;
+- **Destroying, altering, or concealing evidence subject to a known legal hold, court order, or active investigation;**
+- **Covert surveillance or monitoring of any individual without lawful authority and without any notice or consent required by applicable law — including any use against a spouse, partner, family member, or other individual as "stalkerware";**
+- **Remotely locking, wiping, or otherwise acting on any device that the Customer does not own or lack authority to manage;**
+- **Infringing intellectual-property rights, including software piracy or circumvention of technological protection measures.**
+
+Violation constitutes material breach and may result in termination.
+
+## 14. Warranty & Disclaimers
+
+### 14.1 Limited Hardware Warranty
+
+**Coverage.** ServaLabs warrants Product hardware against manufacturing defects for one (1) year from delivery. The sole and exclusive remedy is repair or replacement at ServaLabs' option. This warranty is personal to the original Customer and is not transferable except as permitted under Section 15.8.
+
+**Exclusions.** The warranty does not cover damage caused by: misuse, accident, or neglect; operation outside the environmental requirements of Section 6.4 (including water exposure, improper voltage, shock, vibration, or temperature extremes); or modification or repair by the Customer or third parties, to the extent the damage is caused by that modification or repair. Opening the chassis, replacing or adding drives, or installing the Customer's own software does not by itself void this warranty.
+
+**RMA Process & Shipping.** Warranty service requires a return merchandise authorization (RMA) issued by ServaLabs. The Customer bears the cost and risk of shipping the unit to ServaLabs; ServaLabs bears the cost of shipping the repaired or replacement unit back to the Customer.
+
+**Customer Data During Service.** Products use separate boot and data drives. The Customer is strongly advised to remove its data drives before shipping a unit for service — warranty service does not require them. If the Customer ships a unit with data drives installed, ServaLabs will not access, read, or copy any data on them, and any storage media replaced during service is securely erased or physically destroyed before disposal or reuse. The Customer remains responsible for backing up its data before any service event (Section 17.4).
+
+**DOA.** A unit that fails on initial installation or within the Inspection Period (Section 7.2) is treated as DOA and prioritized for replacement.
+
+### 14.2 Comprehensive Warranty Disclaimer
+
+THE PRODUCT AND THE SOFTWARE ARE PROVIDED **"AS IS"** AND **"AS AVAILABLE"** WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. ServaLabs expressly disclaims all warranties, including but not limited to: implied warranties of merchantability, fitness for a particular purpose, non-infringement, title, and quiet enjoyment; any guarantee that the Product or Software will prevent all security breaches, unauthorized access, data loss, or cyberattacks; any warranty of absolute or 100% protection against any threat; any warranty regarding outcomes of government investigations, law-enforcement actions, regulatory inquiries, or legal proceedings; any warranty regarding zero-day exploits, advanced persistent threats, or state-level attacks; **any absolute guarantee regarding the cleanup irrecoverability of sanitized data, particularly against state-level cleanup techniques and the physical characteristics of modern storage media (e.g., SSD wear-leveling);** uninterrupted operation; or compatibility with future software, operating systems, or third-party services.
+
+The Customer acknowledges that no technology solution can provide 100% security against all possible threats; that effectiveness depends on proper configuration, maintenance, and use; that security is a shared responsibility; and that ServaLabs makes no representation regarding the Product's or Software's ability to protect against all current or future attack methods.
+
+### 14.3 AI and Analytical Outputs
+
+Certain Software may include features powered by artificial-intelligence, machine-learning, or automated-analysis models (including models running locally on the Customer's own hardware). Outputs of such features are generated probabilistically, may be inaccurate, incomplete, or misleading, and are provided for the Customer's information only. They do not constitute legal, forensic, investigative, financial, or other professional advice; the Customer must independently verify any output before relying or acting on it, and remains solely responsible for decisions and actions taken on the basis of such outputs. Where the Software assists in preparing statutory certificates, evidentiary attestations, or similar formal documents, the person signing or certifying remains solely responsible for the accuracy, completeness, and legal sufficiency of the document. Where the Customer configures the Software to use a third-party or cloud-hosted AI model provider, data submitted to that provider is transmitted to and processed by that provider under **its** terms and privacy policy — not by ServaLabs; local-model operation, where offered, keeps such data on the Customer's own hardware.
+
+### 14.4 High-Risk Use
+
+The Product and Software are not designed, tested, or certified for use in environments where failure could lead to death, personal injury, or severe physical or environmental damage — including life-support systems, medical devices, weapons systems fire-control, air-traffic control, or nuclear facilities. Any such use is at the Customer's sole risk, and ServaLabs disclaims all liability arising from it.
+
+## 15. Software License, Open Source, and Third-Party Licenses
+
+### 15.1 Composition
+
+The Product and the Software include open-source components, proprietary software, and ServaLabs-provided scripts and configurations.
+
+### 15.2 License Grant
+
+Subject to the Customer's compliance with this Agreement, ServaLabs grants the Customer a non-exclusive, non-transferable (except as permitted in Section 15.8), worldwide (subject to Section 6.5) licence to install and use the ServaLabs-proprietary components of the Software: (a) for the **Free** tier, at no charge, on devices owned or controlled by the Customer; and (b) for the **Pro** tier, on the number of devices or seats specified in the applicable Order. The Customer may permit Authorized Users to use the Software within the licensed scope; the Customer shall ensure such use complies with this Agreement (including Sections 13, 18, and 19) and, on ServaLabs' reasonable written request no more than once per year, shall self-certify its deployed device or seat count for the Pro tier. The licence is **perpetual** for the Software versions lawfully delivered to or downloaded by the Customer; entitlement to updates and support is governed by Section 16 and the applicable Order. The Software is **licensed, not sold**: title to hardware passes under Section 6.3, but the Customer acquires no ownership of the Software, ServaLabs-provided configurations, or any intellectual property of ServaLabs, all of which remain the exclusive property of ServaLabs or its licensors. For the avoidance of doubt, the Customer owns all data, content, and code that the Customer itself creates or stores on the Product. Open-source components are licensed to the Customer directly by their respective licensors under their own licenses (Section 25.6).
+
+### 15.3 WinCommander Licensing
+
+The **Free** tier is provided at no charge; any open-source components are governed by their own open-source licenses, and this Agreement governs the Customer's conduct and acceptable use rather than the rights those licenses grant in the code. The **Pro** tier requires a valid paid licence; stripping or circumventing the entitlement check is prohibited. All product names and logos used by ServaLabs (including "ServaLabs" and "WinCommander") are proprietary to ServaLabs; no right or licence to use them is granted under this Agreement.
+
+### 15.4 Open-Source Compliance
+
+All applicable open-source licenses and notices are included with the Product/Software; source-code offer links are provided where required (e.g., GPL/AGPL); and attribution is maintained for all open-source components.
+
+### 15.5 Customer Responsibility for Third-Party Licenses & Applications
+
+- **Bring-Your-Own Windows / Microsoft:** the Customer must provide valid licences for Microsoft Windows, Microsoft Office, and any Microsoft product, and comply with all Microsoft licence terms (including RDS CALs where applicable). **The Software does not provide, and must not be used to obtain, unlicensed activation of any third-party software.**
+- **Third-Party Applications (including dashboard / app-store installs):** applications published by third parties — including open-source server applications installed through any ServaLabs dashboard or app store — are provided by their respective publishers under their own licence terms. ServaLabs curates, packages, or integrates such applications for convenience but does not own them and makes no warranty for them; the Customer's use of each such application is governed by that application's own licence and terms.
+- **Third-Party Network Services:** certain Products or Software may be configured to use, or may act as a management layer over, third-party network services (for example, third-party DNS-filtering or content-filtering services). Such services are operated by their providers, not by ServaLabs; any data (including network queries) they process is processed under **their** terms of service and privacy policies, and the zero-access and no-telemetry representations in Sections 8, 15.6, and 17 describe ServaLabs only and do not extend to such third-party providers. The Customer is responsible for reviewing and accepting the applicable third-party terms before enabling such services.
+- **Other Third-Party Software / Services:** the Customer is solely responsible for obtaining and complying with all third-party licences and terms of service.
+
+### 15.6 No Telemetry
+
+ServaLabs represents that, as of the date of delivery, ServaLabs-provided software collects no telemetry, usage data, or analytics. The only network communications initiated toward ServaLabs are Customer-controlled licence-validation and update checks (Section 16) — including requests to any ServaLabs-hosted application/update repository — which carry no Customer content and are not used to profile the Customer. This Section describes communications toward ServaLabs only; third-party services the Customer elects to use are addressed in Section 15.5.
+
+### 15.7 Use Restrictions (Proprietary Components Only)
+
+For ServaLabs-proprietary components (including WinCommander Pro): the Customer shall not resell, sublicense, or provide them as a multi-tenant service; shall not reverse engineer, decompile, or disassemble them except where expressly permitted by applicable law or an applicable open-source license; and shall maintain the confidentiality of proprietary configurations, scripts, and processes. *(These restrictions do not apply to open-source components, which are governed by their own licenses.)*
+
+### 15.8 Transfer of Licence & Warranty; Hardware Resale
+
+The Customer owns its hardware and is free to sell or otherwise dispose of it. However: (a) the Software licence (other than rights under open-source licenses), the hardware warranty, and any support or update entitlements are **personal to the original Customer** and do not transfer automatically with the hardware; (b) on written request, ServaLabs will consent to a transfer of the licence and any remaining warranty to a transferee (consent not to be unreasonably withheld), provided the transferee agrees to be bound by this Agreement; (c) before transferring any hardware, the Customer must remove or securely erase its own data and credentials; and (d) the Customer shall not hold itself out as a ServaLabs reseller, distributor, or agent — commercial resale as a business requires ServaLabs' prior written authorization as a reseller.
+
+### 15.9 No License by Disclosure
+
+Except for the limited rights expressly granted (by this Agreement for proprietary components, and by the applicable open-source licenses for open-source components), no license or interest is granted in ServaLabs' Confidential Information, trade secrets, proprietary workflows, or system designs.
+
+## 16. Software Updates and Maintenance
+
+### 16.1 Updates (Customer-Controlled)
+
+All online update functionality is controlled by the Customer and may be enabled or disabled at any time. ServaLabs does not install automatic or forced updates: for Products, updates are applied by the Customer, or by ServaLabs personnel at the Customer's request; for the Software, the in-app updater — only if and while enabled by the Customer — may retrieve cryptographically signed updates. Customers who keep online updates disabled may obtain and apply updates manually (including by physical media). The period (if any) during which updates and support are included is as specified in the applicable Order or invoice; thereafter, updates and support may be offered for an additional fee. Failure to apply security patches moves liability for subsequent breaches to the Customer (Section 16.2).
+
+### 16.2 No Liability for Obsolescence
+
+ServaLabs is not responsible for vulnerabilities arising from the Customer's failure to apply recommended updates.
+
+## 17. Data Sovereignty and Privacy
+
+### 17.1 Customer Data Ownership
+
+The Customer retains all right, title, and interest in all data stored on the Product or processed with the Software. ServaLabs acts purely as a technology provider and does not process, store, or view Customer data.
+
+### 17.2 No Access or Monitoring
+
+ServaLabs does not have access to Customer data and does not monitor Customer activities or data.
+
+### 17.3 Support Mode (Zero-Trust Protocol)
+
+Remote support is technically disabled by default and may be rendered only via a Client-Initiated Encrypted Tunnel explicitly activated by the Customer. ServaLabs holds no standing access privileges.
+
+### 17.4 Customer Responsibility for Backups
+
+The Customer is solely responsible for maintaining appropriate data backups (a 3-2-1 strategy is strongly recommended). **ServaLabs shall not be liable for any data loss or corruption, regardless of cause.**
+
+### 17.5–17.7 Customer Errors, Third-Party Risk, and "No 100% Security"
+
+The Customer bears responsibility for data loss, breach, or incidents resulting from weak credentials, misconfiguration, failure to patch, granting access to untrusted parties, malware-infected networks, or physical-security failures; for risks introduced by connecting to third-party networks/devices/accounts; and acknowledges that no technology can provide 100% security against zero-day, state-level, physical-access, social-engineering, or insider threats. The Customer assumes all risk of using the Product/Software in high-threat environments or for highly sensitive data.
+
+## 18. Data Lifecycle and Compliance Tools
+
+The Software includes advanced features for data management and access control. **These features are provided strictly as compliance, privacy, and safety tools.**
+
+### 18.1 Local Endpoint Sanitization (Secure Erase)
+
+- **Function:** secure-erase features execute media sanitization appropriate to the storage medium — such as multi-pass random overwrite for magnetic media, and single-pass overwrite combined with TRIM/secure-deletion primitives for solid-state media — on designated local storage, and privacy-cleanup features remove residual local artifacts and traces.
+- **Intended Use:** to protect data confidentiality on the physical endpoint in the event of **theft, loss, coercion, or other unauthorized physical access**, in conjunction with an offsite backup strategy to preserve data availability. It is **not** intended to, and must not be used to, destroy evidence subject to legal hold or to obstruct lawful process.
+- **Cleanup Disclaimer:** ServaLabs makes no guarantee regarding absolute cleanup irrecoverability, particularly against high-level cleanup techniques, due to the inherent physical characteristics of modern storage media (e.g., SSD wear-leveling).
+- **Legal Basis:** may assist the Customer in implementing storage-limitation and erasure obligations under applicable data-protection laws, subject to the Customer's own legal assessment; for individuals, it helps protect privacy and mitigate identity-theft and financial-loss risks.
+- **Scope Limitation:** these features erase only the local endpoint; they do not erase offsite backups, cloud copies, or remote stores.
+
+### 18.2 Access Segregation & Anti-Coercion Tools
+
+- **Function:** cryptographic access-segregation mechanisms, including multi-credential encrypted partitions and duress-activated protections, designed to separate classes of data under distinct authentication controls.
+- **Intended Use:** to protect sensitive data against unauthorized access arising from **physical coercion, theft, kidnapping, or extortion**, and to reduce the risk of compelled disclosure of unrelated data sets to criminal actors. **These tools are not represented as a means to defeat a lawful order; refusing a lawful decryption or production order may itself be an offence (e.g., under Section 69 of the IT Act, 2000), and the Customer remains solely responsible for lawful compliance.**
+- **Legal Basis:** may assist the Customer in implementing reasonable security safeguards, subject to the Customer's own legal assessment.
+
+### 18.3 Disabled by Default; Activation Attestation
+
+The features described in this Section 18 are supplied **disabled by default** and operate only if expressly activated by the Customer. By activating any such feature, the Customer represents and warrants, as of the moment of activation, that the data within its scope is not subject to any known legal hold, preservation order, court order, or active investigation, and reaffirms its obligations under Sections 1, 13, and 19.1. ServaLabs has no visibility into, and no ability to monitor or control, the activation or use of these features after handover.
+
+### 18.4 Fleet & Remote Administration Features
+
+Certain Software includes Fleet Software: self-hosted management components through which the Customer's own administrators may remotely configure, lock, seal, or sanitize endpoint devices that the Customer has enrolled. The Customer acknowledges and agrees that:
+
+- Fleet Software is installed and operated **entirely on the Customer's own infrastructure**; ServaLabs does not host, operate, relay, or have any access to it, and cannot see, trigger, veto, or reverse any fleet action;
+- every remote action is initiated by the Customer or its Authorized Users, and the Customer bears sole responsibility for each action, including erroneous, unauthorized, or malicious triggering from within its own organization;
+- the Customer shall enrol only devices that it **owns or is legally authorized to manage**, and, where enrolled devices are used by employees or other individuals, shall provide any notice and obtain any consent or authorization required by applicable law (including employment and data-protection law) before enrolment and before executing remote actions;
+- remote sanitization and lockdown actions are subject to all of Sections 12, 13, 18.1–18.3, and 19.1, including the prohibitions on spoliation of evidence and on acting against data subject to a known legal hold.
+
+### 18.5 Workforce Monitoring & Session-Assurance Features
+
+Certain Pro-tier Software may include workforce productivity, session-assurance, or insider-risk features that observe activity on Customer-managed devices. These features are designed for **disclosed** workplace use only. The Customer represents and warrants that, before enabling any such feature, it will: (a) provide clear, advance notice to every monitored individual; (b) obtain any consent and satisfy any other condition required by applicable law (including the DPDP Act and applicable employment law); and (c) limit monitoring to devices and contexts it is legally entitled to monitor. Covert monitoring of individuals, and any use described in Section 13 as prohibited, is a material breach. All data generated by these features remains on Customer-controlled systems; ServaLabs receives none of it and has no ability to access it.
+
+## 19. Acceptable Use and Indemnity
+
+### 19.1 Lawful Use Only
+
+The Customer covenants to use the Product and Software solely for lawful purposes. The Customer is strictly prohibited from using them to:
+
+1. Destroy, alter, or conceal evidence subject to a known legal hold, court order, or active investigation (**spoliation of evidence**);
+2. Evade lawful tax, regulatory, or reporting obligations, including concealing assets from lawful authorities;
+3. Obstruct lawful search-and-seizure operations;
+4. Facilitate, conceal, or aid the commission of any criminal offence, including fraud, money laundering, terrorism, drug trafficking, human trafficking, child exploitation, or organized crime;
+5. Violate the terms of service of any third-party platform;
+6. Infringe intellectual-property rights, including piracy, circumvention of technological protection measures, or unauthorized software activation;
+7. Store, transmit, or distribute illegal content, including CSAM, unlicensed weapons blueprints, or materials prohibited under Indian law.
+
+### 19.2 Customer Acknowledgment and Sole Responsibility
+
+The Customer acknowledges and agrees that: it has sole and exclusive control over the Product/Software and all data after the Handover Protocol (for Products) or upon installation (for the Software); it is an independent actor responsible for its own decisions and uses; ServaLabs has no technical ability to access, monitor, or control use and therefore cannot prevent, detect, or be aware of unlawful use; the Customer assumes all civil, criminal, and regulatory liability arising from its use; and the Customer is solely responsible for compliance with all applicable laws, including the **Digital Personal Data Protection Act, 2023**, the **Information Technology Act, 2000**, the **Bharatiya Nyaya Sanhita, 2023**, the **Bharatiya Nagarik Suraksha Sanhita, 2023**, the **Bharatiya Sakshya Adhiniyam, 2023**, the **Prevention of Money-Laundering Act, 2002**, the **Copyright Act, 1957**, all applicable tax laws, **and all laws applicable in the Customer's own country or jurisdiction**.
+
+### 19.3 Confidentiality Obligations
+
+The Customer shall maintain Confidential Information in strict confidence (at least reasonable care), not disclose it except to advisors bound by equivalent confidentiality, not use it other than for lawful use of the Product/Software, and not publish or benchmark the proprietary internal architecture or operational logic without ServaLabs' prior written consent. *(This Section does not apply to publicly released open-source code.)*
+
+### 19.4 Prohibition on Aiding and Abetting
+
+The Customer shall NOT request, encourage, or solicit ServaLabs or its employees to: assist in any unlawful activity or violation of this Agreement; configure the Product/Software to facilitate illegal activity; advise on evading law enforcement, regulators, or lawful court orders; or suppress or destroy evidence subject to legal hold or investigation. Any such request is a material breach and immediately terminates ServaLabs' support obligations.
+
+### 19.5 Prohibition on Reverse Engineering (Proprietary Components)
+
+For ServaLabs-proprietary components, the Customer shall not reverse engineer, decompile, disassemble, or derive the underlying structure for publication, replication, or competitive use, except where expressly permitted by applicable law **or an applicable open-source license**.
+
+### 19.6 Disclaimer: No Aiding and Abetting
+
+**ServaLabs expressly disclaims any role as an accomplice, aider, abettor, or co-conspirator in any unlawful activity conducted by the Customer.** The provision of general-purpose privacy and security technology does not constitute knowledge of, participation in, or endorsement of any specific customer use case. ServaLabs does not investigate or monitor customer use; has no obligation to police customer conduct; shall not be liable under theories of vicarious liability, conspiracy, or aiding and abetting for customer misconduct; and reserves the right to terminate services and refuse future business with any customer suspected of unlawful use.
+
+### 19.7 Cooperation with Law Enforcement
+
+ServaLabs will comply with lawful obligations applicable to it under Indian law and will cooperate with lawful requests from Indian law-enforcement and regulatory authorities to the extent technically and legally possible. Due to the Zero-Access Architecture (Section 8), ServaLabs cannot decrypt Customer data or recover lost credentials. ServaLabs may provide: transaction records, invoices, and contact information; information about Product/Software capabilities and configurations; and technical assistance in understanding the design (but not access to encrypted Customer data).
+
+### 19.8 Indemnification
+
+The Customer shall defend, indemnify, and hold harmless ServaLabs and its officers, directors, employees, agents, and affiliates from any claims, liabilities, damages, losses, costs, and fees (including reasonable attorneys' fees) arising out of or relating to: the Customer's violation of this Agreement; the Customer's use, misuse, configuration, or deployment of the Product/Software (including use of any secure-erase, data-sanitization, access-control, fleet/remote-administration, or monitoring features and any configuration choices, and any claim by an Authorized User or monitored individual); any allegation that ServaLabs aided, abetted, conspired in, facilitated, or had knowledge of unlawful activity by the Customer (including spoliation of evidence, obstruction of justice, tax evasion, money laundering, IP infringement, or any criminal activity); the Customer's misrepresentations; IP-infringement claims arising from the Customer's data or use; export violations; third-party licence violations; data breaches except to the extent solely caused by ServaLabs' gross negligence or willful misconduct; and any regulatory or law-enforcement action related to the Customer's use. This obligation survives termination indefinitely.
+
+## 20. Limitation of Liability
+
+**To the maximum extent permitted by law, ServaLabs' total aggregate liability arising out of or related to this Agreement — whether in contract, tort, negligence, strict liability, or otherwise — shall not exceed the total amount paid by the Customer to ServaLabs in the twelve (12) months preceding the event giving rise to liability** (and, for the no-charge Free tier where no amount has been paid, shall not exceed INR 1,000). In no event shall ServaLabs be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, including lost profits or revenue, data loss, business interruption, reputational harm, regulatory fines, legal/investigation costs, third-party claims, or opportunity costs, even if advised of the possibility. These limitations are a fundamental basis of the bargain and apply even if a limited remedy fails of its essential purpose.
+
+Nothing in this Agreement excludes or limits either Party's liability for fraud or fraudulent misrepresentation, for death or personal injury caused by its negligence, or for any other liability that cannot be excluded or limited under applicable law. Each limitation and exclusion in this Agreement applies severally and survives independently if any other is held unenforceable.
+
+## 21. Force Majeure
+
+Neither Party shall be liable for any delay or failure to perform (other than payment obligations) due to events beyond its reasonable control, including acts of God, fire, flood, earthquake, labour disputes, shortages, government actions, regulatory changes, pandemic, cyberattacks, war, terrorism, or supply-chain disruptions.
+
+## 22. Dispute Resolution
+
+### 22.1 Arbitration
+
+Any dispute arising out of or relating to this Agreement shall be settled by binding arbitration under the Arbitration and Conciliation Act, 1996. The seat and venue shall be Ahmedabad, Gujarat.
+
+### 22.2 Sole Arbitrator
+
+The arbitration shall be conducted by a sole arbitrator mutually agreed by the Parties; failing agreement within 30 days, appointed per the Arbitration Act.
+
+### 22.3 Language
+
+The language of the arbitration shall be English.
+
+### 22.4 Interim Relief
+
+The courts at Ahmedabad, Gujarat, shall have exclusive jurisdiction for interim relief and enforcement of arbitral awards.
+
+## 23. Notices
+
+All notices shall be delivered via email. **To ServaLabs:** legal@servalabs.com (Registered Address as above). **To Customer:** the email specified in the Order, or, for the Software, the email associated with the licence or registration (if any). Notices are deemed received twenty-four (24) hours after sending, with proof of sending retained.
+
+## 24. Term & Termination
+
+### 24.1 Term
+
+This Agreement takes effect upon acceptance (Section 26) and continues until terminated in accordance with this Section.
+
+### 24.2 Termination by the Customer
+
+The Customer may terminate this Agreement at any time by ceasing all use of the Software and Services. Termination does not entitle the Customer to any refund (Section 5.3) and does not affect the Customer's ownership of hardware.
+
+### 24.3 Termination by ServaLabs
+
+ServaLabs may terminate this Agreement (including the licence granted in Section 15.2) with immediate effect by written notice if the Customer materially breaches this Agreement — including Sections 1 (Purpose), 6.5 (Export & Sanctions), 13 (Prohibited Uses), or 19 (Acceptable Use) — and, where the breach is curable, fails to cure within fifteen (15) days of notice.
+
+### 24.4 Effect of Termination
+
+On termination: (a) the Customer's ownership of hardware is unaffected — ServaLabs has no technical means to, and will not, remotely disable, degrade, or access any Product or the Customer's data, and termination operates as a matter of contract only; (b) rights to future updates, support, and warranty service cease; (c) where ServaLabs terminates for the Customer's material breach, the licence to ServaLabs-proprietary Software components terminates and the Customer shall cease using them; (d) the Customer's rights under open-source licenses are unaffected (those rights are granted by the respective licensors, not by this Agreement); and (e) rights and obligations accrued before termination survive.
+
+## 25. Miscellaneous
+
+- **25.1 Entire Agreement.** This Agreement, with the applicable Order, the Privacy Policy (as to ServaLabs' handling of Customer business data), and any applicable open-source license, constitutes the entire agreement and supersedes prior understandings. Amendments must be in writing and signed by both Parties (or, for the Software, published as a new version that applies on the Customer's next download/update/use).
+- **25.2 Severability.** Invalid provisions are severed; the remainder stays in effect.
+- **25.3 Headings.** For convenience only.
+- **25.4 Assignment.** The Customer may not assign this Agreement without ServaLabs' prior written consent (not unreasonably withheld; see Section 15.8 for licence transfers). ServaLabs may assign this Agreement to an affiliate or in connection with a merger, acquisition, reorganization, or sale of substantially all of its assets, with notice to the Customer.
+- **25.5 Waiver.** No waiver is effective unless in writing.
+- **25.6 Order of Precedence.** For any open-source component, its open-source license governs that component's code; this Agreement otherwise governs the Product, the Software, Services, and the Customer's acceptable use.
+- **25.7 Survival.** Sections 3, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 22, 23, and 24.4 survive termination or expiration; confidentiality obligations survive indefinitely.
+
+## 26. Acceptance
+
+**By purchasing, downloading, installing, or using the Product or the Software — including by completing the first-run acknowledgment presented within the Software — the Customer acknowledges that it has read, understood, and agreed to be bound by this Agreement.** For hardware Products, acceptance also occurs (if not earlier) upon the Customer's signature of the applicable Order or delivery acknowledgment, or upon completion of the Handover Protocol (Section 8), whichever occurs first. Continued use after a new version is published constitutes acceptance of that version.
+
+---
+
+**ServaLabs Private Limited**
+CIN: U74904GJ2026PTC171683
+Registered Address: A-21 Shardul Co. Op. H. Soc. Ltd, Paldi, Ahmedabad – 380007, Gujarat, India
+Email: legal@servalabs.com · Phone: +91 9265769706
+Authorized Signatory: Saumya Shah, Director

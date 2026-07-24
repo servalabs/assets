@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+<style>
+.bg{fill:#f2ede4;stroke:#d0c7ba;stroke-width:8}
+.a{fill:#107572}.b{fill:#0b5f5d}.c{fill:#7b858c}.d{fill:#5e6870}.e{fill:#111820}.f{fill:#24313a}
+@media (prefers-color-scheme:dark){.bg{fill:#14171a;stroke:#344149}.a{fill:#69d9d1}.b{fill:#42b7b0}.c{fill:#6f7e88}.d{fill:#91a1aa}.e{fill:#f5efe5}.f{fill:#d7cec1}}
+</style>
+<rect class="bg" x="16" y="16" width="208" height="208" rx="44"/>
+<polygon class="a" points="139.63,79 206.6,195 186.97,195 129.81,96" transform="translate(0 1)"/>
+<polygon class="b" points="129.81,96 186.97,195 167.34,195 120,113" transform="translate(0 1)"/>
+<polygon class="c" points="167.34,195 33.4,195 43.21,178 157.53,178" transform="translate(0 1)"/>
+<polygon class="d" points="157.53,178 43.21,178 53.03,161 147.71,161" transform="translate(0 1)"/>
+<polygon class="e" points="53.03,161 120,45 129.81,62 72.66,161" transform="translate(0 1)"/>
+<polygon class="f" points="72.66,161 129.81,62 139.63,79 92.29,161" transform="translate(0 1)"/>
+</svg>
