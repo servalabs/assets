@@ -1,0 +1,47 @@
+► Title - 
+	It was impossible to get the image bytes to encode.
+♦ [Version] Date/Hour - 
+	[2.43.2] 07/31/2026 13:59:14
+▬ Message - 
+	There is not enough space on the disk. : 'C:\Users\Admin\AppData\Local\Temp\ScreenToGif\Recording\2026-07-31 13-51-49\Encode 2026-07-31 01-58-08-56\Chunk'.
+○ Type - 
+	System.IO.IOException
+▲ Source - 
+	System.Private.CoreLib
+▼ TargetSite - 
+	Void WriteSpan(System.ReadOnlySpan`1[System.Byte], System.ArraySegment`1[System.Byte])
+♠ StackTrace - 
+   at System.IO.Strategies.BufferedFileStreamStrategy.WriteSpan(ReadOnlySpan`1 source, ArraySegment`1 arraySegment)
+   at ScreenToGif.Util.StreamHelpers.WriteBytes(Stream ms, Byte[] value) in R:\Source\NickeManarin\ScreenToGif\ScreenToGif.Util\StreamHelpers.cs:line 194
+   at ScreenToGif.Model.ProjectInfo.CopyToExport(List`1 indexes, Boolean copyJson, Boolean useBytes, Boolean usePadding) in R:\Source\NickeManarin\ScreenToGif\ScreenToGif\Model\ProjectInfo.cs:line 231
+
+----------------------------------
+
+► Title - 
+	Error while exporting
+♦ [Version] Date/Hour - 
+	[2.43.2] 07/31/2026 13:59:14
+▬ Message - 
+	There is not enough space on the disk. : 'C:\Users\Admin\AppData\Local\Temp\ScreenToGif\Recording\2026-07-31 13-51-49\Encode 2026-07-31 01-58-08-56\Chunk'.
+○ Type - 
+	System.IO.IOException
+▲ Source - 
+	System.Private.CoreLib
+▼ TargetSite - 
+	Void WriteSpan(System.ReadOnlySpan`1[System.Byte], System.ArraySegment`1[System.Byte])
+♠ StackTrace - 
+   at System.IO.Strategies.BufferedFileStreamStrategy.WriteSpan(ReadOnlySpan`1 source, ArraySegment`1 arraySegment)
+   at ScreenToGif.Util.StreamHelpers.WriteBytes(Stream ms, Byte[] value) in R:\Source\NickeManarin\ScreenToGif\ScreenToGif.Util\StreamHelpers.cs:line 194
+   at ScreenToGif.Model.ProjectInfo.CopyToExport(List`1 indexes, Boolean copyJson, Boolean useBytes, Boolean usePadding) in R:\Source\NickeManarin\ScreenToGif\ScreenToGif\Model\ProjectInfo.cs:line 231
+   at ScreenToGif.Windows.Editor.SaveAsync(ExportPreset preset) in R:\Source\NickeManarin\ScreenToGif\ScreenToGif\Windows\Editor.xaml.cs:line 5371
+   at ScreenToGif.Windows.Editor.<>c__DisplayClass103_0.<SaveAsButton_Click>b__0() in R:\Source\NickeManarin\ScreenToGif\ScreenToGif\Windows\Editor.xaml.cs:line 889
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at ScreenToGif.Windows.Editor.SaveAsButton_Click(Object sender, RoutedEventArgs e) in R:\Source\NickeManarin\ScreenToGif\ScreenToGif\Windows\Editor.xaml.cs:line 889
+
+----------------------------------
+
