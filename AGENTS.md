@@ -1,8 +1,10 @@
 # AGENTS.md — servalabs-assets
 
-Agent + contributor entry point for the shared-assets repo. Read
-[BESTPRACTICES.md](https://github.com/servalabs) global standards
-(`D:\GitHub\obsidian-vault\10 System\GitHub\BESTPRACTICES.md`) before editing.
+Agent + contributor entry point for the shared-assets repo. Read the global
+standards at [BESTPRACTICES.md](BESTPRACTICES.md) — a synced local copy (works
+without the `obsidian-vault` repo present) — before editing. Canonical source:
+`D:\GitHub\obsidian-vault\10 System\GitHub\BESTPRACTICES.md`; edit there, then
+re-sync this copy.
 
 ## What this repo is
 
