@@ -295,7 +295,13 @@ Except for the limited rights expressly granted (by this Agreement for proprieta
 
 All online update functionality is controlled by the Customer and may be enabled or disabled at any time. ServaLabs does not install automatic or forced updates: for Products, updates are applied by the Customer, or by ServaLabs personnel at the Customer's request; for the Software, the in-app updater — only if and while enabled by the Customer — may retrieve cryptographically signed updates. Customers who keep online updates disabled may obtain and apply updates manually (including by physical media).
 
-**Included update period.** The period during which updates are included is as specified in the applicable Order or invoice or, **in a Reseller Sale where there is no such Order, as recorded in the Entitlement** and published in ServaLabs' product documentation for that Product. The period runs **from Delivery** (Section 2), so in a Reseller Sale it is reduced by the time the reseller held the unit; ServaLabs requires the reseller to disclose the actual expiry date at the point of sale (Section 4.4(d)). A Customer may confirm its expiry date at any time by contacting ServaLabs with the Product serial number or licence key. After the period, updates may be offered for an additional fee. Failure to apply security patches moves liability for subsequent breaches to the Customer (Section 16.2).
+**Included update period — twelve (12) months.** Updates are included **free of charge for twelve (12) months from Delivery** (Section 2), unless a longer or shorter period is stated in the applicable Order, invoice, or Entitlement. **After that period, continued updates require a paid extension** at ServaLabs' then-current rates, and ServaLabs is under no obligation to supply updates for a Product whose update period has expired and for which no extension has been purchased.
+
+In a Reseller Sale the period runs from delivery to the reseller, so it is reduced by the time the reseller held the unit; ServaLabs requires the reseller to disclose the actual expiry date at the point of sale (Section 4.4(d)). A Customer may confirm its expiry date at any time by contacting ServaLabs with the Product serial number or licence key.
+
+The update period, the hardware warranty period (Section 14.1), and the email-support period (Section 16.3) are **all twelve (12) months from Delivery and expire together.**
+
+Failure to apply security patches moves liability for subsequent breaches to the Customer (Section 16.2).
 
 ### 16.2 No Liability for Obsolescence
 
