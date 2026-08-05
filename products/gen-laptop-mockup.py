@@ -13,7 +13,7 @@ from PIL import Image, ImageDraw, ImageFilter
 
 JOBS = [
     ("wincommander/wc-dashboard.png", "wincommander/wc-dashboard-laptop.png"),
-    ("theron/theron-entity-graph.png", "theron/theron-entity-graph-laptop.png"),
+    ("theron/Theron_Dashboard.png", "theron/theron-entity-graph-laptop.png"),
 ]
 
 # Frame geometry (px, relative to a 1920-wide screenshot; scaled otherwise)
