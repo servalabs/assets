@@ -430,7 +430,7 @@ Any dispute arising out of or relating to this Agreement shall be settled by bin
 
 ### 22.2 Sole Arbitrator
 
-The arbitration shall be conducted by a sole arbitrator mutually agreed by the Parties; failing agreement within 30 days, appointed by the Mumbai Centre for International Arbitration, or, failing that, under Section 11 of the Arbitration and Conciliation Act, 1996. Neither Party may appoint the arbitrator unilaterally. Where the total of all claims and counterclaims does not exceed INR 50,00,000, either Party may elect the fast-track procedure under Section 29B of that Act.
+The arbitration shall be conducted by a sole arbitrator mutually agreed by the Parties within 30 days. Failing agreement, the appointment shall be made on the application of either Party by the **Gujarat International Maritime Arbitration Centre, GIFT City, Gandhinagar**, or, if it is unable or unwilling to act, under **Section 11 of the Arbitration and Conciliation Act, 1996 by the High Court of Gujarat**. Neither Party may appoint the arbitrator unilaterally. Naming an appointing authority does not change the seat, the venue, or the governing law. Where the total of all claims and counterclaims does not exceed INR 50,00,000, either Party may elect the fast-track procedure under Section 29B of that Act.
 
 ### 22.3 Language
 
