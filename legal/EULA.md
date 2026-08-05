@@ -4,26 +4,6 @@
 
 **Version 1.5 | Effective Date: 2026-08-05**
 
-<!--
-REVISION HISTORY
-v1.5 (2026-08-05) — reseller-channel amendment. Added "Reseller Sale" and "Delivery" definitions (§2);
-  expanded §4.4 to allocate warranty, updates, support, and local data-protection compliance in a
-  Reseller Sale; §14.1 warranty period now runs from Delivery and its benefit passes to the end
-  customer in a Reseller Sale; §15.2 licence quantity may be set by entitlement where there is no
-  ServaLabs Order; §16.1 update period likewise; new §16.3 states what support is and is not included;
-  §9.1, §17.1 and §17.2 now expressly subject to §8.2 and §9.2 (removing an internal contradiction);
-  §20 liability cap given a floor; §22.2 arbitration fallback and fast-track; §23 notice fallback where
-  no email is registered; §24.3 identifies non-curable breaches; §25.1 requires notice of material
-  amendments and preserves the prior version; §25.7 survival list corrected. §14.1 RMA: ServaLabs now
-  bears both shipping legs for a confirmed defect.
-v1.4 (2026-07-02) — fleet / remote-monitoring / AI clauses added alongside PRIVACY.md v1.1.
--->
-
-<!--
-NOTE: this is the public legal SSOT. It is consumed by `wincommander` (in-app consent screen) and
-`servalabs.com` (legal pages) — bump their submodule pointers after changing this file.
--->
-
 
 THIS AGREEMENT is made by and between:
 
@@ -93,7 +73,7 @@ Where the Customer purchases a Product or the Software through an authorized Ser
 In a Reseller Sale, the following apply:
 
 - **(a) Warranty.** The Customer is entitled to the benefit of the limited hardware warranty in Section 14.1 for the unexpired remainder of its period, which runs from **Delivery** — that is, from delivery to the reseller, not from the onward sale. Section 15.8 does not require ServaLabs' consent for this entitlement; it passes with the Product on the first onward sale by the reseller.
-- **(b) Updates.** The included update period is as stated in Section 16.1 and recorded in the Entitlement, and likewise runs from Delivery.
+- **(b) Updates.** Updates are included free for twelve (12) months from Delivery (Section 16.1), which likewise means from delivery to the reseller. After that they are chargeable.
 - **(c) Support.** Section 16.3 governs. **Installation, configuration, integration, data migration, and training are provided by the reseller, not by ServaLabs**, unless the Customer purchases them from ServaLabs under a separate order.
 - **(d) The reseller must tell the Customer the actual dates.** ServaLabs requires its resellers to disclose in writing, at or before the point of sale, the actual expiry dates of the warranty and update periods for the unit supplied. **A Customer who was not given those dates should contact ServaLabs at legal@servalabs.com**, which will confirm them from the Entitlement.
 - **(e) Registration.** ServaLabs requires its resellers to register each end customer. Where a Customer has not been registered, ServaLabs will still honour the warranty and update periods on proof of purchase and the Product serial number.
@@ -305,7 +285,7 @@ Failure to apply security patches moves liability for subsequent breaches to the
 
 ### 16.2 No Liability for Obsolescence
 
-ServaLabs is not responsible for vulnerabilities arising from the Customer's failure to apply recommended updates, or arising after the included update period has expired where no extension has been purchased.
+ServaLabs is not responsible for vulnerabilities arising from the Customer's failure to apply recommended updates, or arising after the twelve-month included update period has expired where no extension has been purchased.
 
 ### 16.3 Support — What Is and Is Not Included
 
