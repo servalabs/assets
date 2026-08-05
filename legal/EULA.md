@@ -2,7 +2,28 @@
 
 **(End User License Agreement)**
 
-**Version 1.4 | Effective Date: 2026-07-02**
+**Version 1.5 | Effective Date: 2026-08-05**
+
+<!--
+REVISION HISTORY
+v1.5 (2026-08-05) — reseller-channel amendment. Added "Reseller Sale" and "Delivery" definitions (§2);
+  expanded §4.4 to allocate warranty, updates, support, and local data-protection compliance in a
+  Reseller Sale; §14.1 warranty period now runs from Delivery and its benefit passes to the end
+  customer in a Reseller Sale; §15.2 licence quantity may be set by entitlement where there is no
+  ServaLabs Order; §16.1 update period likewise; new §16.3 states what support is and is not included;
+  §9.1, §17.1 and §17.2 now expressly subject to §8.2 and §9.2 (removing an internal contradiction);
+  §20 liability cap given a floor; §22.2 arbitration fallback and fast-track; §23 notice fallback where
+  no email is registered; §24.3 identifies non-curable breaches; §25.1 requires notice of material
+  amendments and preserves the prior version; §25.7 survival list corrected. §14.1 RMA: ServaLabs now
+  bears both shipping legs for a confirmed defect.
+v1.4 (2026-07-02) — fleet / remote-monitoring / AI clauses added alongside PRIVACY.md v1.1.
+-->
+
+<!--
+NOTE: this is the public legal SSOT. It is consumed by `wincommander` (in-app consent screen) and
+`servalabs.com` (legal pages) — bump their submodule pointers after changing this file.
+-->
+
 
 THIS AGREEMENT is made by and between:
 
@@ -39,6 +60,9 @@ The Customer agrees to use the Product and the Software only for lawful purposes
 - **"Services"** means initial configuration, installation, and hardening services, if any.
 - **"Zero-Access Architecture"** means a system design under which ServaLabs has no technical ability to access Customer data.
 - **"Order"** means the invoice, quotation, or purchase document governing commercial terms (where applicable; the Free tier requires no Order).
+- **"Reseller Sale"** means a supply in which ServaLabs sells a Product or Software licence to an authorized ServaLabs reseller, which then resells it onward. In a Reseller Sale there is no Order between ServaLabs and the Customer; the Order is between the Customer and the reseller.
+- **"Delivery"** means, for a direct sale, delivery to the Customer; and for a Reseller Sale, **delivery to the reseller**. Where a period in this Agreement runs "from Delivery", it runs from that date and is not restarted by the onward sale.
+- **"Entitlement"** means the licence, update, and warranty record ServaLabs issues against an order, identifying the Product, quantity of devices or seats, Delivery date, and the periods applicable under Sections 14.1 and 16.1. In a Reseller Sale the Entitlement performs the function the Order performs in a direct sale.
 
 ## 3. Confidential Information
 
@@ -65,6 +89,15 @@ The Customer represents that it is acquiring hardware Products primarily for bus
 ### 4.4 Purchases via Authorized Resellers
 
 Where the Customer purchases a Product or the Software through an authorized ServaLabs reseller, this Agreement nonetheless governs the Customer's use of the Product and the Software, the licence, and the warranty. Commercial terms (price, payment, delivery schedule) are solely between the Customer and the reseller. Resellers are independent businesses and are not agents of ServaLabs; ServaLabs is not bound by, and accepts no liability for, any representation, promise, or warranty made by a reseller beyond ServaLabs' official published documentation.
+
+In a Reseller Sale, the following apply:
+
+- **(a) Warranty.** The Customer is entitled to the benefit of the limited hardware warranty in Section 14.1 for the unexpired remainder of its period, which runs from **Delivery** — that is, from delivery to the reseller, not from the onward sale. Section 15.8 does not require ServaLabs' consent for this entitlement; it passes with the Product on the first onward sale by the reseller.
+- **(b) Updates.** The included update period is as stated in Section 16.1 and recorded in the Entitlement, and likewise runs from Delivery.
+- **(c) Support.** Section 16.3 governs. **Installation, configuration, integration, data migration, and training are provided by the reseller, not by ServaLabs**, unless the Customer purchases them from ServaLabs under a separate order.
+- **(d) The reseller must tell the Customer the actual dates.** ServaLabs requires its resellers to disclose in writing, at or before the point of sale, the actual expiry dates of the warranty and update periods for the unit supplied. **A Customer who was not given those dates should contact ServaLabs at legal@servalabs.com**, which will confirm them from the Entitlement.
+- **(e) Registration.** ServaLabs requires its resellers to register each end customer. Where a Customer has not been registered, ServaLabs will still honour the warranty and update periods on proof of purchase and the Product serial number.
+- **(f) Data protection outside India.** Where the Software is supplied to a Customer outside India, **the reseller is responsible for compliance with data-protection law applicable in the Customer's jurisdiction** in respect of the reseller's own processing of the Customer's data, and for any notice or consent required from the Customer. ServaLabs' own processing of Customer business-contact data is described in Section 9.2 and the Privacy Policy.
 
 ## 5. Commercial Terms & Payment
 
@@ -118,7 +151,7 @@ Products are configured to order. All sales are final: ServaLabs does not accept
 
 ### 7.2 Inspection & Acceptance
 
-The Customer shall have five (5) business days from delivery (the "**Inspection Period**") to inspect a Product and provide written notice of any non-conformity. A Product is deemed accepted upon the earliest of: (a) the Customer's written acceptance; (b) expiry of the Inspection Period without notice of non-conformity; or (c) completion of the Handover Protocol (Section 8). Acceptance does not limit the Customer's rights under the warranty in Section 14.1.
+The Customer shall have five (5) business days **from its own physical receipt of the Product** (the "**Inspection Period**") to inspect it and provide written notice of any non-conformity. For the avoidance of doubt, in a Reseller Sale the Inspection Period runs from the Customer's receipt from the reseller, **not** from Delivery as defined in Section 2 — so the Customer always receives a full Inspection Period however long the reseller held the unit. A Product is deemed accepted upon the earliest of: (a) the Customer's written acceptance; (b) expiry of the Inspection Period without notice of non-conformity; or (c) completion of the Handover Protocol (Section 8). Acceptance does not limit the Customer's rights under the warranty in Section 14.1.
 
 ## 8. System Architecture & Zero-Access Design
 
@@ -143,7 +176,11 @@ The representations in Section 8.1 and Sections 15.6 and 17 describe Products an
 
 ### 9.1 Customer Data on the Product (Customer as Data Fiduciary)
 
-The Parties expressly acknowledge that, with respect to all data stored or processed using the Product or the Software: ServaLabs is not a Data Fiduciary or Data Processor as defined under the Digital Personal Data Protection Act, 2023 ("DPDP Act"); ServaLabs does not determine the purpose or means of processing of any Personal Data; ServaLabs has no access to Personal Data and cannot exercise control over such data; and the Customer is the sole Data Fiduciary and/or Data Controller with respect to all Personal Data stored or processed using the Product or Software. All obligations under the DPDP Act — and under any other data-protection law applicable to the Customer or its data subjects (such as the EU/UK GDPR or other regional regimes), as applicable — including consent, notice, purpose limitation, security safeguards, breach reporting, and data-principal/data-subject rights, rest exclusively with the Customer.
+**Subject to Section 8.2 (hosted management consoles) and Section 9.2 (Customer business-contact data)**, the Parties expressly acknowledge that, with respect to data stored or processed on the Product or with the Software on the Customer's own devices and infrastructure: ServaLabs is not a Data Fiduciary or Data Processor as defined under the Digital Personal Data Protection Act, 2023 ("DPDP Act"); ServaLabs does not determine the purpose or means of processing of any Personal Data; ServaLabs has no access to Personal Data and cannot exercise control over such data; and the Customer is the sole Data Fiduciary and/or Data Controller with respect to all Personal Data stored or processed using the Product or Software. All obligations under the DPDP Act — and under any other data-protection law applicable to the Customer or its data subjects (such as the EU/UK GDPR or other regional regimes), as applicable — including consent, notice, purpose limitation, security safeguards, breach reporting, and data-principal/data-subject rights, rest exclusively with the Customer.
+
+### 9.1A Hosted Management Consoles
+
+Where ServaLabs provides a hosted management console (Section 8.2), Section 9.1 does not apply to the account, authentication, service-configuration, service-administration, audit, and anti-abuse security records ServaLabs necessarily holds to operate that console. In respect of those records ServaLabs acts as a **Data Fiduciary** under the DPDP Act, and handles them as described in the Privacy Policy. Where ServaLabs processes any personal data on the Customer's documented instructions in connection with such a console, it does so as a **Data Processor** under a separate data-processing agreement. ServaLabs has no access to content on the Customer's own devices or servers in either case.
 
 ### 9.2 ServaLabs' Limited Collection of Customer Business Data
 
@@ -185,11 +222,13 @@ Violation constitutes material breach and may result in termination.
 
 ### 14.1 Limited Hardware Warranty
 
-**Coverage.** ServaLabs warrants Product hardware against manufacturing defects for one (1) year from delivery. The sole and exclusive remedy is repair or replacement at ServaLabs' option. This warranty is personal to the original Customer and is not transferable except as permitted under Section 15.8.
+**Coverage.** ServaLabs warrants Product hardware against manufacturing defects for **twelve (12) months from Delivery** (as defined in Section 2). The sole and exclusive remedy is repair or replacement at ServaLabs' option.
+
+**Who holds the warranty.** In a direct sale the warranty is personal to the Customer. **In a Reseller Sale the benefit of the warranty passes with the Product to the first end customer on the reseller's onward sale, for the unexpired remainder of the period** — no ServaLabs consent is required for that passage, and Section 15.8 does not restrict it. Because the period runs from Delivery to the reseller, the remainder available to the end customer is reduced by the time the reseller held the unit; ServaLabs requires the reseller to disclose the actual expiry date at the point of sale (Section 4.4(d)). Any **further** transfer, for example on a subsequent resale of the hardware, requires ServaLabs' consent under Section 15.8.
 
 **Exclusions.** The warranty does not cover damage caused by: misuse, accident, or neglect; operation outside the environmental requirements of Section 6.4 (including water exposure, improper voltage, shock, vibration, or temperature extremes); or modification or repair by the Customer or third parties, to the extent the damage is caused by that modification or repair. Opening the chassis, replacing or adding drives, or installing the Customer's own software does not by itself void this warranty.
 
-**RMA Process & Shipping.** Warranty service requires a return merchandise authorization (RMA) issued by ServaLabs. The Customer bears the cost and risk of shipping the unit to ServaLabs; ServaLabs bears the cost of shipping the repaired or replacement unit back to the Customer.
+**RMA Process & Shipping.** Warranty service requires a return merchandise authorization (RMA) issued by ServaLabs. **Where the unit is confirmed to have a defect covered by this warranty, ServaLabs bears the cost of shipping in both directions.** Where the reported fault is not found, or is excluded under this Section, the Customer bears the cost of shipping to ServaLabs. Risk of loss in transit lies with the party arranging and paying for that leg. In a Reseller Sale the Customer may raise a warranty claim with ServaLabs directly or through its reseller.
 
 **Customer Data During Service.** Products use separate boot and data drives. The Customer is strongly advised to remove its data drives before shipping a unit for service — warranty service does not require them. If the Customer ships a unit with data drives installed, ServaLabs will not access, read, or copy any data on them, and any storage media replaced during service is securely erased or physically destroyed before disposal or reuse. The Customer remains responsible for backing up its data before any service event (Section 17.4).
 
@@ -217,7 +256,7 @@ The Product and the Software include open-source components, proprietary softwar
 
 ### 15.2 License Grant
 
-Subject to the Customer's compliance with this Agreement, ServaLabs grants the Customer a non-exclusive, non-transferable (except as permitted in Section 15.8), worldwide (subject to Section 6.5) licence to install and use the ServaLabs-proprietary components of the Software: (a) for the **Free** tier, at no charge, on devices owned or controlled by the Customer; and (b) for the **Pro** tier, on the number of devices or seats specified in the applicable Order. The Customer may permit Authorized Users to use the Software within the licensed scope; the Customer shall ensure such use complies with this Agreement (including Sections 13, 18, and 19) and, on ServaLabs' reasonable written request no more than once per year, shall self-certify its deployed device or seat count for the Pro tier. The licence is **perpetual** for the Software versions lawfully delivered to or downloaded by the Customer; entitlement to updates and support is governed by Section 16 and the applicable Order. The Software is **licensed, not sold**: title to hardware passes under Section 6.3, but the Customer acquires no ownership of the Software, ServaLabs-provided configurations, or any intellectual property of ServaLabs, all of which remain the exclusive property of ServaLabs or its licensors. For the avoidance of doubt, the Customer owns all data, content, and code that the Customer itself creates or stores on the Product. Open-source components are licensed to the Customer directly by their respective licensors under their own licenses (Section 25.6).
+Subject to the Customer's compliance with this Agreement, ServaLabs grants the Customer a non-exclusive, non-transferable (except as permitted in Section 15.8), worldwide (subject to Section 6.5) licence to install and use the ServaLabs-proprietary components of the Software: (a) for the **Free** tier, at no charge, on devices owned or controlled by the Customer; and (b) for the **Pro** tier, on the number of devices or seats specified in the applicable Order or, in a Reseller Sale where there is no such Order, in the Entitlement issued by ServaLabs against the reseller's order. The Customer may permit Authorized Users to use the Software within the licensed scope; the Customer shall ensure such use complies with this Agreement (including Sections 13, 18, and 19) and, on ServaLabs' reasonable written request no more than once per year, shall self-certify its deployed device or seat count for the Pro tier. The licence is **perpetual** for the Software versions lawfully delivered to or downloaded by the Customer; entitlement to updates and support is governed by Section 16 and the applicable Order. The Software is **licensed, not sold**: title to hardware passes under Section 6.3, but the Customer acquires no ownership of the Software, ServaLabs-provided configurations, or any intellectual property of ServaLabs, all of which remain the exclusive property of ServaLabs or its licensors. For the avoidance of doubt, the Customer owns all data, content, and code that the Customer itself creates or stores on the Product. Open-source components are licensed to the Customer directly by their respective licensors under their own licenses (Section 25.6).
 
 ### 15.3 WinCommander Licensing
 
@@ -254,21 +293,35 @@ Except for the limited rights expressly granted (by this Agreement for proprieta
 
 ### 16.1 Updates (Customer-Controlled)
 
-All online update functionality is controlled by the Customer and may be enabled or disabled at any time. ServaLabs does not install automatic or forced updates: for Products, updates are applied by the Customer, or by ServaLabs personnel at the Customer's request; for the Software, the in-app updater — only if and while enabled by the Customer — may retrieve cryptographically signed updates. Customers who keep online updates disabled may obtain and apply updates manually (including by physical media). The period (if any) during which updates and support are included is as specified in the applicable Order or invoice; thereafter, updates and support may be offered for an additional fee. Failure to apply security patches moves liability for subsequent breaches to the Customer (Section 16.2).
+All online update functionality is controlled by the Customer and may be enabled or disabled at any time. ServaLabs does not install automatic or forced updates: for Products, updates are applied by the Customer, or by ServaLabs personnel at the Customer's request; for the Software, the in-app updater — only if and while enabled by the Customer — may retrieve cryptographically signed updates. Customers who keep online updates disabled may obtain and apply updates manually (including by physical media).
+
+**Included update period.** The period during which updates are included is as specified in the applicable Order or invoice or, **in a Reseller Sale where there is no such Order, as recorded in the Entitlement** and published in ServaLabs' product documentation for that Product. The period runs **from Delivery** (Section 2), so in a Reseller Sale it is reduced by the time the reseller held the unit; ServaLabs requires the reseller to disclose the actual expiry date at the point of sale (Section 4.4(d)). A Customer may confirm its expiry date at any time by contacting ServaLabs with the Product serial number or licence key. After the period, updates may be offered for an additional fee. Failure to apply security patches moves liability for subsequent breaches to the Customer (Section 16.2).
 
 ### 16.2 No Liability for Obsolescence
 
-ServaLabs is not responsible for vulnerabilities arising from the Customer's failure to apply recommended updates.
+ServaLabs is not responsible for vulnerabilities arising from the Customer's failure to apply recommended updates, or arising after the included update period has expired where no extension has been purchased.
+
+### 16.3 Support — What Is and Is Not Included
+
+**Included.** ServaLabs provides **email support** in respect of hardware and Software for the duration of the warranty period in Section 14.1: fault diagnosis and resolution guidance for the Product or Software as supplied, clarification of documented behaviour and configuration options, and warranty and RMA handling. Support is provided by email to ServaLabs' published support address, in English, during normal business hours, on a commercially reasonable endeavours basis. **There is no response-time or resolution-time commitment and no service level**, and ServaLabs' failure to respond within any particular period is not a breach of this Agreement.
+
+**Not included.** Telephone, chat, or on-site support; any service level, uptime, or response-time commitment; installation, deployment, provisioning, or configuration; integration with the Customer's systems; **data migration, migration planning, migration tooling, or migration documentation**; onboarding or training programmes; custom or customer-specific documentation; a named or dedicated contact; and monitoring or managed services. Section 17.3 describes the technical mechanism available **if** remote assistance is separately agreed; it is not an entitlement.
+
+**Reseller Sales.** In a Reseller Sale the reseller provides installation, configuration, integration, migration, and training, and is the Customer's first point of contact. Email support under this Section 16.3 remains available in respect of the Product and Software as supplied. Any service level, response time, or support commitment the reseller offers the Customer is the reseller's own obligation and not ServaLabs' (Section 4.4).
+
+**Beyond the included period.** Support and Services beyond this Section may be purchased under a separate order at ServaLabs' then-current rates. The definition of "Services" in Section 2 refers to such separately purchased work.
 
 ## 17. Data Sovereignty and Privacy
 
+*Sections 17.1 and 17.2 are subject to Section 8.2 (hosted management consoles), Section 9.1A, and Section 9.2 (Customer business-contact data).*
+
 ### 17.1 Customer Data Ownership
 
-The Customer retains all right, title, and interest in all data stored on the Product or processed with the Software. ServaLabs acts purely as a technology provider and does not process, store, or view Customer data.
+The Customer retains all right, title, and interest in all data stored on the Product or processed with the Software. ServaLabs acts purely as a technology provider and does not process, store, or view data on the Customer's own devices and infrastructure.
 
 ### 17.2 No Access or Monitoring
 
-ServaLabs does not have access to Customer data and does not monitor Customer activities or data.
+ServaLabs does not have access to data on the Customer's own devices and infrastructure and does not monitor Customer activities or data.
 
 ### 17.3 Support Mode (Zero-Trust Protocol)
 
@@ -361,7 +414,7 @@ The Customer shall defend, indemnify, and hold harmless ServaLabs and its office
 
 ## 20. Limitation of Liability
 
-**To the maximum extent permitted by law, ServaLabs' total aggregate liability arising out of or related to this Agreement — whether in contract, tort, negligence, strict liability, or otherwise — shall not exceed the total amount paid by the Customer to ServaLabs in the twelve (12) months preceding the event giving rise to liability** (and, for the no-charge Free tier where no amount has been paid, shall not exceed INR 1,000). In no event shall ServaLabs be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, including lost profits or revenue, data loss, business interruption, reputational harm, regulatory fines, legal/investigation costs, third-party claims, or opportunity costs, even if advised of the possibility. These limitations are a fundamental basis of the bargain and apply even if a limited remedy fails of its essential purpose.
+**To the maximum extent permitted by law, ServaLabs' total aggregate liability arising out of or related to this Agreement — whether in contract, tort, negligence, strict liability, or otherwise — shall not exceed the greatest of: (a) the total amount paid by the Customer to ServaLabs in the twelve (12) months preceding the event giving rise to liability; (b) the price paid for the Product or Software licence giving rise to the claim, whether paid to ServaLabs or, in a Reseller Sale, to the reseller; or (c) INR 1,000.** In no event shall ServaLabs be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, including lost profits or revenue, data loss, business interruption, reputational harm, regulatory fines, legal/investigation costs, third-party claims, or opportunity costs, even if advised of the possibility. These limitations are a fundamental basis of the bargain and apply even if a limited remedy fails of its essential purpose.
 
 Nothing in this Agreement excludes or limits either Party's liability for fraud or fraudulent misrepresentation, for death or personal injury caused by its negligence, or for any other liability that cannot be excluded or limited under applicable law. Each limitation and exclusion in this Agreement applies severally and survives independently if any other is held unenforceable.
 
@@ -373,11 +426,11 @@ Neither Party shall be liable for any delay or failure to perform (other than pa
 
 ### 22.1 Arbitration
 
-Any dispute arising out of or relating to this Agreement shall be settled by binding arbitration under the Arbitration and Conciliation Act, 1996. The seat and venue shall be Ahmedabad, Gujarat.
+Any dispute arising out of or relating to this Agreement shall be settled by binding arbitration under the Arbitration and Conciliation Act, 1996. The **seat** of the arbitration shall be Ahmedabad, Gujarat; hearings may be held at any convenient location or conducted remotely without affecting the seat.
 
 ### 22.2 Sole Arbitrator
 
-The arbitration shall be conducted by a sole arbitrator mutually agreed by the Parties; failing agreement within 30 days, appointed per the Arbitration Act.
+The arbitration shall be conducted by a sole arbitrator mutually agreed by the Parties; failing agreement within 30 days, appointed by the Mumbai Centre for International Arbitration, or, failing that, under Section 11 of the Arbitration and Conciliation Act, 1996. Neither Party may appoint the arbitrator unilaterally. Where the total of all claims and counterclaims does not exceed INR 50,00,000, either Party may elect the fast-track procedure under Section 29B of that Act.
 
 ### 22.3 Language
 
@@ -389,7 +442,9 @@ The courts at Ahmedabad, Gujarat, shall have exclusive jurisdiction for interim 
 
 ## 23. Notices
 
-All notices shall be delivered via email. **To ServaLabs:** legal@servalabs.com (Registered Address as above). **To Customer:** the email specified in the Order, or, for the Software, the email associated with the licence or registration (if any). Notices are deemed received twenty-four (24) hours after sending, with proof of sending retained.
+All notices shall be delivered via email. **To ServaLabs:** legal@servalabs.com (Registered Address as above). **To Customer:** the email specified in the Order; in a Reseller Sale, the email recorded on registration by the reseller; or, for the Software, the email associated with the licence or registration. Notices are deemed received twenty-four (24) hours after sending, with proof of sending retained, provided no bounce or delivery-failure notification is received.
+
+**Where no Customer email is held** — as may be the case for the Free tier or an unregistered Reseller Sale — ServaLabs may give notice by any of: a prominent notice within the Software; publication on servalabs.com; or, where a postal address is held, registered post. It remains the Customer's responsibility to keep its contact details current.
 
 ## 24. Term & Termination
 
@@ -403,7 +458,9 @@ The Customer may terminate this Agreement at any time by ceasing all use of the 
 
 ### 24.3 Termination by ServaLabs
 
-ServaLabs may terminate this Agreement (including the licence granted in Section 15.2) with immediate effect by written notice if the Customer materially breaches this Agreement — including Sections 1 (Purpose), 6.5 (Export & Sanctions), 13 (Prohibited Uses), or 19 (Acceptable Use) — and, where the breach is curable, fails to cure within fifteen (15) days of notice.
+ServaLabs may terminate this Agreement (including the licence granted in Section 15.2) with immediate effect by written notice if the Customer materially breaches this Agreement and, where the breach is curable, fails to cure within fifteen (15) days of notice.
+
+**Non-curable breaches.** A breach of Section 1 (Purpose), Section 6.5 (Export & Sanctions), Section 13 (Prohibited Uses), or Section 19.1 (Lawful Use Only) is treated as **not curable**, and ServaLabs may terminate immediately without a cure period. This is consistent with Section 6.5, which entitles ServaLabs to terminate immediately for an export or sanctions violation.
 
 ### 24.4 Effect of Termination
 
@@ -411,13 +468,13 @@ On termination: (a) the Customer's ownership of hardware is unaffected — Serva
 
 ## 25. Miscellaneous
 
-- **25.1 Entire Agreement.** This Agreement, with the applicable Order, the Privacy Policy (as to ServaLabs' handling of Customer business data), and any applicable open-source license, constitutes the entire agreement and supersedes prior understandings. Amendments must be in writing and signed by both Parties (or, for the Software, published as a new version that applies on the Customer's next download/update/use).
+- **25.1 Entire Agreement & Amendments.** This Agreement, with the applicable Order or Entitlement, the Privacy Policy (as to ServaLabs' handling of Customer business data), and any applicable open-source license, constitutes the entire agreement and supersedes prior understandings. Amendments must be in writing and signed by both Parties, except that for the Software ServaLabs may publish a new version of this Agreement. **Where a new version makes a change that is material and adverse to the Customer, ServaLabs will give at least thirty (30) days' notice under Section 23 before it takes effect, and the Customer may instead continue to use the version of the Software it then holds under the prior version of this Agreement.** Non-material changes, and changes required by law, take effect on the Customer's next download, update, or use. ServaLabs will maintain the revision history at the top of this document.
 - **25.2 Severability.** Invalid provisions are severed; the remainder stays in effect.
 - **25.3 Headings.** For convenience only.
 - **25.4 Assignment.** The Customer may not assign this Agreement without ServaLabs' prior written consent (not unreasonably withheld; see Section 15.8 for licence transfers). ServaLabs may assign this Agreement to an affiliate or in connection with a merger, acquisition, reorganization, or sale of substantially all of its assets, with notice to the Customer.
 - **25.5 Waiver.** No waiver is effective unless in writing.
 - **25.6 Order of Precedence.** For any open-source component, its open-source license governs that component's code; this Agreement otherwise governs the Product, the Software, Services, and the Customer's acceptable use.
-- **25.7 Survival.** Sections 3, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 22, 23, and 24.4 survive termination or expiration; confidentiality obligations survive indefinitely.
+- **25.7 Survival.** Sections 3, 4.4, 5.3, 8, 9, 10, 11, 12, 13, 14, 15, 16.2, 17, 18, 19, 20, 21, 22, 23, 24.4, and 25 survive termination or expiration; confidentiality obligations survive indefinitely.
 
 ## 26. Acceptance
 

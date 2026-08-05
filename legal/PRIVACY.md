@@ -1,6 +1,6 @@
 # ServaLabs Privacy Policy
 
-**Version 1.1 | Effective Date: 2026-07-02**
+**Version 1.2 | Effective Date: 2026-08-05**
 
 ServaLabs Private Limited (CIN: U74904GJ2026PTC171683, A-21 Shardul Co. Op. H. Soc. Ltd, Paldi, Ahmedabad – 380007, Gujarat, India — "ServaLabs", "we") builds zero-access infrastructure. The same principle applies to you as a customer: we collect the minimum we need to sell, deliver, and service your order — and nothing else.
 
@@ -19,6 +19,8 @@ That is the entire list. **We collect nothing from your server or software after
 If you enable online updates or licence validation in our software, those requests necessarily carry your IP address, like any internet request, and are served by our update infrastructure. Activating or refreshing a paid licence additionally sends your licence key, the application identifier and version, and a one-way hashed device identifier, which we retain solely to enforce the number of devices your licence covers. None of this includes any content from your device, and we do not profile or correlate it with your activity.
 
 **Managed-service consoles.** If you subscribe to a ServaLabs-hosted management console (for example, our DNS-filtering management console), we additionally hold what is needed to run your account: your login email and name, a hashed password, your service configuration, and audit and security logs of console actions. The filtering service itself is operated by its third-party provider under its own privacy policy; we display your service analytics in the console to provide the service but do not sell them or use them for advertising.
+
+**If you bought through a reseller.** Where you purchased from an authorized ServaLabs reseller, that reseller holds its own record of you as its customer, and **it — not ServaLabs — decides how it uses that record**. It is an independent business and its own privacy policy applies to it; ask the reseller for it. What ServaLabs holds in that case is limited to what it needs to honour your warranty, updates, and support: the Product serial number or licence key, the delivery date, and the contact details the reseller registered with us. Where you are outside India, your reseller is responsible for meeting the data-protection requirements of your country in respect of its own records.
 
 Our website can be browsed without an account and does not use advertising trackers or third-party analytics. Like all web servers, our hosting and update infrastructure may record standard technical logs (such as IP addresses) for security purposes.
 
