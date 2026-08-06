@@ -3,3 +3,4 @@ products/theron/Theron_Setting.mp4 filter=lfs diff=lfs merge=lfs -text
 products/theron/Theron_Signals.mp4 filter=lfs diff=lfs merge=lfs -text
 products/theron/theron_network.gif filter=lfs diff=lfs merge=lfs -text
 products/wincommander/Fleet/Fleet_overview.mp4 filter=lfs diff=lfs merge=lfs -text
+products/theron/latest.msi filter=lfs diff=lfs merge=lfs -text
