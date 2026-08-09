@@ -2,7 +2,7 @@
 
 **(End User License Agreement)**
 
-**Version 1.5 | Effective Date: 2026-08-05**
+**Version 1.6 | Effective Date: 2026-08-09**
 
 
 THIS AGREEMENT is made by and between:
@@ -339,9 +339,15 @@ The Software includes advanced features for data management and access control. 
 - **Intended Use:** to protect sensitive data against unauthorized access arising from **physical coercion, theft, kidnapping, or extortion**, and to reduce the risk of compelled disclosure of unrelated data sets to criminal actors. **These tools are not represented as a means to defeat a lawful order; refusing a lawful decryption or production order may itself be an offence (e.g., under Section 69 of the IT Act, 2000), and the Customer remains solely responsible for lawful compliance.**
 - **Legal Basis:** may assist the Customer in implementing reasonable security safeguards, subject to the Customer's own legal assessment.
 
-### 18.3 Disabled by Default; Activation Attestation
+### 18.3 Default State; Arming and Activation Attestation
 
-The features described in this Section 18 are supplied **disabled by default** and operate only if expressly activated by the Customer. By activating any such feature, the Customer represents and warrants, as of the moment of activation, that the data within its scope is not subject to any known legal hold, preservation order, court order, or active investigation, and reaffirms its obligations under Sections 1, 13, and 19.1. ServaLabs has no visibility into, and no ability to monitor or control, the activation or use of these features after handover.
+**(a) Destructive features are disabled by default.** The secure-erase and privacy-cleanup features in Section 18.1, the remote sanitization and lockdown features in Section 18.4, and the monitoring features in Section 18.5 are supplied **disabled by default** and operate only if expressly enabled by the Customer.
+
+**(b) Anti-coercion protection is enabled by default.** The access-segregation and duress-activated protections in Section 18.2 are supplied **enabled by default**, because their purpose is protective rather than destructive: they restrict access to data under coercion. Being enabled, however, they have no effect until the Customer **arms** them by configuring a duress credential, trigger, or protected partition. Arming is the Customer's act, not ServaLabs'.
+
+**(c) Attestation.** By enabling a feature under (a), or by arming a feature under (b), the Customer represents and warrants, as of that moment, that the data within the feature's scope is not subject to any known legal hold, preservation order, court order, or active investigation, and reaffirms its obligations under Sections 1, 13, and 19.1. The Customer shall not arm, configure, or trigger any Section 18 feature in respect of data it knows to be subject to any of those, and shall disarm or exclude such data from scope on becoming aware that it is.
+
+**(d) No ServaLabs visibility.** ServaLabs has no visibility into, and no ability to monitor or control, the default state as shipped, the arming, the configuration, or the use of these features after handover.
 
 ### 18.4 Fleet & Remote Administration Features
 
@@ -350,7 +356,7 @@ Certain Software includes Fleet Software: self-hosted management components thro
 - Fleet Software is installed and operated **entirely on the Customer's own infrastructure**; ServaLabs does not host, operate, relay, or have any access to it, and cannot see, trigger, veto, or reverse any fleet action;
 - every remote action is initiated by the Customer or its Authorized Users, and the Customer bears sole responsibility for each action, including erroneous, unauthorized, or malicious triggering from within its own organization;
 - the Customer shall enrol only devices that it **owns or is legally authorized to manage**, and, where enrolled devices are used by employees or other individuals, shall provide any notice and obtain any consent or authorization required by applicable law (including employment and data-protection law) before enrolment and before executing remote actions;
-- remote sanitization and lockdown actions are subject to all of Sections 12, 13, 18.1–18.3, and 19.1, including the prohibitions on spoliation of evidence and on acting against data subject to a known legal hold.
+- remote sanitization and lockdown actions are subject to all of Sections 12, 13, 18.1–18.3 (including the attestation in Section 18.3(c)), and 19.1, including the prohibitions on spoliation of evidence and on acting against data subject to a known legal hold.
 
 ### 18.5 Workforce Monitoring & Session-Assurance Features
 
