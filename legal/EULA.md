@@ -474,8 +474,8 @@ On termination: (a) the Customer's ownership of hardware is unaffected — Serva
 
 ---
 
-**ServaLabs Private Limited**
-CIN: U74904GJ2026PTC171683
-Registered Address: A-21 Shardul Co. Op. H. Soc. Ltd, Paldi, Ahmedabad – 380007, Gujarat, India
-Email: legal@servalabs.com · Phone: +91 9265769706
+**ServaLabs Private Limited**  
+CIN: U74904GJ2026PTC171683  
+Registered Address: A-21 Shardul Co. Op. H. Soc. Ltd, Paldi, Ahmedabad – 380007, Gujarat, India  
+Email: legal@servalabs.com · Phone: +91 9265769706  
 Authorized Signatory: Saumya Shah, Director
