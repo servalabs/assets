@@ -2,7 +2,7 @@
 
 **(End User License Agreement)**
 
-**Version 1.6 | Effective Date: 2026-08-09**
+**Version 1.7 | Effective Date: 2026-08-09**
 
 
 THIS AGREEMENT is made by and between:
@@ -105,7 +105,9 @@ ServaLabs shall deliver and install the Product at the Customer's site within In
 
 ### 6.3 Title & Risk Transfer
 
-Title and risk of loss shall transfer to the Customer upon delivery and completion of installation.
+**Direct sale.** Title and risk of loss shall transfer to the Customer upon delivery and completion of installation.
+
+**Reseller Sale.** This Section 6.3 does not apply. Title and risk pass under two separate contracts to which this Agreement is not a party: from ServaLabs to the reseller under ServaLabs' channel agreement with that reseller, and from the reseller to the Customer under the reseller's own terms of sale. Nothing in this Agreement determines when the Customer acquires title to, or bears risk in, a Product bought from a reseller. This Agreement governs the Software licence, acceptable use, and the ServaLabs warranty in Section 14.1 — not the commercial chain of title.
 
 ### 6.4 Customer Environment
 
@@ -456,7 +458,9 @@ ServaLabs may terminate this Agreement (including the licence granted in Section
 
 ### 24.4 Effect of Termination
 
-On termination: (a) the Customer's ownership of hardware is unaffected — ServaLabs has no technical means to, and will not, remotely disable, degrade, or access any Product or the Customer's data, and termination operates as a matter of contract only; (b) rights to future updates, support, and warranty service cease; (c) where ServaLabs terminates for the Customer's material breach, the licence to ServaLabs-proprietary Software components terminates and the Customer shall cease using them; (d) the Customer's rights under open-source licenses are unaffected (those rights are granted by the respective licensors, not by this Agreement); and (e) rights and obligations accrued before termination survive.
+On termination: (a) the Customer's ownership of hardware is unaffected — ServaLabs has no technical means to, and will not, remotely disable, degrade, or access any Product or the Customer's data, and termination operates as a matter of contract only; (b) rights to future updates and support cease; (c) where ServaLabs terminates for the Customer's material breach, the licence to ServaLabs-proprietary Software components terminates and the Customer shall cease using them; (d) the Customer's rights under open-source licenses are unaffected (those rights are granted by the respective licensors, not by this Agreement); and (e) rights and obligations accrued before termination survive.
+
+**The hardware warranty survives termination.** Notwithstanding (b), the limited hardware warranty in Section 14.1 continues for the unexpired remainder of its period in respect of **manufacturing defects** in hardware the Customer owns, and ServaLabs will continue to issue safety recalls and critical security advisories for that hardware. A breach of the Software licence, the acceptable-use provisions, or any other term of this Agreement does not extinguish the Customer's remedy for a physical defect in a product it has already bought and paid for. This does not revive any warranty already expired, and does not apply where the defect is itself caused by the conduct for which the Agreement was terminated.
 
 ## 25. Miscellaneous
 
