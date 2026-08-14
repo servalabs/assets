@@ -185,8 +185,10 @@
   transition: box-shadow 0.3s;
 }
 .rm-agency-btn img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.rm-agency-btn.sm { width: 56px; height: 56px; z-index: 10; }
-.rm-agency-btn.lg { width: 64px; height: 64px; z-index: 20; border-width: 4px; }
+/* A modest size lift keeps FBI, NASA, US Government, and CIA legible without
+   overpowering the orbiting technology nodes. */
+.rm-agency-btn.sm { width: 64px; height: 64px; z-index: 10; }
+.rm-agency-btn.lg { width: 72px; height: 72px; z-index: 20; border-width: 4px; }
 .is-embargo .rm-agency-btn {
   border-color: color-mix(in srgb, var(--rm-danger) 55%, transparent);
   box-shadow: 0 0 40px color-mix(in srgb, var(--rm-danger) 35%, transparent);
@@ -362,9 +364,11 @@
 .rm-sev--high { background: color-mix(in srgb, var(--rm-warning) 12%, transparent); color: var(--rm-warning); border-color: color-mix(in srgb, var(--rm-warning) 25%, transparent); }
 .rm-sev--unknown { background: var(--rm-fg); color: var(--rm-surface); border-color: var(--rm-fg); }
 .rm-event-title { font-size: 15px; font-weight: 600; color: var(--rm-fg); margin: 0 0 0.25rem; line-height: 1.25; }
-.rm-event-desc { font-size: 14px; color: var(--rm-muted); line-height: 1.55; margin: 0 0 0.5rem; }
-.rm-event-img { margin-bottom: 0.5rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--rm-border); background: rgba(0, 0, 0, 0.4); display: flex; justify-content: center; padding: 0.5rem 0; }
-.rm-event-img img { width: 100%; object-fit: contain; max-height: 220px; }
+.rm-event-desc { font-size: 14px; color: var(--rm-muted); line-height: 1.5; margin: 0; }
+.rm-event-more { appearance: none; border: 0; background: none; color: var(--rm-accent); cursor: pointer; font: inherit; font-size: 12px; font-weight: 700; margin-top: 0.35rem; padding: 0; text-decoration: underline; text-underline-offset: 3px; }
+.rm-event-more:hover { color: var(--rm-fg); }
+.rm-event-img { margin-bottom: 0.5rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--rm-border); background: rgba(0, 0, 0, 0.4); aspect-ratio: 16 / 9; }
+.rm-event-img img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .rm-sources { display: flex; flex-wrap: wrap; gap: 0.4rem; padding-top: 0.5rem; border-top: 1px solid var(--rm-border); }
 .rm-source { display: inline-flex; align-items: center; gap: 0.25rem; font-size: 11px; color: var(--rm-muted); text-decoration: none; padding: 2px 6px; border-radius: 6px; border: 1px solid var(--rm-border); transition: color 0.2s, border-color 0.2s; }
 .rm-source:hover { color: var(--rm-accent); border-color: color-mix(in srgb, var(--rm-accent) 40%, transparent); }
@@ -430,6 +434,7 @@
 .rm-you-btn:focus-visible,
 .rm-close:focus-visible,
 .rm-source:focus-visible,
+.rm-event-more:focus-visible,
 .rm-fp-close:focus-visible,
 .rm-fp-scan:focus-visible,
 .rm-fp-retry:focus-visible {

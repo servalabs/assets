@@ -8,6 +8,21 @@ import type { RiskMatrixProps } from "./types";
 import "./risk-matrix.css";
 
 const RADIUS = 174;
+const SIDEBAR_PREVIEW_LIMIT = 180;
+
+/**
+ * Keeps the timeline skimmable without changing the underlying, cited record.
+ * The full wording remains one click away for readers who need the context.
+ */
+function sidebarPreview(description: string) {
+  if (description.length <= SIDEBAR_PREVIEW_LIMIT) return description;
+
+  const sentenceEnd = description.slice(0, SIDEBAR_PREVIEW_LIMIT + 1).search(/[.!?](?:\s|$)/);
+  if (sentenceEnd >= 0) return description.slice(0, sentenceEnd + 1);
+
+  const lastSpace = description.lastIndexOf(" ", SIDEBAR_PREVIEW_LIMIT);
+  return `${description.slice(0, lastSpace > 0 ? lastSpace : SIDEBAR_PREVIEW_LIMIT)}…`;
+}
 
 /** Distribute orbit nodes across the top ~2/3, leaving a gap at the bottom so
  *  they never collide with the central cluster or the YOU node. Radius + arc
@@ -36,6 +51,7 @@ export default function RiskMatrix({
   const [selectedCompany, setSelectedCompany] = useState<string | null>(null);
   const [showFingerprint, setShowFingerprint] = useState(false);
   const [isEmbargo, setIsEmbargo] = useState(false);
+  const [expandedEvents, setExpandedEvents] = useState<Set<string>>(() => new Set());
   const reduce = useReducedMotion();
 
   const selectedData = selectedCompany ? SCANDALS[selectedCompany] : null;
@@ -47,6 +63,16 @@ export default function RiskMatrix({
   const handleCompanyClick = (key: string) => {
     setShowFingerprint(false);
     setSelectedCompany(key);
+    setExpandedEvents(new Set());
+  };
+
+  const toggleEventDescription = (eventKey: string) => {
+    setExpandedEvents((current) => {
+      const next = new Set(current);
+      if (next.has(eventKey)) next.delete(eventKey);
+      else next.add(eventKey);
+      return next;
+    });
   };
 
   const youPanelNode =
@@ -232,14 +258,30 @@ export default function RiskMatrix({
                     Lenis instance is present (e.g. the WinCommander desktop app). */}
                 <div className="rm-timeline" data-lenis-prevent>
                   <h4 className="rm-timeline-title">Compliance &amp; Risk History</h4>
-                  {selectedData.events.map((event, i) => (
-                    <div key={i} className="rm-event">
+                  {selectedData.events.map((event, i) => {
+                    const eventKey = `${selectedCompany ?? "entity"}-${i}`;
+                    const expanded = expandedEvents.has(eventKey);
+                    const preview = sidebarPreview(event.desc);
+                    const canExpand = preview !== event.desc;
+
+                    return (
+                    <div key={eventKey} className="rm-event">
                       <div className="rm-event-top">
                         <span className="rm-event-year">{event.year}</span>
                         <span className={`rm-sev rm-sev--${event.severity.toLowerCase()}`}>{event.severity}</span>
                       </div>
                       <h5 className="rm-event-title">{event.title}</h5>
-                      <p className="rm-event-desc">{event.desc}</p>
+                      <p className="rm-event-desc">{expanded ? event.desc : preview}</p>
+                      {canExpand && (
+                        <button
+                          type="button"
+                          className="rm-event-more"
+                          onClick={() => toggleEventDescription(eventKey)}
+                          aria-expanded={expanded}
+                        >
+                          {expanded ? "Show less" : "Read details"}
+                        </button>
+                      )}
                       {event.image && editorial[event.image] && (
                         <div className="rm-event-img">
                           <img src={editorial[event.image]} alt={event.title} draggable={false} />
@@ -255,7 +297,8 @@ export default function RiskMatrix({
                         </div>
                       )}
                     </div>
-                  ))}
+                    );
+                  })}
                 </div>
 
                 <div className="rm-panel-foot">
