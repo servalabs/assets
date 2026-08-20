@@ -10,3 +10,5 @@
 - 2026-08-17 — The compressed-media rollout copied `compressed/` over the live originals for apps, editorial, entities, news, private-phone, private-server, theron, and most software, but left Fleet stills, several WinCommander stills, and `softwares/dotnet.svg` on the uncompressed originals. Consumers that import the live path (not `compressed/`) kept serving the large files. Copy the remaining same-basename compressed files over the originals whenever a folder is compressed.
 
 - 2026-08-20 — The self-hosted Inter, Outfit, and Playfair Display variable fonts currently contain the Latin subset only. English pages render without an external font request, but future Cyrillic, Greek, Vietnamese, or broader multilingual copy will fall back to system fonts until the corresponding reviewed WOFF2 subsets are added.
+
+- 2026-08-20 — `products/wincommander/Fleet/Fleet_overview-web.mp4` is the reviewed 1280-pixel web derivative used by the public site. Keep the 27.8 MB original as the archival master, and point browser consumers at the derivative so a below-the-fold visual does not carry production-master weight.
