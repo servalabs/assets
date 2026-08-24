@@ -2,7 +2,7 @@
 
 **Version 1.3 | Effective Date: 2026-08-05**
 
-ServaLabs Private Limited (CIN: U74904GJ2026PTC171683, A-21 Shardul Co. Op. H. Soc. Ltd, Paldi, Ahmedabad – 380007, Gujarat, India — "ServaLabs", "we") builds zero-access infrastructure. The same principle applies to you as a customer: we collect the minimum we need to sell, deliver, and service your order — and nothing else.
+SERVALABS PRIVATE LIMITED (CIN: U74904GJ2026PTC171683, A-21 Shardul Co. Op. H. Soc. Ltd, Paldi, Ahmedabad – 380007, Gujarat, India — "ServaLabs", "we") builds zero-access infrastructure. The same principle applies to you as a customer: we collect the minimum we need to sell, deliver, and service your order — and nothing else.
 
 ## 1. The complete list of what we collect
 

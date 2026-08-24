@@ -43,8 +43,10 @@ grant permission to reuse them outside the documented product or editorial
 context. Review and remove any asset without a public redistribution right
 before adding it to this repository.
 
-The `legal/` documents are the public legal-document source used by the
-website and WinCommander; they are not a replacement for legal advice.
+The canonical public legal sources are `legal/EULA.md` and `legal/PRIVACY.md`.
+Their generated Word copies are `legal/EULA.docx` and `legal/PRIVACY.docx`.
+The website and WinCommander render the Markdown sources; the DOCX files are
+portable copies for distribution and review, not independent sources.
 
 ## Development
 
