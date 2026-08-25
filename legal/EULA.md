@@ -2,7 +2,7 @@
 
 **(End User License Agreement)**
 
-**Version 1.7 | Effective Date: 2026-08-09**
+**Version 1.8 | Effective Date: 2026-08-25**
 
 
 THIS AGREEMENT is made by and between:
