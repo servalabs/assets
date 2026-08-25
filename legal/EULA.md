@@ -2,7 +2,7 @@
 
 **(End User License Agreement)**
 
-**Version 1.8 | Effective Date: 2026-08-25**
+**Version 1.9 | Effective Date: 2026-08-25**
 
 
 THIS AGREEMENT is made by and between:
@@ -408,7 +408,7 @@ The Customer shall defend, indemnify, and hold harmless ServaLabs and its office
 
 ## 20. Limitation of Liability
 
-**To the maximum extent permitted by law, ServaLabs' total aggregate liability arising out of or related to this Agreement — whether in contract, tort, negligence, strict liability, or otherwise — shall not exceed the greatest of: (a) the total amount paid by the Customer to ServaLabs in the twelve (12) months preceding the event giving rise to liability; (b) the price paid for the Product or Software licence giving rise to the claim, whether paid to ServaLabs or, in a Reseller Sale, to the reseller; or (c) INR 1,000.** In no event shall ServaLabs be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, including lost profits or revenue, data loss, business interruption, reputational harm, regulatory fines, legal/investigation costs, third-party claims, or opportunity costs, even if advised of the possibility. These limitations are a fundamental basis of the bargain and apply even if a limited remedy fails of its essential purpose.
+**To the maximum extent permitted by law, ServaLabs' total aggregate liability arising out of or related to this Agreement — whether in contract, tort, negligence, strict liability, or otherwise — shall not exceed the greatest of: (a) the total amount paid by the Customer to ServaLabs in the twelve (12) months preceding the event giving rise to liability; (b) the price paid for the Product or Software licence giving rise to the claim, whether paid to ServaLabs or, in a Reseller Sale, to the reseller; or (c) INR 20,000.** In no event shall ServaLabs be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, including lost profits or revenue, data loss, business interruption, reputational harm, regulatory fines, legal/investigation costs, third-party claims, or opportunity costs, even if advised of the possibility. These limitations are a fundamental basis of the bargain and apply even if a limited remedy fails of its essential purpose.
 
 Nothing in this Agreement excludes or limits either Party's liability for fraud or fraudulent misrepresentation, for death or personal injury caused by its negligence, or for any other liability that cannot be excluded or limited under applicable law. Each limitation and exclusion in this Agreement applies severally and survives independently if any other is held unenforceable.
 
