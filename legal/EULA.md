@@ -2,7 +2,7 @@
 
 **(End User License Agreement)**
 
-**Version 1.9 | Effective Date: 2026-08-25**
+**Version 1.10 | Effective Date: 2026-08-29**
 
 
 THIS AGREEMENT is made by and between:
@@ -261,7 +261,7 @@ ServaLabs represents that, as of the date of delivery, ServaLabs-provided softwa
 
 ### 15.7 Use Restrictions (Proprietary Components Only)
 
-For ServaLabs-proprietary components (including WinCommander Pro): the Customer shall not resell, sublicense, or provide them as a multi-tenant service; shall not reverse engineer, decompile, or disassemble them except where expressly permitted by applicable law or an applicable open-source license; and shall maintain the confidentiality of proprietary configurations, scripts, and processes. *(These restrictions do not apply to open-source components, which are governed by their own licenses.)*
+For ServaLabs-proprietary components (including WinCommander Pro): the Customer shall not resell, sublicense, or provide them as a multi-tenant service; shall not reverse engineer, decompile, disassemble, or derive their underlying structure for publication, replication, circumvention, or competitive use; shall not circumvent or strip a licence, entitlement, or technical protection measure; shall not copy, distribute, or publicly disclose proprietary source, object, configurations, credentials, keys, or signing material except as this Agreement permits; and shall maintain the confidentiality of proprietary configurations, scripts, and processes. *(These restrictions do not apply to open-source components, which are governed by their own licenses.)*
 
 ### 15.8 Transfer of Licence & Warranty; Hardware Resale
 
@@ -392,7 +392,7 @@ The Customer shall NOT request, encourage, or solicit ServaLabs or its employees
 
 ### 19.5 Prohibition on Reverse Engineering (Proprietary Components)
 
-For ServaLabs-proprietary components, the Customer shall not reverse engineer, decompile, disassemble, or derive the underlying structure for publication, replication, or competitive use, except where expressly permitted by applicable law **or an applicable open-source license**.
+For ServaLabs-proprietary components, the Customer shall not reverse engineer, decompile, disassemble, or derive the underlying structure for publication, replication, circumvention, or competitive use; shall not circumvent or strip a licence, entitlement, or technical protection measure; and shall not copy, distribute, or publicly disclose proprietary source, object, configurations, credentials, keys, or signing material. These restrictions do not apply where expressly permitted by applicable law or an applicable open-source license, or to conduct this Agreement expressly authorises.
 
 ### 19.6 Disclaimer: No Aiding and Abetting
 
@@ -405,6 +405,14 @@ ServaLabs will comply with lawful obligations applicable to it under Indian law 
 ### 19.8 Indemnification
 
 The Customer shall defend, indemnify, and hold harmless ServaLabs and its officers, directors, employees, agents, and affiliates from any claims, liabilities, damages, losses, costs, and fees (including reasonable attorneys' fees) arising out of or relating to: the Customer's violation of this Agreement; the Customer's use, misuse, configuration, or deployment of the Product/Software (including use of any secure-erase, data-sanitization, access-control, fleet/remote-administration, or monitoring features and any configuration choices, and any claim by an Authorized User or monitored individual); any allegation that ServaLabs aided, abetted, conspired in, facilitated, or had knowledge of unlawful activity by the Customer (including spoliation of evidence, obstruction of justice, tax evasion, money laundering, IP infringement, or any criminal activity); the Customer's misrepresentations; IP-infringement claims arising from the Customer's data or use; export violations; third-party licence violations; data breaches except to the extent solely caused by ServaLabs' gross negligence or willful misconduct; and any regulatory or law-enforcement action related to the Customer's use. This obligation survives termination indefinitely.
+
+### 19.9 Stipulated Compensation for Confidentiality and Proprietary-Software Breach
+
+The Parties agree that loss caused by the Customer's breach of Sections 3, 15.3, 15.7, 19.3, or 19.5 — including reverse engineering, decompilation, disassembly, derivation of structure, circumvention or stripping of a licence, entitlement, or technical protection measure, unauthorised copying, distribution, or public disclosure of proprietary source, object, configurations, credentials, keys, or signing material, or use of Confidential Information or those acts to clone, publish, or compete — is real but difficult to quantify precisely. As their genuine pre-estimate, compensation payable by the Customer to ServaLabs for such a breach shall be assessed within a range of INR 25,00,000 (Indian Rupees twenty-five lakh) to INR 2,00,00,000 (Indian Rupees two crore), having regard to the sensitivity and commercial value of the material, the extent and permanence of the disclosure or copying, whether the conduct was deliberate or reckless, competitive and regulatory harm, remediation cost, and any benefit obtained by the Customer. ServaLabs need not prove the precise quantum of loss within that range. Consistent with section 74 of the Indian Contract Act, 1872, the upper figure is a ceiling on reasonable compensation rather than an automatic debt, penalty, or fine; breach and causation must still be established, and an adjudicator may award less where the range is shown to exceed reasonable compensation. This Section does not apply to an open-source component to the extent the applicable licence permits the conduct, to the Free tier insofar as it consists of open-source components, to conduct required or permitted by non-waivable law, or where the Customer is a consumer under the Consumer Protection Act, 2019 or other mandatory law that does not permit such a stipulation. It is outside the limitation in Section 20, does not limit ServaLabs' other rights, and is in addition to (not a substitute for) any right under the Copyright Act, 1957, the Information Technology Act, 2000, or other applicable law. No double recovery is permitted for the same loss.
+
+### 19.10 Equitable Relief
+
+ServaLabs may seek proportionate interim or other equitable relief from the courts at Ahmedabad, Gujarat, for actual or threatened misuse of Confidential Information, proprietary software, or technical protection measures, without waiving arbitration. Relief must not restrict rights granted directly by an applicable open-source licence, a protected disclosure, or a non-waivable statutory right.
 
 ## 20. Limitation of Liability
 
@@ -424,7 +432,7 @@ Any dispute arising out of or relating to this Agreement shall be settled by bin
 
 ### 22.2 Sole Arbitrator
 
-The arbitration shall be conducted by a sole arbitrator mutually agreed by the Parties within 30 days. Failing agreement, the appointment shall be made on the application of either Party by the **Gujarat International Maritime Arbitration Centre, GIFT City, Gandhinagar**, or, if it is unable or unwilling to act, under **Section 11 of the Arbitration and Conciliation Act, 1996 by the High Court of Gujarat**. Neither Party may appoint the arbitrator unilaterally. Naming an appointing authority does not change the seat, the venue, or the governing law. Where the total of all claims and counterclaims does not exceed INR 50,00,000, either Party may elect the fast-track procedure under Section 29B of that Act.
+The arbitration shall be conducted by a sole arbitrator mutually agreed by the Parties within 30 days. Failing agreement, the appointment shall be made on the application of either Party by the **Gujarat International Maritime Arbitration Centre, GIFT City, Gandhinagar**, or, if it is unable or unwilling to act, under **Section 11 of the Arbitration and Conciliation Act, 1996 by the High Court of Gujarat**. Neither Party may appoint the arbitrator unilaterally. Naming an appointing authority does not change the seat, the venue, or the governing law. Fast-track procedure under Section 29B of that Act applies only by mutual written agreement after the dispute arises.
 
 ### 22.3 Language
 
@@ -432,7 +440,7 @@ The language of the arbitration shall be English.
 
 ### 22.4 Interim Relief
 
-The courts at Ahmedabad, Gujarat, shall have exclusive jurisdiction for interim relief and enforcement of arbitral awards.
+The courts at Ahmedabad, Gujarat, shall have exclusive jurisdiction for interim relief — including for actual or threatened misuse of Confidential Information, proprietary software, or technical protection measures — and for enforcement of arbitral awards.
 
 ## 23. Notices
 
@@ -454,7 +462,7 @@ The Customer may terminate this Agreement at any time by ceasing all use of the 
 
 ServaLabs may terminate this Agreement (including the licence granted in Section 15.2) with immediate effect by written notice if the Customer materially breaches this Agreement and, where the breach is curable, fails to cure within fifteen (15) days of notice.
 
-**Non-curable breaches.** A breach of Section 1 (Purpose), Section 6.5 (Export & Sanctions), Section 13 (Prohibited Uses), or Section 19.1 (Lawful Use Only) is treated as **not curable**, and ServaLabs may terminate immediately without a cure period. This is consistent with Section 6.5, which entitles ServaLabs to terminate immediately for an export or sanctions violation.
+**Non-curable breaches.** A breach of Section 1 (Purpose), Section 6.5 (Export & Sanctions), Section 13 (Prohibited Uses), Section 15.3 (entitlement circumvention), Section 15.7 (proprietary-component restrictions), Section 19.1 (Lawful Use Only), or Section 19.5 (reverse engineering and related proprietary-software restrictions) is treated as **not curable**, and ServaLabs may terminate immediately without a cure period. This is consistent with Section 6.5, which entitles ServaLabs to terminate immediately for an export or sanctions violation.
 
 ### 24.4 Effect of Termination
 
