@@ -1,69 +1,123 @@
 # ServaLabs Privacy Policy
 
-**Version 1.3 | Effective Date: 2026-08-05**
+**Version 1.4 | Effective Date: 2026-09-02**
 
-SERVALABS PRIVATE LIMITED (CIN: U74904GJ2026PTC171683, A-21 Shardul Co. Op. H. Soc. Ltd, Paldi, Ahmedabad – 380007, Gujarat, India — "ServaLabs", "we") builds zero-access infrastructure. The same principle applies to you as a customer: we collect the minimum we need to sell, deliver, and service your order — and nothing else.
+**Document ID: SL-PUBLIC-PRIVACY-1.4**
 
-## 1. The complete list of what we collect
+**Revision history**
 
-When you place an order or request support, we collect:
+| Version | Effective date | Summary |
+|---|---|---|
+| 1.4 | 2026-09-02 | Added complete commerce, acceptance, trial, licensing, update, lease, hosted-service, provider, location, and retention disclosures. |
+| 1.3 | 2026-08-05 | Consolidated customer, reseller, hosted-console, and security-log disclosures. |
 
-- Your name (or company name and contact person);
-- Billing address and delivery address;
-- Contact number and email address;
-- Order, invoice, and payment records (including GST particulars where applicable);
-- Warranty and support correspondence you send us.
+SERVALABS PRIVATE LIMITED (CIN: U74904GJ2026PTC171683, A-21 Shardul Co. Op. H. Soc. Ltd, Paldi, Ahmedabad - 380007, Gujarat, India - "ServaLabs", "we") collects the minimum information needed to sell, deliver, secure, and support its products and services. This policy lists the categories used by our current public commerce, licensing, update, and hosted-service systems. It does not describe data that a customer stores only on its own device or self-hosted deployment and never sends to us.
 
-That is the entire list. **We collect nothing from your server or software after handover** — no telemetry, no usage analytics, no activity logs, and no access to your data. By technical design, we cannot (see Section 8 of our End User License Agreement).
+## 1. What we collect
 
-If you enable online updates or licence validation in our software, those requests necessarily carry your IP address, like any internet request, and are served by our update infrastructure. Activating or refreshing a paid licence additionally sends your licence key, the application identifier and version, and a one-way hashed device identifier, which we retain solely to enforce the number of devices your licence covers. None of this includes any content from your device, and we do not profile or correlate it with your activity.
+### 1.1 Contact, order, and support records
 
-**Managed-service consoles.** If you subscribe to a ServaLabs-hosted management console (for example, our DNS-filtering management console), we additionally hold what is needed to run your account: your login email and name, a hashed password, your service configuration, and audit and security logs of console actions. The filtering service itself is operated by its third-party provider under its own privacy policy; we display your service analytics in the console to provide the service but do not sell them or use them for advertising.
+When you buy, register, request support, or make a warranty claim, we may collect:
 
-**Self-hosted Fleet deployments.** WinCommander's fleet-management server is ordinarily run by the deploying organization (typically your employer) on its own infrastructure, not by ServaLabs. Where that is the case, ServaLabs has no access to and does not process any of the device, user, or activity data held in that deployment — the hosting organization is the Data Fiduciary for it, and its own privacy policy and internal IT rules apply to its own employees and devices, not this one.
+- your name, organization, job title, email address, telephone number, billing and delivery addresses, and tax particulars;
+- the product, SKU, quoted price, currency, device or seat quantity, billing term, order, invoice, payment-provider identifiers and status, subscription status, and refund or dispute status;
+- messages, evidence, and files you choose to send for support, warranty, security, or legal requests; and
+- for a reseller sale, the non-secret product, entitlement, delivery, expiry, and customer-contact records needed to honour warranty, updates, recalls, and support.
 
-**If you bought through a reseller.** Where you purchased from an authorized ServaLabs reseller, that reseller holds its own record of you as its customer, and **it — not ServaLabs — decides how it uses that record**. It is an independent business and its own privacy policy applies to it; ask the reseller for it. What ServaLabs holds in that case is limited to what it needs to honour your warranty, updates, and support: the Product serial number or licence key, the delivery date, and the contact details the reseller registered with us. Where you are outside India, your reseller is responsible for meeting the data-protection requirements of your country in respect of its own records.
+We do not receive full payment-card, bank-account, or UPI credentials. The payment provider collects those directly.
 
-Our website can be browsed without an account and does not use advertising trackers or third-party analytics.
+### 1.2 Checkout acceptance and compliance records
 
-**Security logging.** Our website, update, and licence-validation servers record the IP address of every request, as any internet-facing server does. We keep this log for up to 180 days solely to detect and block DDoS attacks, credential-stuffing, and similar abuse, and to investigate an incident if one occurs. We do not use it to profile visitors, and it is not linked to your account or order records except when an abusive request is traced back to a specific licence key or account as part of that investigation.
+Before direct online payment, we collect the accepted product and offer snapshot; EULA and Privacy Policy titles, versions, effective dates, and SHA-256 hashes; acceptance time; buyer type; customer or organization name; country; job title where applicable; stated end use for screened offers; authority, sanctions, export, restricted-party, and immediate-digital-delivery attestations; application version; browser user-agent hash; and the checkout IP address in encrypted and hashed form. We use this record to prove what was offered and accepted, prevent unauthorised or prohibited sales, handle disputes, and meet legal obligations.
 
-## 2. Why we collect it
+### 1.3 Trial, licence, update, and lease records
 
-We use this information solely to: process and deliver your order; install and hand over your Product; provide warranty, repair, and support services you request; issue invoices and maintain accounts; comply with Indian tax, accounting, and corporate law; and protect our servers from DDoS and similar attacks (IP address logs only).
+Depending on the action you initiate, our Software may send:
 
-We do not use it for advertising. We do not sell it. We share it only with: (a) delivery and logistics partners (name, delivery address, contact number — only as needed to deliver); (b) payment providers and banks, to process the payment you initiate; (c) our accountants and statutory auditors; and (d) government authorities where the law requires.
+- **Trial:** application identifier and a one-way hashed device identifier. The hash prevents the same device from repeatedly claiming a one-time Trial. It is not used to identify files or activity on the device.
+- **Activation and refresh:** licence key or entitlement reference, application/product and version, one-way hashed device identifier, seat/allocation state, and the request IP address. The IP address is stored in encrypted and hashed form against the licence for security, fraud investigation, and entitlement administration.
+- **Catalogue, checkout, recovery, and update:** product/application and version, requested SKU or update channel, purchase-recovery state, and ordinary network information such as IP address and request time.
+- **Fleet or Theron lease:** subscription or purchase reference, customer-provided organization identifier, product, seat or instance quantity, lease sequence, status, and issue/expiry times. We do not receive Fleet commands, device telemetry, workforce activity, files, window titles, URLs, or other content held in a self-hosted deployment.
 
-## 3. Legal basis
+### 1.4 Hosted-service and website records
 
-We process this information on the basis of your consent and the legitimate uses recognized under the Digital Personal Data Protection Act, 2023 (information you voluntarily provide for the specified purpose of your purchase), to comply with our legal obligations, and — for IP address security logs only — our legitimate interest in keeping our infrastructure available and secure.
+If you use a ServaLabs-hosted console or term service, we hold the account, authentication, configuration, administration, audit, anti-abuse, subscription, and service records needed to operate it. The applicable service or Data Processing Addendum describes any personal data we process on a customer's documented instructions.
 
-## 4. How long we keep it
+Our public website does not use advertising trackers or third-party behavioural analytics. Direct checkout uses Cloudflare Turnstile for bot and abuse prevention. Turnstile receives ordinary request and browser integrity information under Cloudflare's privacy terms.
 
-Order, invoice, and tax records are kept as long as Indian tax and company law require (generally eight years). Support correspondence is kept for up to three (3) years after the last interaction. Security logs (IP addresses) are kept for up to one hundred eighty (180) days, or longer only for the specific logs needed to investigate an identified incident. After these periods, records are deleted or anonymized.
+### 1.5 What self-hosted products do not send us
 
-## 5. Your rights
+ServaLabs does not collect Customer files, commands, browsing content, window titles, workforce activity, passwords, encryption keys, or recovery secrets from Customer-controlled devices or self-hosted Fleet deployments. Optional third-party services selected by a Customer process data under their own terms and privacy policies.
 
-Under the DPDP Act you may: request a summary of the personal data we hold about you; correct or update it; request erasure (subject to legal retention requirements); nominate a person to exercise your rights on your behalf; and, if we fail to respond, complain to the Data Protection Board of India.
+## 2. Why we use this information
 
-To exercise any of these rights, email **legal@servalabs.com**. We may ask you to verify your identity before acting on a request. We respond within the timelines prescribed under the DPDP Act and its Rules.
+We use these records only to:
 
-## 5A. If something goes wrong
+- quote, process, deliver, renew, cancel, refund, reconcile, and account for an order or Subscription;
+- record assent, confirm purchasing authority, and conduct proportionate sanctions, export, territory, end-use, fraud, and abuse checks;
+- issue, validate, recover, transfer, and enforce Trials, licences, seats, updates, service entitlements, and signed leases;
+- operate a hosted service, provide support and warranty service, and send transaction, renewal, security, recall, and legal notices;
+- protect our systems against attacks, credential abuse, duplicate Trials, payment fraud, and entitlement circumvention; and
+- comply with tax, accounting, corporate, consumer, export, sanctions, court, regulatory, and law-enforcement obligations.
 
-In the unlikely event of a personal-data breach affecting your information, we will notify the Data Protection Board of India and each affected person in the form and within the timelines prescribed under the DPDP Act and its Rules.
+We do not sell personal data or use it for targeted advertising or Customer-activity profiling.
 
-## 6. Grievance contact
+## 3. Legal basis and customer roles
 
-Grievance Officer: Saumya Shah · legal@servalabs.com · +91 9265769706 · A-21 Shardul Co. Op. H. Soc. Ltd, Paldi, Ahmedabad – 380007, Gujarat, India.
+We process information you provide to take steps at your request, perform a contract, comply with law, protect our systems and legal rights, prevent fraud and abuse, and obtain consent where consent is the required basis. ServaLabs is the Data Fiduciary or controller for its own commerce, licensing, security, support, and hosted-account records. If ServaLabs processes personal data on a business customer's documented instructions, the parties' Data Processing Addendum governs that processing. A customer operating self-hosted Fleet Software is responsible for its own workforce and device data.
 
-## 7. Where your data is stored
+## 4. Who receives it
 
-Business records are stored on ServaLabs' own infrastructure in India. Email correspondence is processed by our privacy-focused email provider and may be stored on secure servers outside India; we do not transfer personal data to any country restricted by the Central Government under the DPDP Act.
+We disclose only what is necessary to:
 
-## 8. Children
+- Razorpay or another identified payment provider, to create and administer the payment or Subscription;
+- Cloudflare, which provides the Worker, D1 database, network, security, and Turnstile infrastructure used by checkout and licensing;
+- Resend or another identified transactional-email provider, to send purchase, licence, renewal, and service messages;
+- delivery, logistics, banking, accounting, audit, support, or infrastructure providers acting for the relevant purpose;
+- a reseller involved in your transaction, limited to the records needed for that sale and support; and
+- courts, regulators, law-enforcement bodies, or other persons where disclosure is legally required or necessary to establish, exercise, or defend legal rights.
 
-Our products and website are intended for businesses and adults. We do not knowingly collect personal data of children.
+These providers may generate their own security, fraud, and transaction records as independent controllers under their published terms.
 
-## 9. Changes
+## 5. How long we keep it
 
-Any revised version will be posted at this address with a new effective date. Material changes will be notified to active customers by email.
+- **Orders, invoices, payments, tax, refunds, and disputes:** for the period required by applicable tax, accounting, company, consumer, and limitation law, ordinarily up to eight (8) years after the relevant transaction or closure.
+- **Checkout acceptance and compliance records:** while the relevant licence, Subscription, or claim can be exercised and for seven (7) years afterwards, or longer during a legal hold, investigation, chargeback, or unresolved dispute.
+- **Licence, entitlement, activation, device-allocation, Subscription, and lease records:** while needed to operate or prove the entitlement and for up to seven (7) years afterwards. A record supporting a perpetual licence may therefore remain for the life of that licence.
+- **Activation and refresh IP records linked to a licence:** a rolling maximum of one hundred eighty (180) days from the most recent matching activation or refresh, except a specific record isolated for an identified security, fraud, dispute, or legal investigation may be retained until that matter closes.
+- **One-time Trial device hashes:** seven (7) years from Trial issue, after which the device may become eligible for a new Trial unless another anti-abuse rule then applies.
+- **General security and request logs:** up to one hundred eighty (180) days, except records isolated for an identified incident may be retained until the incident and related legal period close.
+- **Support correspondence:** up to three (3) years after the last interaction, unless linked to a longer-lived warranty, security incident, claim, or legal hold.
+- **Hosted-service content and configuration:** for the service term, any stated export window, and the deletion period in the applicable service terms or DPA; limited backups may persist until their normal protected rotation completes.
+
+After the applicable period, we delete or irreversibly anonymize the record where technically and legally permitted.
+
+## 6. Security
+
+We use access controls, encryption in transit, encryption or cryptographic hashing for sensitive commerce and licensing fields, signed entitlements, rate limits, anti-replay controls, and audit records. No system is completely secure. Do not send Customer content, passwords, encryption keys, or recovery secrets in a support request unless we expressly provide an approved secure method for that purpose.
+
+## 7. Storage location and international processing
+
+Our providers operate global networks and may process or store records in India and other countries. Cloudflare D1 data-location configuration is a placement hint, not a guarantee that every copy, log, backup, or processing operation remains in one country. Email, payment, security, and support providers may also process data outside India. We use contractual and technical safeguards appropriate to the service and do not transfer personal data to a country or territory prohibited by applicable law.
+
+## 8. Your choices and rights
+
+You may ask us for a summary of personal data we hold about you, correction, updating, or erasure; withdraw consent where consent is the basis; nominate another person where applicable; and use the applicable grievance or complaint process. Rights may be limited by identity verification, another person's rights, a live entitlement, security and fraud controls, legal retention, or an unresolved claim. You can disable optional update checks in the Software, cancel a Subscription through the purchase-recovery channel or by contacting us, and decline an optional hosted service. Disabling a required licence or lease refresh may prevent new activations, paid updates, or term services as described in the EULA.
+
+To exercise a right, email **legal@servalabs.com**. We will verify the request and respond within the period required by applicable law.
+
+## 9. Personal-data breaches
+
+If a personal-data breach triggers a legal notification duty, we will notify the competent authority and affected individuals in the form and time required by applicable law.
+
+## 10. Children
+
+Our products, Trials, and checkout are intended for adults and organizations. We do not knowingly collect personal data from a child. A parent or guardian who believes a child supplied information should contact us.
+
+## 11. Grievance contact
+
+Grievance Officer: Saumya Shah - legal@servalabs.com - +91 9265769706 - A-21 Shardul Co. Op. H. Soc. Ltd, Paldi, Ahmedabad - 380007, Gujarat, India.
+
+## 12. Changes
+
+We will publish a revised version with a new effective date and revision-history entry. We will give active customers reasonable notice of a material change where we hold a current contact address and the law or our contract requires notice. A later policy does not retrospectively change the EULA or Checkout Terms accepted for an earlier transaction.
