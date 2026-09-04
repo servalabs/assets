@@ -2,14 +2,15 @@
 
 **(End User License Agreement)**
 
-**Version 1.12 | Effective Date: 2026-09-02**
+**Version 1.13 | Effective Date: 2026-09-04**
 
-**Document ID: SL-PUBLIC-EULA-1.12**
+**Document ID: SL-PUBLIC-EULA-1.13**
 
 **Revision history**
 
 | Version | Effective date | Summary |
 |---|---|---|
+| 1.13 | 2026-09-04 | Distinguished direct B2B and B2C hardware payment milestones: 50% advance / 50% before dispatch for B2B, and 60% advance / 40% on delivery for B2C; aligned the authorised-signatory title. |
 | 1.12 | 2026-09-02 | Aligned licence, trial, checkout, subscription, hosted-service, update, and privacy terms with the operating services; corrected amendment, termination, installation, warranty-clock, and arbitration provisions. |
 | 1.11 | 2026-08-29 | Consolidated hardware, software, channel-sale, and protected-technology terms. |
 
@@ -100,7 +101,11 @@ Price shall be as specified in the Order or at the point of sale, plus applicabl
 
 ### 5.2 Payment Terms
 
-For a negotiated hardware or services Order, unless that Order states otherwise, 50% is due on Order confirmation and 50% on the installation or handover milestone expressly included in that Order. Direct online Software purchases are charged as shown in the Checkout Terms. A Subscription renews and is charged for each disclosed billing period until cancelled; cancellation takes effect at the end of the then-current paid period unless mandatory law or the Checkout Terms require otherwise.
+**Direct B2B hardware Orders.** Unless the Order states otherwise, 50% is due in advance on Order confirmation and the remaining 50% is due before dispatch.
+
+**Direct B2C hardware Orders.** Unless the Order or mandatory consumer law states otherwise, 60% is due in advance on Order confirmation and the remaining 40% is due on delivery to the Customer.
+
+In a Reseller Sale, payment between ServaLabs and the reseller is governed by their channel agreement, and payment between the reseller and the end customer is governed by their separate order or terms of sale. Services, software-only purchases and direct online Software purchases are charged as stated in the applicable Order or Checkout Terms. A Subscription renews and is charged for each disclosed billing period until cancelled; cancellation takes effect at the end of the then-current paid period unless mandatory law or the Checkout Terms require otherwise.
 
 ### 5.3 Non-Refundability
 
@@ -527,4 +532,4 @@ Registered Address: A-21 Shardul Co. Op. H. Soc. Ltd, Paldi, Ahmedabad – 38000
 
 Email: legal@servalabs.com · Phone: +91 9265769706
 
-Authorized Signatory: Saumya Shah, Director
+Authorized Signatory: Saumya Shah, Founder & Director
