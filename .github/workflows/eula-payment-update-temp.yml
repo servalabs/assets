@@ -1,0 +1,58 @@
+name: Temporary EULA payment update
+
+on:
+  push:
+    branches:
+      - legal/eula-b2b-b2c-payment-2026-09-04
+
+permissions:
+  contents: write
+
+jobs:
+  update-eula:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: legal/eula-b2b-b2c-payment-2026-09-04
+          fetch-depth: 0
+      - name: Apply and verify EULA update
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib
+
+          path = Path('legal/EULA.md')
+          text = path.read_text(encoding='utf-8')
+
+          replacements = {
+              '**Version 1.12 | Effective Date: 2026-09-02**': '**Version 1.13 | Effective Date: 2026-09-04**',
+              '**Document ID: SL-PUBLIC-EULA-1.12**': '**Document ID: SL-PUBLIC-EULA-1.13**',
+              '| 1.12 | 2026-09-02 | Aligned licence, trial, checkout, subscription, hosted-service, update, and privacy terms with the operating services; corrected amendment, termination, installation, warranty-clock, and arbitration provisions. |': '| 1.13 | 2026-09-04 | Distinguished direct B2B and B2C hardware payment milestones: 50% advance / 50% before dispatch for B2B, and 60% advance / 40% on delivery for B2C; aligned the authorised-signatory title. |\n| 1.12 | 2026-09-02 | Aligned licence, trial, checkout, subscription, hosted-service, update, and privacy terms with the operating services; corrected amendment, termination, installation, warranty-clock, and arbitration provisions. |',
+              'For a negotiated hardware or services Order, unless that Order states otherwise, 50% is due on Order confirmation and 50% on the installation or handover milestone expressly included in that Order. Direct online Software purchases are charged as shown in the Checkout Terms. A Subscription renews and is charged for each disclosed billing period until cancelled; cancellation takes effect at the end of the then-current paid period unless mandatory law or the Checkout Terms require otherwise.': '**Direct B2B hardware Orders.** Unless the Order states otherwise, 50% is due in advance on Order confirmation and the remaining 50% is due before dispatch.\n\n**Direct B2C hardware Orders.** Unless the Order or mandatory consumer law states otherwise, 60% is due in advance on Order confirmation and the remaining 40% is due on delivery to the Customer.\n\nIn a Reseller Sale, payment between ServaLabs and the reseller is governed by their channel agreement, and payment between the reseller and the end customer is governed by their separate order or terms of sale. Services, software-only purchases and direct online Software purchases are charged as stated in the applicable Order or Checkout Terms. A Subscription renews and is charged for each disclosed billing period until cancelled; cancellation takes effect at the end of the then-current paid period unless mandatory law or the Checkout Terms require otherwise.',
+              'Authorized Signatory: Saumya Shah, Director': 'Authorized Signatory: Saumya Shah, Founder & Director',
+          }
+
+          for old, new in replacements.items():
+              count = text.count(old)
+              assert count == 1, f'expected exactly one occurrence, got {count}: {old[:80]}'
+              text = text.replace(old, new)
+
+          assert text.count('**Version 1.13 | Effective Date: 2026-09-04**') == 1
+          assert text.count('**Document ID: SL-PUBLIC-EULA-1.13**') == 1
+          assert '50% is due in advance on Order confirmation and the remaining 50% is due before dispatch' in text
+          assert '60% is due in advance on Order confirmation and the remaining 40% is due on delivery' in text
+          assert '50% on the installation or handover milestone' not in text
+          path.write_text(text, encoding='utf-8')
+
+          digest = hashlib.sha256(path.read_bytes()).hexdigest()
+          print(f'EULA_SHA256={digest}')
+          PY
+      - name: Commit EULA
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add legal/EULA.md
+          git commit -m "legal: distinguish B2B and B2C payment terms"
+          git push origin HEAD:legal/eula-b2b-b2c-payment-2026-09-04
