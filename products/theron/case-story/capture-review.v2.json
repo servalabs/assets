@@ -1,0 +1,390 @@
+{
+  "schema_version": 2,
+  "status": "Source media approved for lead integration; final product replay and public browser acceptance remain separate",
+  "origin": "Real Theron UI at http://localhost:5189; API8518; isolated collection-watchers Docker project and internal ashoka_case_story PostgreSQL database",
+  "frontend_branch": "feat/collection-watchers-20261012",
+  "website_branch": "feat/theron-collection-watchers-20261012",
+  "fixture_contract": "ashoka-link.v1.json",
+  "reset_completed_utc": "2026-10-12T14:05:54Z",
+  "viewport": {
+    "width": 1600,
+    "height": 1000,
+    "device_scale_factor": 1
+  },
+  "locale": "en-IN",
+  "timezone": "Asia/Kolkata",
+  "clock": {
+    "start": "2026-10-12T14:07:55.193Z",
+    "technique": "Native current Date, performance, timers, requestAnimationFrame and CSS animations; historical retained records unchanged"
+  },
+  "recording_method": "Actual UI PNG samples encoded at 10 fps with measured original intervals. No overlays, DOM edits, retouching or speed changes. Scene03 video is a native foreground crop; its still was already cropped by the native element screenshot.",
+  "capture_sampling": {
+    "frames": 1075,
+    "requested_hz": 10,
+    "observed_hz": 3.720749762256562,
+    "max_gap_seconds": 1.2064999999999984,
+    "frame_capture_errors": 0
+  },
+  "quality_exception": {
+    "sole_gap_seconds": 1.2064999999999984,
+    "from_host_seconds": 58.835,
+    "to_host_seconds": 60.0415,
+    "frames": [
+      309,
+      310
+    ],
+    "identical_png_sha256": "9671f7b7643e262f402daf42482225533ff67341b1db70f02a916a372ae0518e",
+    "state": "Unchanged native consent dialog; no input or state change; outside all five public loops",
+    "authority": "Explicit parent /root approval after independent hash and visual review",
+    "general_capture_gate_unchanged": true
+  },
+  "source_receipt_sha256": "9e3cc1196742a0356355ab4779921453d6114b5428b97ce7bc85a5f3b391a680",
+  "original_failed_quality_receipt_preserved": true,
+  "rejected_take": {
+    "take": "definitive-02",
+    "reason": "Next-frame still waiter timed out at Task modal; no media used",
+    "harness_resolution": "Reverted waiter to successful independent native still capture; strict future one-second gap gate retained"
+  },
+  "files": [
+    {
+      "file": "01-ask.webm",
+      "sha256": "8b23560d781b3bedd9879e82c54291c1192d88bbff71616077631b63e72b14b1",
+      "bytes": 504749,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": 10.0,
+      "decoded_frames": 100,
+      "video_fps": 10
+    },
+    {
+      "file": "01-ask.webp",
+      "sha256": "ff9642e6cf6ec2f711811003c30a72ae78863ea2b6530f1f8f61a7fbf1cbdb9f",
+      "bytes": 138368,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": null,
+      "decoded_frames": 1,
+      "video_fps": null
+    },
+    {
+      "file": "02-case.webp",
+      "sha256": "6bd31edcc5c59952c67b4ab9c51b8eed96fed33f99e0eb9f4a1815c14cc2a470",
+      "bytes": 244274,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": null,
+      "decoded_frames": 1,
+      "video_fps": null
+    },
+    {
+      "file": "03-collection-dossier.webm",
+      "sha256": "afdfa660b077b78add3c528e71eca4074a4a906933d9e8b9b4a568339c26af05",
+      "bytes": 189157,
+      "width": 720,
+      "height": 898,
+      "duration_seconds": 12.0,
+      "decoded_frames": 120,
+      "video_fps": 10
+    },
+    {
+      "file": "03-collection-dossier.webp",
+      "sha256": "099c5eeb21b3af133510a8d8c7743a982d2c56caaf28da6bee416790195f0aed",
+      "bytes": 27672,
+      "width": 720,
+      "height": 898,
+      "duration_seconds": null,
+      "decoded_frames": 1,
+      "video_fps": null
+    },
+    {
+      "file": "04-graph.webm",
+      "sha256": "ec8c001b256f504d7944e78102255fd197f8a67ead5b33269841d5abd28b6a13",
+      "bytes": 1045880,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": 10.0,
+      "decoded_frames": 100,
+      "video_fps": 10
+    },
+    {
+      "file": "04-graph.webp",
+      "sha256": "fcf695837adde591cea8e29a30b45c0294158e52a7b360366193c94a633bbc69",
+      "bytes": 314442,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": null,
+      "decoded_frames": 1,
+      "video_fps": null
+    },
+    {
+      "file": "05-news.webm",
+      "sha256": "4aa0c4af5bd745f36e1dddbc145dff647f1439e9944926d1a9143f158628e667",
+      "bytes": 759499,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": 10.0,
+      "decoded_frames": 99,
+      "video_fps": 10
+    },
+    {
+      "file": "05-news.webp",
+      "sha256": "718f9e4dffa840d08b1ddc6f7ac26fbc0d0e7d09623b2d29fcd107081ed5662b",
+      "bytes": 190628,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": null,
+      "decoded_frames": 1,
+      "video_fps": null
+    },
+    {
+      "file": "06-lead.webp",
+      "sha256": "c16413e864dd86761a065525d37d523e969d4603359f6f1d6b716a0610844cdf",
+      "bytes": 75484,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": null,
+      "decoded_frames": 1,
+      "video_fps": null
+    },
+    {
+      "file": "07-tasks-notes.webm",
+      "sha256": "264092b647392e95c80254be23395b1383cce43a194972283ab1488b682a3aba",
+      "bytes": 618410,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": 10.0,
+      "decoded_frames": 100,
+      "video_fps": 10
+    },
+    {
+      "file": "07-tasks-notes.webp",
+      "sha256": "550d96f83fbe67ec8bfe3c5701ba3db57aaf564ffe5a74fe97ba12f735e98cc5",
+      "bytes": 157640,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": null,
+      "decoded_frames": 1,
+      "video_fps": null
+    },
+    {
+      "file": "ashoka-link-walkthrough.webm",
+      "sha256": "e41783167430ae2cead00d054ecdbef102c71358f9f4db89d650edc09842aa6f",
+      "bytes": 13899453,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": 289.0,
+      "decoded_frames": 2890,
+      "video_fps": 10
+    }
+  ],
+  "trim_provenance": [
+    {
+      "key": "01-ask",
+      "start_seconds": 19.8755,
+      "duration_seconds": 10,
+      "crop": null,
+      "basis": "Recorded real-action timestamp minus raw recording origin"
+    },
+    {
+      "key": "03-collection-dossier",
+      "start_seconds": 72.6965,
+      "duration_seconds": 12,
+      "crop": {
+        "x": 865,
+        "y": 60,
+        "width": 720,
+        "height": 898
+      },
+      "basis": "Recorded real-action timestamp minus raw recording origin"
+    },
+    {
+      "key": "04-graph",
+      "start_seconds": 157.55349999999999,
+      "duration_seconds": 10,
+      "crop": null,
+      "basis": "Recorded real-action timestamp minus raw recording origin"
+    },
+    {
+      "key": "05-news",
+      "start_seconds": 254.7345,
+      "duration_seconds": 10,
+      "crop": null,
+      "basis": "Recorded real-action timestamp minus raw recording origin"
+    },
+    {
+      "key": "07-tasks-notes",
+      "start_seconds": 279,
+      "duration_seconds": 10,
+      "crop": null,
+      "basis": "Actual raw recording final ten seconds; native Task link to asserted fully loaded Note"
+    }
+  ],
+  "sources": [
+    {
+      "id": "b8a49624-3ee8-5b3a-8dee-b1ab95d0358c",
+      "claims": [
+        "subject name",
+        "alternate contact name"
+      ],
+      "route": "/mind?note=b8a49624-3ee8-5b3a-8dee-b1ab95d0358c",
+      "retained_text_verified": true
+    },
+    {
+      "id": "ea344c43-4c5f-592d-94d6-9b48a585db0d",
+      "claims": [
+        "phone"
+      ],
+      "route": "/mind?note=ea344c43-4c5f-592d-94d6-9b48a585db0d",
+      "retained_text_verified": true
+    },
+    {
+      "id": "62c631dd-a6d5-5a89-87de-0a07b3ee01d5",
+      "claims": [
+        "email"
+      ],
+      "route": "/mind?note=62c631dd-a6d5-5a89-87de-0a07b3ee01d5",
+      "retained_text_verified": true
+    },
+    {
+      "id": "9d708ced-8e69-5a21-b71a-39b88039144c",
+      "claims": [
+        "possible address",
+        "company reference"
+      ],
+      "route": "/mind?note=9d708ced-8e69-5a21-b71a-39b88039144c",
+      "retained_text_verified": true
+    }
+  ],
+  "native_scene_routes": [
+    {
+      "key": "01-ask",
+      "route": "/ask",
+      "video_start": 20.035,
+      "duration_seconds": 10
+    },
+    {
+      "key": "02-case",
+      "route": "/operations?operation=af07cf50-7a13-5f26-a55d-9d66933002eb&tab=cases&caseStatus=all&hypothesisStatus=all&cdrView=table&telecom=%7B%7D",
+      "video_start": 55.892
+    },
+    {
+      "key": "03-collection-dossier",
+      "route": "/entities/ed4078b8-671c-5aab-9a9c-60cd26837a4e",
+      "video_start": 72.856,
+      "duration_seconds": 12,
+      "still_capture": "Actual native foreground Drawer element screenshot; no retouch, overlays or rescaling",
+      "crop": {
+        "x": 865,
+        "y": 60,
+        "width": 720,
+        "height": 898
+      },
+      "still_state": "Returned leads before any approval; every finding still needs review"
+    },
+    {
+      "key": "04-graph",
+      "route": "/entities?view=graph&entity=ed4078b8-671c-5aab-9a9c-60cd26837a4e&filter=%22%7B%5C%22query%5C%22%3Anull%2C%5C%22types%5C%22%3A%5B%5C%22person%5C%22%2C%5C%22organization%5C%22%2C%5C%22email%5C%22%2C%5C%22phone%5C%22%2C%5C%22address%5C%22%5D%2C%5C%22tags%5C%22%3A%5B%5D%2C%5C%22tag_match%5C%22%3A%5C%22any%5C%22%2C%5C%22facts%5C%22%3A%5B%5D%2C%5C%22exclude_tags%5C%22%3A%5B%5D%2C%5C%22exclude_facts%5C%22%3A%5B%5D%2C%5C%22place%5C%22%3Anull%2C%5C%22radius%5C%22%3Anull%2C%5C%22relationship%5C%22%3Anull%2C%5C%22last_contact_days%5C%22%3Anull%2C%5C%22flags%5C%22%3A%7B%5C%22missing_predicates%5C%22%3A%5B%5D%7D%2C%5C%22lead_status%5C%22%3A%5B%5D%2C%5C%22where%5C%22%3Anull%7D%22",
+      "video_start": 157.713,
+      "duration_seconds": 10
+    },
+    {
+      "key": "05-news",
+      "route": "/entities/f170d3ef-403e-5265-a4ae-f1ab17e05a7a",
+      "video_start": 254.894,
+      "duration_seconds": 10
+    },
+    {
+      "key": "06-lead",
+      "route": "/mind?note=0bbf08f8-bead-5458-ae87-2e6280d7732f",
+      "video_start": 271.768
+    },
+    {
+      "key": "07-tasks-notes",
+      "route": "/tasks?view=project%3A8728c937-c147-599f-a1ee-7088e53c5520&task=6a4aa9cc-428a-54b6-9103-81c815849bf0",
+      "video_start": 278.292,
+      "duration_seconds": 10
+    }
+  ],
+  "watcher_match": {
+    "mode": "controlled_local_replay",
+    "created": true,
+    "event_id": "01a13074-9334-74d1-a579-504abdc08bfe",
+    "observation_id": "01a13074-84dc-7f60-9818-7f63b7a47662",
+    "watcher_id": "01a13073-a5c3-7a22-a40c-b895c4391ef7",
+    "title": "Kaveri Mercantile Private Limited publishes an updated delivery schedule",
+    "published_at": 1791814304,
+    "collected_at": 1791814304,
+    "matches": [
+      {
+        "id": "01a13073-a5c3-7a22-a40c-b895c4391ef7",
+        "name": "Entity news watch",
+        "active": true,
+        "reason": "Configured entity name matched the retained article text.",
+        "matched_at": 1791814309,
+        "observation_id": "01a13074-84dc-7f60-9818-7f63b7a47662",
+        "producer": "rss",
+        "source": "Illustrative local bulletin",
+        "source_mode": "controlled_local_replay",
+        "published_at": 1791814304,
+        "collected_at": 1791814304
+      }
+    ],
+    "live_provider_verified": false,
+    "delivery_verified": false
+  },
+  "browser_proof": {
+    "scene_count": 7,
+    "retained_source_count": 4,
+    "page_errors": 0,
+    "primary_http_failures": 0,
+    "verify_only_completed": "verify-05/receipt.json",
+    "optional_http_boundaries": "Unconfigured Immich, Scout Research and geocoding returned optional503/404; absent latest collection404 before first run expected"
+  },
+  "automated_review": {
+    "decoded_video_frames": 3409,
+    "decoded_posters": 7,
+    "distinct_full_images": 2687,
+    "cached_distinct_images": 0,
+    "ocr_distinct_images": 2687,
+    "raw_alerts": 208,
+    "visually_adjudicated_false_positives": 208,
+    "unresolved_alerts": 0,
+    "confirmed_sensitive_exposure": 0,
+    "ocr_errors": 0,
+    "coverage": "Every decoded final frame and poster; only byte-identical PNG images deduplicated; OCR is not a visual inspection"
+  },
+  "visual_review": {
+    "posters": "All7 full-resolution stills",
+    "auxiliary": "All4 retained source-note screenshots, native consent, dossier and linked-task-note",
+    "videos": "All5 loop contact sheets and13 full-walkthrough contact sheets at one sample per second, plus full-resolution critical03/05/07/final walkthrough frames; start/middle/end and native transitions checked",
+    "alert_adjudication": "All208 OCRalerts across207 distinct images:18 native-resolution crop sheets viewed; three ambiguous crop locations additionally reviewed as full-resolution frames2714/2715/2716. Mask bullets/domain misrecognition and one maskedphone plus adjacent B2badge concatenation; no actual original identifiers.",
+    "limits": "Sampled general visual review plus visual review of every alerted image; not a claim that every video frame was individually viewed by a human"
+  },
+  "source_checks": [
+    {
+      "command": "bun run test src/components/entities/CollectionProvenance.test.tsx src/components/entities/DeepSearchDrawer.test.tsx src/components/entities/DeepSearchDrawerContent.test.tsx",
+      "result": "3files31tests PASS"
+    },
+    {
+      "command": "bunx tsc --noEmit",
+      "result": "PASS after controlled_local typing"
+    },
+    {
+      "command": "bun run test src/components/sections/TheronStoryScroller.test.tsx src/components/sections/TheronFragmentationStory.test.tsx src/pages/new/Theron.test.tsx",
+      "result": "3files14tests PASS"
+    },
+    {
+      "command": "node --check scripts/capture-ashoka-journey.mjs; node --check scripts/export-ashoka-approved-take.mjs; python -m py_compile scripts/review-ashoka-frames.py",
+      "result": "PASS"
+    }
+  ],
+  "boundaries": [
+    "No live dark-web or RSS provider fetch verified; controlled local retained records went through real normal collection/ingestion/matching/review APIs.",
+    "No notification delivery verified.",
+    "Owner-only originals were never opened in any public recording; separate private browser proof is lead-owned.",
+    "Historical source/task dates remain retained; watcher results use native current clock.",
+    "The12second collection loop records returned leads and actual acceptance request; authorisation, run and settled selective approvals are covered by the continuous walkthrough.",
+    "Invalid non-dialable example phone original is encrypted and owner-only; public source view remains masked.",
+    "Source tests, media review, independent product replay and final public acceptance are separate gates."
+  ]
+}

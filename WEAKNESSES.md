@@ -1,5 +1,17 @@
 # Weaknesses Ledger
 
+- 2026-10-12 — Revision2 replaces the Ashoka Link captures with seven lossless
+  posters, five loops and a 289-second native walkthrough. Scene03 is a sharp
+  720×898 foreground crop. `capture-review.v2.json` records all13 hashes, source
+  routes, causal watcher receipts and review boundaries; v1 is historical.
+  Every3409 video frames and seven posters decoded, with2687 distinct OCR inputs,
+  zero OCR errors and zero unresolved/confirmed exposure. All208 raw OCR alerts
+  were visually adjudicated; general human review used contact sheets and critical
+  frames rather than viewing every frame individually. One identical static-dialog
+  sampling gap was separately approved outside all five loops, with the failed
+  original receipt retained. This proves controlled local UI media only, not live
+  source coverage, notification delivery or production acceptance.
+
 - 2026-10-12 — Fixed locally: reviewed Ashoka Link real UI media now provides
   seven posters, five short recordings and one continuous walkthrough under
   `products/theron/case-story/`. Hashes, routes and frame-review boundaries are
