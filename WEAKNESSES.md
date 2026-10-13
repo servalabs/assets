@@ -1,5 +1,13 @@
 # Weaknesses Ledger
 
+- 2026-10-13 — Presentation revision3 uses a full1600×1000 collection poster and
+ 12-second recording derived from the original approved native browser take,
+ replacing the public foreground crop. The previous media stays intact;
+ `capture-review.v3.json` identifies the exact source frame/clip and derivative
+ review separately from inherited review of unchanged media. No reconstruction,
+ overlays or product privacy changes were used. Full-screen fitting trades fine
+ text size for a complete view on smaller website layouts.
+
 - 2026-10-12 — Revision2 replaces the Ashoka Link captures with seven lossless
   posters, five loops and a 289-second native walkthrough. Scene03 is a sharp
   720×898 foreground crop. `capture-review.v2.json` records all13 hashes, source
