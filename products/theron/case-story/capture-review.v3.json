@@ -1,0 +1,594 @@
+{
+  "schema_version": 3,
+  "status": "Full-viewport collection derivatives reviewed for lead integration; final v3 website binding and public browser acceptance remain separate",
+  "origin": "Real Theron UI at http://localhost:5189; API8518; isolated collection-watchers Docker project and internal ashoka_case_story PostgreSQL database",
+  "frontend_branch": "feat/collection-watchers-20261012",
+  "website_branch": "feat/theron-collection-watchers-20261012",
+  "fixture_contract": "ashoka-link.v1.json",
+  "reset_completed_utc": "2026-10-12T14:05:54Z",
+  "viewport": {
+    "width": 1600,
+    "height": 1000,
+    "device_scale_factor": 1
+  },
+  "locale": "en-IN",
+  "timezone": "Asia/Kolkata",
+  "clock": {
+    "start": "2026-10-12T14:07:55.193Z",
+    "technique": "Native current Date, performance, timers, requestAnimationFrame and CSS animations; historical retained records unchanged"
+  },
+  "recording_method": "Real native full-browser UI PNG samples encoded at 10 fps using original measured intervals. Bound v3 collection poster is a lossless full native PNG frame; collection loop uses the original approved 12-second window with fps=10 only. No crop, overlay, retouching, rescaling or speed change. Native Drawer backdrop blur and product-default masks remain exactly as captured.",
+  "capture_sampling": {
+    "frames": 1075,
+    "requested_hz": 10,
+    "observed_hz": 3.720749762256562,
+    "max_gap_seconds": 1.2064999999999984,
+    "frame_capture_errors": 0
+  },
+  "quality_exception": {
+    "sole_gap_seconds": 1.2064999999999984,
+    "from_host_seconds": 58.835,
+    "to_host_seconds": 60.0415,
+    "frames": [
+      309,
+      310
+    ],
+    "identical_png_sha256": "9671f7b7643e262f402daf42482225533ff67341b1db70f02a916a372ae0518e",
+    "state": "Unchanged native consent dialog; no input or state change; outside all five public loops",
+    "authority": "Explicit parent /root approval after independent hash and visual review",
+    "general_capture_gate_unchanged": true
+  },
+  "source_receipt_sha256": "9e3cc1196742a0356355ab4779921453d6114b5428b97ce7bc85a5f3b391a680",
+  "original_failed_quality_receipt_preserved": true,
+  "rejected_take": {
+    "take": "definitive-02",
+    "reason": "Next-frame still waiter timed out at Task modal; no media used",
+    "harness_resolution": "Reverted waiter to successful independent native still capture; strict future one-second gap gate retained"
+  },
+  "files": [
+    {
+      "file": "01-ask.webm",
+      "sha256": "8b23560d781b3bedd9879e82c54291c1192d88bbff71616077631b63e72b14b1",
+      "bytes": 504749,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": 10.0,
+      "decoded_frames": 100,
+      "video_fps": 10,
+      "scene_key": "01-ask",
+      "route": "/ask",
+      "inherited_review": "capture-review.v2.json"
+    },
+    {
+      "file": "01-ask.webp",
+      "sha256": "ff9642e6cf6ec2f711811003c30a72ae78863ea2b6530f1f8f61a7fbf1cbdb9f",
+      "bytes": 138368,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": null,
+      "decoded_frames": 1,
+      "video_fps": null,
+      "scene_key": "01-ask",
+      "route": "/ask",
+      "inherited_review": "capture-review.v2.json"
+    },
+    {
+      "file": "02-case.webp",
+      "sha256": "6bd31edcc5c59952c67b4ab9c51b8eed96fed33f99e0eb9f4a1815c14cc2a470",
+      "bytes": 244274,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": null,
+      "decoded_frames": 1,
+      "video_fps": null,
+      "scene_key": "02-case",
+      "route": "/operations?operation=af07cf50-7a13-5f26-a55d-9d66933002eb&tab=cases&caseStatus=all&hypothesisStatus=all&cdrView=table&telecom=%7B%7D",
+      "inherited_review": "capture-review.v2.json"
+    },
+    {
+      "file": "03-collection-dossier-full.webm",
+      "sha256": "254e23b125f0e5f524cf2e2d92aa9e6c513ddef98b8a205e69248d911700e367",
+      "bytes": 279905,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": 12.0,
+      "decoded_frames": 120,
+      "video_fps": 10,
+      "scene_key": "03-collection-dossier",
+      "route": "/entities/ed4078b8-671c-5aab-9a9c-60cd26837a4e",
+      "inherited_review": null
+    },
+    {
+      "file": "03-collection-dossier-full.webp",
+      "sha256": "87a1c654f760d247ebe086d20d1adc6a2ed25ca023d405b31e6077cb59975ad5",
+      "bytes": 170086,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": null,
+      "decoded_frames": 1,
+      "video_fps": null,
+      "scene_key": "03-collection-dossier",
+      "route": "/entities/ed4078b8-671c-5aab-9a9c-60cd26837a4e",
+      "inherited_review": null
+    },
+    {
+      "file": "04-graph.webm",
+      "sha256": "ec8c001b256f504d7944e78102255fd197f8a67ead5b33269841d5abd28b6a13",
+      "bytes": 1045880,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": 10.0,
+      "decoded_frames": 100,
+      "video_fps": 10,
+      "scene_key": "04-graph",
+      "route": "/entities?view=graph&entity=ed4078b8-671c-5aab-9a9c-60cd26837a4e&filter=%22%7B%5C%22query%5C%22%3Anull%2C%5C%22types%5C%22%3A%5B%5C%22person%5C%22%2C%5C%22organization%5C%22%2C%5C%22email%5C%22%2C%5C%22phone%5C%22%2C%5C%22address%5C%22%5D%2C%5C%22tags%5C%22%3A%5B%5D%2C%5C%22tag_match%5C%22%3A%5C%22any%5C%22%2C%5C%22facts%5C%22%3A%5B%5D%2C%5C%22exclude_tags%5C%22%3A%5B%5D%2C%5C%22exclude_facts%5C%22%3A%5B%5D%2C%5C%22place%5C%22%3Anull%2C%5C%22radius%5C%22%3Anull%2C%5C%22relationship%5C%22%3Anull%2C%5C%22last_contact_days%5C%22%3Anull%2C%5C%22flags%5C%22%3A%7B%5C%22missing_predicates%5C%22%3A%5B%5D%7D%2C%5C%22lead_status%5C%22%3A%5B%5D%2C%5C%22where%5C%22%3Anull%7D%22",
+      "inherited_review": "capture-review.v2.json"
+    },
+    {
+      "file": "04-graph.webp",
+      "sha256": "fcf695837adde591cea8e29a30b45c0294158e52a7b360366193c94a633bbc69",
+      "bytes": 314442,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": null,
+      "decoded_frames": 1,
+      "video_fps": null,
+      "scene_key": "04-graph",
+      "route": "/entities?view=graph&entity=ed4078b8-671c-5aab-9a9c-60cd26837a4e&filter=%22%7B%5C%22query%5C%22%3Anull%2C%5C%22types%5C%22%3A%5B%5C%22person%5C%22%2C%5C%22organization%5C%22%2C%5C%22email%5C%22%2C%5C%22phone%5C%22%2C%5C%22address%5C%22%5D%2C%5C%22tags%5C%22%3A%5B%5D%2C%5C%22tag_match%5C%22%3A%5C%22any%5C%22%2C%5C%22facts%5C%22%3A%5B%5D%2C%5C%22exclude_tags%5C%22%3A%5B%5D%2C%5C%22exclude_facts%5C%22%3A%5B%5D%2C%5C%22place%5C%22%3Anull%2C%5C%22radius%5C%22%3Anull%2C%5C%22relationship%5C%22%3Anull%2C%5C%22last_contact_days%5C%22%3Anull%2C%5C%22flags%5C%22%3A%7B%5C%22missing_predicates%5C%22%3A%5B%5D%7D%2C%5C%22lead_status%5C%22%3A%5B%5D%2C%5C%22where%5C%22%3Anull%7D%22",
+      "inherited_review": "capture-review.v2.json"
+    },
+    {
+      "file": "05-news.webm",
+      "sha256": "4aa0c4af5bd745f36e1dddbc145dff647f1439e9944926d1a9143f158628e667",
+      "bytes": 759499,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": 10.0,
+      "decoded_frames": 99,
+      "video_fps": 10,
+      "scene_key": "05-news",
+      "route": "/entities/f170d3ef-403e-5265-a4ae-f1ab17e05a7a",
+      "inherited_review": "capture-review.v2.json"
+    },
+    {
+      "file": "05-news.webp",
+      "sha256": "718f9e4dffa840d08b1ddc6f7ac26fbc0d0e7d09623b2d29fcd107081ed5662b",
+      "bytes": 190628,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": null,
+      "decoded_frames": 1,
+      "video_fps": null,
+      "scene_key": "05-news",
+      "route": "/entities/f170d3ef-403e-5265-a4ae-f1ab17e05a7a",
+      "inherited_review": "capture-review.v2.json"
+    },
+    {
+      "file": "06-lead.webp",
+      "sha256": "c16413e864dd86761a065525d37d523e969d4603359f6f1d6b716a0610844cdf",
+      "bytes": 75484,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": null,
+      "decoded_frames": 1,
+      "video_fps": null,
+      "scene_key": "06-lead",
+      "route": "/mind?note=0bbf08f8-bead-5458-ae87-2e6280d7732f",
+      "inherited_review": "capture-review.v2.json"
+    },
+    {
+      "file": "07-tasks-notes.webm",
+      "sha256": "264092b647392e95c80254be23395b1383cce43a194972283ab1488b682a3aba",
+      "bytes": 618410,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": 10.0,
+      "decoded_frames": 100,
+      "video_fps": 10,
+      "scene_key": "07-tasks-notes",
+      "route": "/tasks?view=project%3A8728c937-c147-599f-a1ee-7088e53c5520&task=6a4aa9cc-428a-54b6-9103-81c815849bf0",
+      "inherited_review": "capture-review.v2.json"
+    },
+    {
+      "file": "07-tasks-notes.webp",
+      "sha256": "550d96f83fbe67ec8bfe3c5701ba3db57aaf564ffe5a74fe97ba12f735e98cc5",
+      "bytes": 157640,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": null,
+      "decoded_frames": 1,
+      "video_fps": null,
+      "scene_key": "07-tasks-notes",
+      "route": "/tasks?view=project%3A8728c937-c147-599f-a1ee-7088e53c5520&task=6a4aa9cc-428a-54b6-9103-81c815849bf0",
+      "inherited_review": "capture-review.v2.json"
+    },
+    {
+      "file": "ashoka-link-walkthrough.webm",
+      "sha256": "e41783167430ae2cead00d054ecdbef102c71358f9f4db89d650edc09842aa6f",
+      "bytes": 13899453,
+      "width": 1600,
+      "height": 1000,
+      "duration_seconds": 289.0,
+      "decoded_frames": 2890,
+      "video_fps": 10,
+      "scene_key": "continuous-walkthrough",
+      "route": null,
+      "routes": [
+        "/ask",
+        "/operations?operation=af07cf50-7a13-5f26-a55d-9d66933002eb&tab=cases&caseStatus=all&hypothesisStatus=all&cdrView=table&telecom=%7B%7D",
+        "/entities/ed4078b8-671c-5aab-9a9c-60cd26837a4e",
+        "/entities?view=graph&entity=ed4078b8-671c-5aab-9a9c-60cd26837a4e&filter=%22%7B%5C%22query%5C%22%3Anull%2C%5C%22types%5C%22%3A%5B%5C%22person%5C%22%2C%5C%22organization%5C%22%2C%5C%22email%5C%22%2C%5C%22phone%5C%22%2C%5C%22address%5C%22%5D%2C%5C%22tags%5C%22%3A%5B%5D%2C%5C%22tag_match%5C%22%3A%5C%22any%5C%22%2C%5C%22facts%5C%22%3A%5B%5D%2C%5C%22exclude_tags%5C%22%3A%5B%5D%2C%5C%22exclude_facts%5C%22%3A%5B%5D%2C%5C%22place%5C%22%3Anull%2C%5C%22radius%5C%22%3Anull%2C%5C%22relationship%5C%22%3Anull%2C%5C%22last_contact_days%5C%22%3Anull%2C%5C%22flags%5C%22%3A%7B%5C%22missing_predicates%5C%22%3A%5B%5D%7D%2C%5C%22lead_status%5C%22%3A%5B%5D%2C%5C%22where%5C%22%3Anull%7D%22",
+        "/entities/f170d3ef-403e-5265-a4ae-f1ab17e05a7a",
+        "/mind?note=0bbf08f8-bead-5458-ae87-2e6280d7732f",
+        "/tasks?view=project%3A8728c937-c147-599f-a1ee-7088e53c5520&task=6a4aa9cc-428a-54b6-9103-81c815849bf0"
+      ],
+      "inherited_review": "capture-review.v2.json"
+    }
+  ],
+  "trim_provenance": [
+    {
+      "key": "01-ask",
+      "start_seconds": 19.8755,
+      "duration_seconds": 10,
+      "crop": null,
+      "basis": "Recorded real-action timestamp minus raw recording origin"
+    },
+    {
+      "key": "03-collection-dossier",
+      "start_seconds": 72.6965,
+      "duration_seconds": 12,
+      "crop": null,
+      "basis": "Same v2 approved 72.6965-second trim; recovered full viewport with fps=10 only"
+    },
+    {
+      "key": "04-graph",
+      "start_seconds": 157.55349999999999,
+      "duration_seconds": 10,
+      "crop": null,
+      "basis": "Recorded real-action timestamp minus raw recording origin"
+    },
+    {
+      "key": "05-news",
+      "start_seconds": 254.7345,
+      "duration_seconds": 10,
+      "crop": null,
+      "basis": "Recorded real-action timestamp minus raw recording origin"
+    },
+    {
+      "key": "07-tasks-notes",
+      "start_seconds": 279,
+      "duration_seconds": 10,
+      "crop": null,
+      "basis": "Actual raw recording final ten seconds; native Task link to asserted fully loaded Note"
+    }
+  ],
+  "sources": [
+    {
+      "id": "b8a49624-3ee8-5b3a-8dee-b1ab95d0358c",
+      "claims": [
+        "subject name",
+        "alternate contact name"
+      ],
+      "route": "/mind?note=b8a49624-3ee8-5b3a-8dee-b1ab95d0358c",
+      "retained_text_verified": true
+    },
+    {
+      "id": "ea344c43-4c5f-592d-94d6-9b48a585db0d",
+      "claims": [
+        "phone"
+      ],
+      "route": "/mind?note=ea344c43-4c5f-592d-94d6-9b48a585db0d",
+      "retained_text_verified": true
+    },
+    {
+      "id": "62c631dd-a6d5-5a89-87de-0a07b3ee01d5",
+      "claims": [
+        "email"
+      ],
+      "route": "/mind?note=62c631dd-a6d5-5a89-87de-0a07b3ee01d5",
+      "retained_text_verified": true
+    },
+    {
+      "id": "9d708ced-8e69-5a21-b71a-39b88039144c",
+      "claims": [
+        "possible address",
+        "company reference"
+      ],
+      "route": "/mind?note=9d708ced-8e69-5a21-b71a-39b88039144c",
+      "retained_text_verified": true
+    }
+  ],
+  "native_scene_routes": [
+    {
+      "key": "01-ask",
+      "route": "/ask",
+      "video_start": 20.035,
+      "duration_seconds": 10
+    },
+    {
+      "key": "02-case",
+      "route": "/operations?operation=af07cf50-7a13-5f26-a55d-9d66933002eb&tab=cases&caseStatus=all&hypothesisStatus=all&cdrView=table&telecom=%7B%7D",
+      "video_start": 55.892
+    },
+    {
+      "key": "03-collection-dossier",
+      "route": "/entities/ed4078b8-671c-5aab-9a9c-60cd26837a4e",
+      "video_start": 72.856,
+      "duration_seconds": 12,
+      "still_capture": "Lossless full native browser PNG frame000330; no retouch, overlays or rescaling",
+      "crop": null,
+      "still_state": "Returned leads before any approval; every finding still needs review"
+    },
+    {
+      "key": "04-graph",
+      "route": "/entities?view=graph&entity=ed4078b8-671c-5aab-9a9c-60cd26837a4e&filter=%22%7B%5C%22query%5C%22%3Anull%2C%5C%22types%5C%22%3A%5B%5C%22person%5C%22%2C%5C%22organization%5C%22%2C%5C%22email%5C%22%2C%5C%22phone%5C%22%2C%5C%22address%5C%22%5D%2C%5C%22tags%5C%22%3A%5B%5D%2C%5C%22tag_match%5C%22%3A%5C%22any%5C%22%2C%5C%22facts%5C%22%3A%5B%5D%2C%5C%22exclude_tags%5C%22%3A%5B%5D%2C%5C%22exclude_facts%5C%22%3A%5B%5D%2C%5C%22place%5C%22%3Anull%2C%5C%22radius%5C%22%3Anull%2C%5C%22relationship%5C%22%3Anull%2C%5C%22last_contact_days%5C%22%3Anull%2C%5C%22flags%5C%22%3A%7B%5C%22missing_predicates%5C%22%3A%5B%5D%7D%2C%5C%22lead_status%5C%22%3A%5B%5D%2C%5C%22where%5C%22%3Anull%7D%22",
+      "video_start": 157.713,
+      "duration_seconds": 10
+    },
+    {
+      "key": "05-news",
+      "route": "/entities/f170d3ef-403e-5265-a4ae-f1ab17e05a7a",
+      "video_start": 254.894,
+      "duration_seconds": 10
+    },
+    {
+      "key": "06-lead",
+      "route": "/mind?note=0bbf08f8-bead-5458-ae87-2e6280d7732f",
+      "video_start": 271.768
+    },
+    {
+      "key": "07-tasks-notes",
+      "route": "/tasks?view=project%3A8728c937-c147-599f-a1ee-7088e53c5520&task=6a4aa9cc-428a-54b6-9103-81c815849bf0",
+      "video_start": 278.292,
+      "duration_seconds": 10
+    }
+  ],
+  "watcher_match": {
+    "mode": "controlled_local_replay",
+    "created": true,
+    "event_id": "01a13074-9334-74d1-a579-504abdc08bfe",
+    "observation_id": "01a13074-84dc-7f60-9818-7f63b7a47662",
+    "watcher_id": "01a13073-a5c3-7a22-a40c-b895c4391ef7",
+    "title": "Kaveri Mercantile Private Limited publishes an updated delivery schedule",
+    "published_at": 1791814304,
+    "collected_at": 1791814304,
+    "matches": [
+      {
+        "id": "01a13073-a5c3-7a22-a40c-b895c4391ef7",
+        "name": "Entity news watch",
+        "active": true,
+        "reason": "Configured entity name matched the retained article text.",
+        "matched_at": 1791814309,
+        "observation_id": "01a13074-84dc-7f60-9818-7f63b7a47662",
+        "producer": "rss",
+        "source": "Illustrative local bulletin",
+        "source_mode": "controlled_local_replay",
+        "published_at": 1791814304,
+        "collected_at": 1791814304
+      }
+    ],
+    "live_provider_verified": false,
+    "delivery_verified": false
+  },
+  "browser_proof": {
+    "scene_count": 7,
+    "retained_source_count": 4,
+    "page_errors": 0,
+    "primary_http_failures": 0,
+    "verify_only_completed": "verify-05/receipt.json",
+    "optional_http_boundaries": "Unconfigured Immich, Scout Research and geocoding returned optional503/404; absent latest collection404 before first run expected"
+  },
+  "automated_review": {
+    "decoded_video_frames": 3409,
+    "decoded_posters": 7,
+    "coverage": "Eleven unchanged bound files inherit their SHA256-bound v2 every-frame/poster review. New full03 derivative: every120 decoded video frames plus poster scanned; only byte-identical PNG images deduplicated. OCR is not visual inspection.",
+    "inherited_v2_review": {
+      "file": "capture-review.v2.json",
+      "sha256": "eca452814efe7339cac4e1303a55420d9ff5efb774517465bbb6db65355fccb0",
+      "whole_continuous_decoded_frames": 2890,
+      "unchanged_bound_files": 11,
+      "automated_review": {
+        "decoded_video_frames": 3409,
+        "decoded_posters": 7,
+        "distinct_full_images": 2687,
+        "cached_distinct_images": 0,
+        "ocr_distinct_images": 2687,
+        "raw_alerts": 208,
+        "visually_adjudicated_false_positives": 208,
+        "unresolved_alerts": 0,
+        "confirmed_sensitive_exposure": 0,
+        "ocr_errors": 0,
+        "coverage": "Every decoded final frame and poster; only byte-identical PNG images deduplicated; OCR is not a visual inspection"
+      }
+    },
+    "new_derivatives": {
+      "decoded_video_frames": 120,
+      "decoded_posters": 1,
+      "distinct_full_images": 108,
+      "ocr_distinct_images": 108,
+      "raw_alerts": 107,
+      "visually_adjudicated_false_positives": 107,
+      "unresolved_alerts": 0,
+      "confirmed_sensitive_exposure": 0,
+      "ocr_errors": 0,
+      "frame_scan_sha256": "d261aea383d3e0dc96be60d58d847e4a80c14df86309426fb005dcc839afcce9",
+      "adjudication_sha256": "8700f9cc1d4f9dbfc09a3bb7b4c313230bed292d1ff9615188fe2314a4abacba",
+      "raw_alert_values_are_ocr_false_positives": true
+    },
+    "cross_version_unique_image_count_recomputed": false,
+    "unresolved_alerts": 0,
+    "confirmed_sensitive_exposure": 0,
+    "ocr_errors": 0
+  },
+  "visual_review": {
+    "inherited_v2": {
+      "posters": "All7 full-resolution stills",
+      "auxiliary": "All4 retained source-note screenshots, native consent, dossier and linked-task-note",
+      "videos": "All5 loop contact sheets and13 full-walkthrough contact sheets at one sample per second, plus full-resolution critical03/05/07/final walkthrough frames; start/middle/end and native transitions checked",
+      "alert_adjudication": "All208 OCRalerts across207 distinct images:18 native-resolution crop sheets viewed; three ambiguous crop locations additionally reviewed as full-resolution frames2714/2715/2716. Mask bullets/domain misrecognition and one maskedphone plus adjacent B2badge concatenation; no actual original identifiers.",
+      "limits": "Sampled general visual review plus visual review of every alerted image; not a claim that every video frame was individually viewed by a human"
+    },
+    "new_full03": {
+      "original_native_frames_viewed": [
+        329,
+        330
+      ],
+      "decoded_full_resolution_frames_viewed": [
+        1,
+        61,
+        120
+      ],
+      "loop_contact_samples_every_seconds": 1,
+      "native_alert_contact_sheets_viewed": 9,
+      "alerted_distinct_images_adjudicated": 107,
+      "poster_state": "Full original browser view before approval; source type/match reason/collection time/confidence and review-required status visible",
+      "limits": "Full-frame human checks are sampled. Every OCR-alerted region inspected at native resolution; every decoded frame had automated full-frame OCR. No claim that every frame received individual full-resolution human inspection."
+    }
+  },
+  "source_checks": [
+    {
+      "command": "bun run test src/components/entities/CollectionProvenance.test.tsx src/components/entities/DeepSearchDrawer.test.tsx src/components/entities/DeepSearchDrawerContent.test.tsx",
+      "result": "3files31tests PASS"
+    },
+    {
+      "command": "bunx tsc --noEmit",
+      "result": "PASS after controlled_local typing"
+    },
+    {
+      "command": "bun run test src/components/sections/TheronStoryScroller.test.tsx src/components/sections/TheronFragmentationStory.test.tsx src/pages/new/Theron.test.tsx",
+      "result": "3files14tests PASS"
+    },
+    {
+      "command": "node --check scripts/capture-ashoka-journey.mjs; node --check scripts/export-ashoka-approved-take.mjs; python -m py_compile scripts/review-ashoka-frames.py",
+      "result": "PASS"
+    },
+    {
+      "command": "ffprobe dimensions/duration/fps; Pillow RGB byte equality; SHA256 of all13 original v2 media",
+      "result": "New full03:1600x1000; loop12.000s/120frames/10fps; poster pixel-exact; all13 v2 media hashes unchanged"
+    },
+    {
+      "command": "Existing review-ashoka-frames.py on only the two new derivatives; existing native-alert adjudication helper applied to new evidence directory",
+      "result": "120 decoded frames+poster;108 distinct images;107 masked-identifier OCR false positives adjudicated;0 errors/unresolved/exposures"
+    }
+  ],
+  "boundaries": [
+    "No live dark-web or RSS provider fetch verified; controlled local retained records went through real normal collection/ingestion/matching/review APIs.",
+    "No notification delivery verified.",
+    "Owner-only originals were never opened in any public recording; separate private browser proof is lead-owned.",
+    "Historical source/task dates remain retained; watcher results use native current clock.",
+    "The12second collection loop records returned leads and actual acceptance request; authorisation, run and settled selective approvals are covered by the continuous walkthrough.",
+    "Invalid non-dialable example phone original is encrypted and owner-only; public source view remains masked.",
+    "Source tests, media review, independent product replay and final public acceptance are separate gates.",
+    "v3 is a derivative-media presentation revision only. No new product capture, reset, seed changes or provider calls.",
+    "The full03 poster is before approvals; the unchanged12-second real loop includes the actual acceptance request. Settled approvals remain in the unchanged continuous walkthrough.",
+    "v2 source/product test and browser receipts are inherited historical evidence, not newly run v3 production acceptance. Lead owns final v3 public-site binding and browser review."
+  ],
+  "reviewed_utc": "2026-10-13T06:09:43.994938+00:00",
+  "supersedes": "capture-review.v2.json; v2 files and review remain preserved unchanged",
+  "bound_file_counts": {
+    "total": 13,
+    "posters": 7,
+    "loops": 5,
+    "continuous_recordings": 1,
+    "unchanged_v2_files": 11,
+    "new_full_viewport_derivatives": 2
+  },
+  "source_artifact_hashes": {
+    "v2_review": "eca452814efe7339cac4e1303a55420d9ff5efb774517465bbb6db65355fccb0",
+    "source_receipt": "9e3cc1196742a0356355ab4779921453d6114b5428b97ce7bc85a5f3b391a680",
+    "lead_approved_export": "d9baf92ecd76a5e4b9b6ee500025d7aad29bb591773f877051b14ab97dc3649e",
+    "raw_recording": "e41783167430ae2cead00d054ecdbef102c71358f9f4db89d650edc09842aa6f",
+    "continuous_decoded_review": "eda299e36dfd6e3eeb88e10058d63fc50e7760adfe2c8afbe5c36716148eb9a3",
+    "continuous_alert_adjudication": "5897c777bea3e3656bb07d5e3fd5d752b8e1ae04ebb8c0fc77d6ee68cb2e6724"
+  },
+  "source_recording_verified_identical_to_bound_continuous": true,
+  "new_derivative_provenance": {
+    "source_take": "definitive-01",
+    "viewport": {
+      "width": 1600,
+      "height": 1000
+    },
+    "poster": {
+      "file": "03-collection-dossier-full.webp",
+      "source": "browser-frames/000330.png",
+      "source_frame_index_one_based": 330,
+      "raw_seconds": 72.8295,
+      "host_seconds": 72.989,
+      "source_png_sha256": "c7918b33162bf54d8be87a23a26351152f9debe0bb0d796b309f166e731029f7",
+      "pixel_exact_rgb_sha256": "61fe8a89dd49e9b951e62cec9fd71e02c7ecb44a59c6518b3717be84f8bcbf25",
+      "equivalent_clip_start_native_frame": {
+        "index_one_based": 329,
+        "raw_seconds": 72.068,
+        "host_seconds": 72.2275,
+        "source_png_sha256": "c7918b33162bf54d8be87a23a26351152f9debe0bb0d796b309f166e731029f7",
+        "identical_to_selected_frame": true
+      },
+      "state": "Returned leads before any approval; all need review",
+      "lossless": true,
+      "crop": null
+    },
+    "loop": {
+      "file": "03-collection-dossier-full.webm",
+      "source": "browser-frame-recording.webm",
+      "start_seconds": 72.6965,
+      "duration_seconds": 12,
+      "end_seconds": 84.6965,
+      "decoded_frames": 120,
+      "fps": 10,
+      "crop": null,
+      "filter": "fps=10",
+      "timing": "Original real-time 12-second window; no retiming or interpolation",
+      "source_full_decoded_frame_window": {
+        "first_index_one_based": 728,
+        "last_index_one_based": 847,
+        "count": 120,
+        "basis": "Original 10 fps continuous frames covering 72.7 through 84.6 seconds; source video re-encoded, no byte-identical derivative-video claim",
+        "frame_hash_manifest_sha256": "abb832e43fa3832cb17179d51815a81773c981d39353a208b17dca84faa0a77c",
+        "inherited_coverage": "v2 every-decoded-full-frame review and adjudication; source continuous hash unchanged"
+      }
+    },
+    "commands": [
+      [
+        "ffmpeg",
+        "-n",
+        "-loglevel",
+        "error",
+        "-threads",
+        "2",
+        "-i",
+        "definitive-01/browser-frames/000330.png",
+        "-c:v",
+        "libwebp",
+        "-lossless",
+        "1",
+        "03-collection-dossier-full.webp"
+      ],
+      [
+        "ffmpeg",
+        "-n",
+        "-loglevel",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "72.6965",
+        "-i",
+        "definitive-01/browser-frame-recording.webm",
+        "-t",
+        "12",
+        "-vf",
+        "fps=10",
+        "-an",
+        "-c:v",
+        "libvpx-vp9",
+        "-cpu-used",
+        "4",
+        "-crf",
+        "30",
+        "-b:v",
+        "0",
+        "03-collection-dossier-full.webm"
+      ]
+    ]
+  }
+}

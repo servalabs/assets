@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "status": "Source media approved for lead integration; final product and public-site acceptance remain separate",
+  "origin": "Real Theron UI at http://localhost:5186; API8516; isolated internal ashoka_case_story PostgreSQL database (55486 reserved, not exposed)",
+  "frontend_branch": "feat/ashoka-case-capture",
+  "fixture_contract": "ashoka-link.v1.json",
+  "reset_completed_utc": "2026-10-12 11:24:36 UTC",
+  "viewport": {
+    "width": 1600,
+    "height": 1000,
+    "device_scale_factor": 1
+  },
+  "locale": "en-IN",
+  "timezone": "Asia/Kolkata",
+  "clock": {
+    "start": "2024-08-22T11:30:00+05:30",
+    "technique": "running historical Date-only offset; native performance, timers, requestAnimationFrame and CSS animations"
+  },
+  "recording_method": "Timestamped actual full browser screenshots; original frame intervals; 10 fps encoding; no overlays, DOM edits or speed changes",
+  "browser_configuration": "Default Chromium; existing native 2D graph preference selected before recording in the isolated context",
+  "capture_sampling": {
+    "requested_hz": 10,
+    "actual_frames": 693,
+    "observed_hz": 4.982270460968015,
+    "maximum_gap_seconds": 0.7435000000000116,
+    "frame_capture_errors": 0
+  },
+  "encoding": "Lossless WebP posters; VP9 WebM at 10 fps. Measured frame intervals preserved; no speed changes, overlays, invented interfaces or DOM edits.",
+  "files": [
+    {
+      "file": "01-ask.webm",
+      "sha256": "4e3e4f277c26fa0f7ee784d53c74ecc9590431c24e1ac13f73554dfd7bbbce99",
+      "bytes": 506371,
+      "width": 1600,
+      "height": 1000,
+      "codec": "vp9",
+      "fps": "10/1",
+      "frames": 100,
+      "duration_seconds": 10.0
+    },
+    {
+      "file": "01-ask.webp",
+      "sha256": "2b07dc48d99bad09c4d54f622d6179a34417b5c1ceaf11ec93ede6de51b1f3d5",
+      "bytes": 145426,
+      "width": 1600,
+      "height": 1000,
+      "codec": "webp",
+      "fps": null,
+      "frames": 1,
+      "duration_seconds": null
+    },
+    {
+      "file": "02-case.webp",
+      "sha256": "ba2586ece12d20351d2b03098670b51bb3a15913564313cf9f11461e013c7adf",
+      "bytes": 245996,
+      "width": 1600,
+      "height": 1000,
+      "codec": "webp",
+      "fps": null,
+      "frames": 1,
+      "duration_seconds": null
+    },
+    {
+      "file": "03-collection-dossier.webm",
+      "sha256": "55ce0753b11764617d9ce1555da082b4c64a58128e48e2b3b54ccb57521cd8de",
+      "bytes": 478101,
+      "width": 1600,
+      "height": 1000,
+      "codec": "vp9",
+      "fps": "10/1",
+      "frames": 119,
+      "duration_seconds": 12.0
+    },
+    {
+      "file": "03-collection-dossier.webp",
+      "sha256": "54d5292c61ee8201593eeafe5d5ad1704a2d7368a3fc317f3a0067281545257b",
+      "bytes": 217096,
+      "width": 1600,
+      "height": 1000,
+      "codec": "webp",
+      "fps": null,
+      "frames": 1,
+      "duration_seconds": null
+    },
+    {
+      "file": "04-graph.webm",
+      "sha256": "cad0e0c3cde7abc4036551a6c1d9b5d8f8e23c29441418e5dd24ef9b6f179d0b",
+      "bytes": 812753,
+      "width": 1600,
+      "height": 1000,
+      "codec": "vp9",
+      "fps": "10/1",
+      "frames": 99,
+      "duration_seconds": 10.0
+    },
+    {
+      "file": "04-graph.webp",
+      "sha256": "3b6b87754c2316ae4997fb9c0fbd618845c6c99cd0281b66a1a280ddaefe06e9",
+      "bytes": 313800,
+      "width": 1600,
+      "height": 1000,
+      "codec": "webp",
+      "fps": null,
+      "frames": 1,
+      "duration_seconds": null
+    },
+    {
+      "file": "05-news.webm",
+      "sha256": "c5e2089341fed2cbc20d0805da8222b7d6859e8318fbec4cfc462848140d4d29",
+      "bytes": 271591,
+      "width": 1600,
+      "height": 1000,
+      "codec": "vp9",
+      "fps": "10/1",
+      "frames": 99,
+      "duration_seconds": 10.0
+    },
+    {
+      "file": "05-news.webp",
+      "sha256": "ec77c27151b6d7f26da0d5fd8a7cc7a36ed000987dae93dfb650546ae0062eae",
+      "bytes": 81700,
+      "width": 1600,
+      "height": 1000,
+      "codec": "webp",
+      "fps": null,
+      "frames": 1,
+      "duration_seconds": null
+    },
+    {
+      "file": "06-lead.webp",
+      "sha256": "5ef6dbdda4ac318fe26384834698195fcb75461e27e84b747ea5d0499194a99c",
+      "bytes": 84022,
+      "width": 1600,
+      "height": 1000,
+      "codec": "webp",
+      "fps": null,
+      "frames": 1,
+      "duration_seconds": null
+    },
+    {
+      "file": "07-tasks-notes.webm",
+      "sha256": "040114afd73e639794f66cb5ff10cc0eeb8bc362a149343c357f8ac6b410a51e",
+      "bytes": 628480,
+      "width": 1600,
+      "height": 1000,
+      "codec": "vp9",
+      "fps": "10/1",
+      "frames": 100,
+      "duration_seconds": 10.0
+    },
+    {
+      "file": "07-tasks-notes.webp",
+      "sha256": "799a960b269f265086314afba97d3c3eeade07a279a8224319953f7559fc25ab",
+      "bytes": 155686,
+      "width": 1600,
+      "height": 1000,
+      "codec": "webp",
+      "fps": null,
+      "frames": 1,
+      "duration_seconds": null
+    },
+    {
+      "file": "ashoka-link-walkthrough.webm",
+      "sha256": "6a2c138f6991c1600876e0f628df551160575ff5ccc933b0b0007237bf7e89f5",
+      "bytes": 10140400,
+      "width": 1600,
+      "height": 1000,
+      "codec": "vp9",
+      "fps": "10/1",
+      "frames": 1392,
+      "duration_seconds": 139.2
+    }
+  ],
+  "scenes": [
+    {
+      "key": "01-ask",
+      "route": "/ask",
+      "video_start": 6.8595,
+      "duration_seconds": 10
+    },
+    {
+      "key": "02-case",
+      "route": "/operations?operation=af07cf50-7a13-5f26-a55d-9d66933002eb&tab=cases&caseStatus=all&hypothesisStatus=all&cdrView=table&telecom=%7B%7D",
+      "video_start": 44.0645
+    },
+    {
+      "key": "03-collection-dossier",
+      "route": "/entities/ed4078b8-671c-5aab-9a9c-60cd26837a4e",
+      "video_start": 50.9385,
+      "duration_seconds": 12
+    },
+    {
+      "key": "04-graph",
+      "route": "/entities?view=graph&entity=ed4078b8-671c-5aab-9a9c-60cd26837a4e&filter=%22%7B%5C%22query%5C%22%3Anull%2C%5C%22types%5C%22%3A%5B%5C%22person%5C%22%2C%5C%22organization%5C%22%2C%5C%22email%5C%22%2C%5C%22phone%5C%22%2C%5C%22address%5C%22%5D%2C%5C%22tags%5C%22%3A%5B%5D%2C%5C%22tag_match%5C%22%3A%5C%22any%5C%22%2C%5C%22facts%5C%22%3A%5B%5D%2C%5C%22exclude_tags%5C%22%3A%5B%5D%2C%5C%22exclude_facts%5C%22%3A%5B%5D%2C%5C%22place%5C%22%3Anull%2C%5C%22radius%5C%22%3Anull%2C%5C%22relationship%5C%22%3Anull%2C%5C%22last_contact_days%5C%22%3Anull%2C%5C%22flags%5C%22%3A%7B%5C%22missing_predicates%5C%22%3A%5B%5D%7D%2C%5C%22lead_status%5C%22%3A%5B%5D%2C%5C%22where%5C%22%3Anull%7D%22",
+      "video_start": 90.7195,
+      "duration_seconds": 10
+    },
+    {
+      "key": "05-news",
+      "route": "/news?view=cards&event=8072b1fd-908b-579d-94de-a900ee9b8f75",
+      "video_start": 106.7215,
+      "duration_seconds": 10
+    },
+    {
+      "key": "06-lead",
+      "route": "/mind?note=0bbf08f8-bead-5458-ae87-2e6280d7732f",
+      "video_start": 123.1565
+    },
+    {
+      "key": "07-tasks-notes",
+      "route": "/tasks?view=project%3A8728c937-c147-599f-a1ee-7088e53c5520&task=6a4aa9cc-428a-54b6-9103-81c815849bf0",
+      "video_start": 126.6,
+      "duration_seconds": 10,
+      "trim_basis": "Actual same-take frames visually validated at126.6s: nativeTask loading/details -> keyboard-linkedNote loading/readablehold; no speed change or appended ending"
+    }
+  ],
+  "source_checks": [
+    {
+      "id": "b8a49624-3ee8-5b3a-8dee-b1ab95d0358c",
+      "claims": [
+        "subject name",
+        "alternate contact name"
+      ],
+      "route": "/mind?note=b8a49624-3ee8-5b3a-8dee-b1ab95d0358c",
+      "retained_text_verified": true
+    },
+    {
+      "id": "ea344c43-4c5f-592d-94d6-9b48a585db0d",
+      "claims": [
+        "phone"
+      ],
+      "route": "/mind?note=ea344c43-4c5f-592d-94d6-9b48a585db0d",
+      "retained_text_verified": true
+    },
+    {
+      "id": "62c631dd-a6d5-5a89-87de-0a07b3ee01d5",
+      "claims": [
+        "email"
+      ],
+      "route": "/mind?note=62c631dd-a6d5-5a89-87de-0a07b3ee01d5",
+      "retained_text_verified": true
+    },
+    {
+      "id": "9d708ced-8e69-5a21-b71a-39b88039144c",
+      "claims": [
+        "possible address",
+        "company reference"
+      ],
+      "route": "/mind?note=9d708ced-8e69-5a21-b71a-39b88039144c",
+      "retained_text_verified": true
+    }
+  ],
+  "review": {
+    "decoded_video_frames": 1909,
+    "posters": 7,
+    "ocr_distinct_images": 1819,
+    "ocr_alerts": 0,
+    "ocr_errors": 0,
+    "ocr_method": "Every decoded frame; exact-image hash deduplication; full-frame OCR",
+    "manual_visual": "All seven full-resolution posters; all five loops at start/middle/end and their one-second transition sheets; 140 sampled frames across six continuous-walkthrough sheets; full-resolution authorisation and four source-note proofs. Automated OCR is separate and is not manual inspection of every frame."
+  },
+  "coverage": [
+    "Entered Ask question and completed cited answer; four native Note source records",
+    "Native Case with Arjun profile peek and consistent identifiers",
+    "Native authority confirmation, uncompressed run, five normal proposal approvals; seller held outside the case",
+    "Arjun dossier, native 2D Graph with 14 nodes and 13 edges, address/company inspection and possible-relationship explanation",
+    "Company retained News history and selected latest article; relevance unverified",
+    "Maya Sen Case context followed by the actual Case lead review Note in Mind",
+    "Aakash Rao Task detail and native keyboard navigation to the linked Case Note"
+  ],
+  "settled_poster_03": "Read-only recapture in the same world after the stats readiness fix: Review 1, five accepted findings and enabled seller review buttons. No data mutation.",
+  "checks": {
+    "focused_frontend": "PASS: 11 files, 58 tests. Drawer lifecycle/approval/rejection tests: 22 passed. Typecheck and git diff --check passed.",
+    "browser_page_errors": 0,
+    "browser_primary_http_failures": 0
+  },
+  "limitations": [
+    "No live provider or production acceptance. Company News is illustrative retained content.",
+    "Optional Immich 403, ScoutResearch 404 and geocoder 503 did not block the primary journey; those integrations remain unverified.",
+    "The lead state uses an actual shared Case Note. Analyst Task rows remain owner private under existing product design.",
+    "Native Graph explanation states that an original-source locator is not supplied for the link; collection source records and Ask citations remain linked.",
+    "The continuous recording includes normal loading, streaming and in-flight review phases. Its settled 03 poster was recaptured without mutating the world.",
+    "Native Playwright screencasts and forced Swiftshader takes were rejected and remain temporary only. No separate ending was appended to the approved continuous recording.",
+    "Public-site desktop/mobile, reduced motion, pause/replay and failed-video fallback verification, plus final bindings, belong to the lead."
+  ],
+  "visual_proof_paths": {
+    "walkthrough_sheets": [
+      "frame-review/contact-sheets/walkthrough-01.png",
+      "frame-review/contact-sheets/walkthrough-02.png",
+      "frame-review/contact-sheets/walkthrough-03.png",
+      "frame-review/contact-sheets/walkthrough-04.png",
+      "frame-review/contact-sheets/walkthrough-05.png",
+      "frame-review/contact-sheets/walkthrough-06.png"
+    ],
+    "loop_sheets": [
+      "video-preview/01-ask.jpg",
+      "video-preview/03-collection-dossier.jpg",
+      "video-preview/04-graph.jpg",
+      "video-preview/05-news.jpg",
+      "video-preview/07-retimed.jpg"
+    ],
+    "root_evidence": "D:/GitHub/theron-ashoka-capture/.tmp/approved-final-frames"
+  }
+}
