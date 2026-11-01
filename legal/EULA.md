@@ -2,14 +2,15 @@
 
 **(End User License Agreement)**
 
-**Version 1.13 | Effective Date: 2026-09-04**
+**Version 1.14 | Effective Date: 2026-11-02**
 
-**Document ID: SL-PUBLIC-EULA-1.13**
+**Document ID: SL-PUBLIC-EULA-1.14**
 
 **Revision history**
 
 | Version | Effective date | Summary |
 |---|---|---|
+| 1.14 | 2026-11-02 | Added Customer Security Events (observed or recorded credentials, physical-security and environment failures), Lawful Process, search and non-cooperation terms, a ban on presenting duress or decoy credentials in answer to a lawful demand, aligned the data-loss exclusion with Section 20, changed direct B2B hardware payment to 60% advance / 40% within one day after delivery, and aligned title transfer with payment. |
 | 1.13 | 2026-09-04 | Distinguished direct B2B and B2C hardware payment milestones: 50% advance / 50% before dispatch for B2B, and 60% advance / 40% on delivery for B2C; aligned the authorised-signatory title. |
 | 1.12 | 2026-09-02 | Aligned licence, trial, checkout, subscription, hosted-service, update, and privacy terms with the operating services; corrected amendment, termination, installation, warranty-clock, and arbitration provisions. |
 | 1.11 | 2026-08-29 | Consolidated hardware, software, channel-sale, and protected-technology terms. |
@@ -57,6 +58,9 @@ The Customer agrees to use the Product and the Software only for lawful purposes
 - **"Subscription"** means a recurring, term-based entitlement that renews for the billing period disclosed in the Checkout Terms or Order until cancelled, subject to payment and this Agreement.
 - **"Trial"** means a time-limited evaluation entitlement issued once per eligible device without charge. A Trial is not a paid purchase and expires automatically at the time stated in the Software.
 - **"Protected Technology"** means the ServaLabs-proprietary portions of the Product or Software, including non-public source and object code, algorithms, protocols, data structures, licensing and entitlement systems, activation logic, signing material, credentials and keys, anti-tamper and security architecture, deployment logic, and non-public technical documentation. It excludes material to the extent an applicable open-source license grants the relevant right.
+- **"Operational Credential"** means any PIN, password, passphrase, pattern, biometric, hardware token, key, certificate, recovery secret, duress or decoy credential, or other secret used to unlock, administer or recover a Product, the Software, Fleet Software or data.
+- **"Customer Security Event"** means any compromise, disclosure, loss, misuse, coercion, or unauthorised access to or action on a Product, the Software or Customer data to the extent caused or enabled by something other than a defect in the Product or Software as supplied. It includes, without limitation: (a) an Operational Credential that is observed, overheard, photographed, filmed, screen-captured, keylogged or otherwise recorded, including by CCTV, a phone, body or vehicle camera, a hidden or visible camera, a reflection, or shoulder-surfing; (b) an Operational Credential that is weak, guessable, reused, shared, written down, stored insecurely, disclosed to another person or left at default; (c) a credential entered in a place or manner where it can be observed or recorded; (d) an unattended, unlocked or unsecured device or premises; (e) malware, a hostile peripheral, or a compromised host, network or account; (f) phishing, social engineering, bribery, coercion (but a failure of a documented duress or anti-coercion feature to operate as documented is a defect), insider action or the act of an Authorized User; (g) physical access, theft, loss, tampering or interdiction after delivery to the Customer; (h) failure to apply a recommended setting or update; and (i) the act or omission of a third party the Customer relies on, including an installer or reseller acting outside ServaLabs' published instructions.
+- **"Lawful Process"** means any search, survey, inspection, seizure, requisition, summons, notice, warrant, order, direction, audit or inquiry that is, or reasonably appears to be, issued with lawful authority by a court, tax, GST, customs, financial-intelligence, enforcement, police, regulatory or other authority, including under income-tax, indirect-tax, customs, money-laundering, company, securities, data-protection, information-technology and criminal laws.
 
 ## 3. Confidential Information
 
@@ -101,7 +105,7 @@ Price shall be as specified in the Order or at the point of sale, plus applicabl
 
 ### 5.2 Payment Terms
 
-**Direct B2B hardware Orders.** Unless the Order states otherwise, 50% is due in advance on Order confirmation and the remaining 50% is due before dispatch.
+**Direct B2B hardware Orders.** Unless the Order states otherwise, 60% is due in advance on Order confirmation and the remaining 40% is due within one (1) day after delivery to the Customer.
 
 **Direct B2C hardware Orders.** Unless the Order or mandatory consumer law states otherwise, 60% is due in advance on Order confirmation and the remaining 40% is due on delivery to the Customer.
 
@@ -123,7 +127,7 @@ ServaLabs shall deliver a Product as specified in the Order. Installation, confi
 
 ### 6.3 Title & Risk Transfer
 
-**Direct sale.** Title and risk of loss shall transfer to the Customer upon delivery and completion of installation.
+**Direct sale.** Risk of loss shall transfer to the Customer upon delivery and completion of installation. Title shall transfer to the Customer only when the full price has been paid in cleared funds; until then the Customer holds the Product at its own risk, shall keep it insured and identifiable, and shall not sell, pledge or encumber it.
 
 **Reseller Sale.** This Section 6.3 does not apply. Title and risk pass under two separate contracts to which this Agreement is not a party: from ServaLabs to the reseller under ServaLabs' channel agreement with that reseller, and from the reseller to the Customer under the reseller's own terms of sale. Nothing in this Agreement determines when the Customer acquires title to, or bears risk in, a Product bought from a reseller. This Agreement governs the Software licence, acceptable use, and the ServaLabs warranty in Section 14.1 — not the commercial chain of title.
 
@@ -192,7 +196,7 @@ ServaLabs cannot access, decrypt, recover, or disclose Customer content held onl
 
 ## 11. Sole Responsibility & Legal Compliance
 
-The Customer bears exclusive civil and criminal responsibility for all data stored, processed, encrypted, concealed, or deleted using the Product or Software.
+The Customer bears exclusive civil and criminal responsibility for all data stored, processed, encrypted, concealed, or deleted using the Product or Software. This includes its response to Lawful Process (Section 19.11) and every Customer Security Event (Section 17.8).
 
 The Customer acknowledges that supplying general-purpose privacy or security technology, without more, does not establish that ServaLabs knows of, directs, or participates in a particular unlawful use. Nothing in this Agreement declares facts contrary to evidence, excuses ServaLabs' own unlawful conduct, or excludes liability that applicable law does not permit the Parties to exclude.
 
@@ -214,6 +218,7 @@ The Product and the Software shall not be used for:
 - **Destroying, altering, or concealing evidence subject to a known legal hold, court order, or active investigation;**
 - **Covert surveillance or monitoring of any individual without lawful authority and without any notice or consent required by applicable law — including any use against a spouse, partner, family member, or other individual as "stalkerware";**
 - **Remotely locking, wiping, or otherwise acting on any device that the Customer does not own or lack authority to manage;**
+- **Obstructing, hindering, or giving covert effect to non-cooperation with Lawful Process, including by presenting a duress, decoy, false or partial credential in answer to a lawful demand for access (Section 19.11, subject to Section 19.11(a));**
 - **Infringing intellectual-property rights, including software piracy or circumvention of technological protection measures.**
 
 Violation constitutes material breach and may result in termination.
@@ -236,7 +241,7 @@ Violation constitutes material breach and may result in termination.
 
 ### 14.2 Comprehensive Warranty Disclaimer
 
-THE PRODUCT AND THE SOFTWARE ARE PROVIDED **"AS IS"** AND **"AS AVAILABLE"** WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. ServaLabs expressly disclaims all warranties, including but not limited to: implied warranties of merchantability, fitness for a particular purpose, non-infringement, title, and quiet enjoyment; any guarantee that the Product or Software will prevent all security breaches, unauthorized access, data loss, or cyberattacks; any warranty of absolute or 100% protection against any threat; any warranty regarding outcomes of government investigations, law-enforcement actions, regulatory inquiries, or legal proceedings; any warranty regarding zero-day exploits, advanced persistent threats, or state-level attacks; **any absolute guarantee regarding the cleanup irrecoverability of sanitized data, particularly against state-level cleanup techniques and the physical characteristics of modern storage media (e.g., SSD wear-leveling);** uninterrupted operation; or compatibility with future software, operating systems, or third-party services.
+THE PRODUCT AND THE SOFTWARE ARE PROVIDED **"AS IS"** AND **"AS AVAILABLE"** WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. ServaLabs expressly disclaims all warranties, including but not limited to: implied warranties of merchantability, fitness for a particular purpose, non-infringement, title, and quiet enjoyment; any guarantee that the Product or Software will prevent all security breaches, unauthorized access, data loss, or cyberattacks; any warranty of absolute or 100% protection against any threat; any warranty that the Product or Software will prevent, detect or withstand a Customer Security Event; any warranty regarding outcomes of government investigations, law-enforcement actions, regulatory inquiries, or legal proceedings; any warranty regarding zero-day exploits, advanced persistent threats, or state-level attacks; **any absolute guarantee regarding the cleanup irrecoverability of sanitized data, particularly against state-level cleanup techniques and the physical characteristics of modern storage media (e.g., SSD wear-leveling);** uninterrupted operation; or compatibility with future software, operating systems, or third-party services.
 
 The Customer acknowledges that no technology solution can provide 100% security against all possible threats; that effectiveness depends on proper configuration, maintenance, and use; that security is a shared responsibility; and that ServaLabs makes no representation regarding the Product's or Software's ability to protect against all current or future attack methods.
 
@@ -349,11 +354,21 @@ Remote support is technically disabled by default and may be rendered only via a
 
 ### 17.4 Customer Responsibility for Backups
 
-The Customer is solely responsible for maintaining appropriate data backups (a 3-2-1 strategy is strongly recommended). **ServaLabs shall not be liable for any data loss or corruption, regardless of cause.**
+The Customer is solely responsible for maintaining appropriate data backups (a 3-2-1 strategy is strongly recommended). **ServaLabs shall not be liable for any data loss or corruption, except to the extent caused by ServaLabs' own breach of this Agreement, and then only within Section 20.**
 
 ### 17.5–17.7 Customer Errors, Third-Party Risk, and "No 100% Security"
 
 The Customer bears responsibility for data loss, breach, or incidents resulting from weak credentials, misconfiguration, failure to patch, granting access to untrusted parties, malware-infected networks, or physical-security failures; for risks introduced by connecting to third-party networks/devices/accounts; and acknowledges that no technology can provide 100% security against zero-day, state-level, physical-access, social-engineering, or insider threats. The Customer assumes all risk of using the Product/Software in high-threat environments or for highly sensitive data.
+
+### 17.8 Customer Security Events and Operating Environment
+
+The Customer is responsible for its operating environment and for every Customer Security Event. In particular the Customer shall: (a) choose strong, unique Operational Credentials and replace every temporary or default credential at handover (Section 8); (b) take reasonable steps so that no person and no camera or recording device (including CCTV, a phone or a screen-recording tool) that the Customer knows or ought to know is present can see, hear or capture an Operational Credential as it is entered or handled, and control who can view footage from cameras on its premises, vehicles and surroundings; (c) not share, write down, photograph, store in plain text or transmit an Operational Credential; (d) keep Products and Authorized User devices in secured premises and not leave them unlocked or unattended; (e) keep its host systems and networks free of malware and untrusted peripherals; (f) apply the recommended settings and updates described in Section 16; and (g) instruct and supervise its Authorized Users.
+
+A Customer Security Event is not a defect, non-conformity, breach of warranty or failure of the Product or Software. The Product and Software are not warranted to prevent, detect or withstand one, except that a documented duress, access-segregation or secure-erase feature that fails to operate as documented remains a defect. ServaLabs is not liable to the Customer, or to anyone claiming through the Customer, for a Customer Security Event or for loss resulting from it, and the Customer shall defend and indemnify ServaLabs under Section 19.8 against claims by its customers, employees, Authorized Users, data principals and other third parties arising from one.
+
+A Customer who alleges that a security failure was caused by a defect in the Product or Software as supplied, and not by a Customer Security Event, shall give ServaLabs prompt written notice, preserve the affected device, logs and records unaltered, allow ServaLabs or an independent examiner to inspect them under confidentiality, and prove that the defect caused the failure. ServaLabs is not responsible to the extent a failure to preserve or allow inspection prejudices its ability to investigate. Nothing in this Section excludes ServaLabs' liability for a defect proven to exist in the Product or Software as supplied, which remains subject to Sections 14 and 20 and to non-waivable law.
+
+Statements by or for ServaLabs or a reseller that describe a Product or the Software as secure, private, zero-access or similar describe its design intent. They are not a guarantee of any outcome in the Customer's own environment, and the Customer has not relied on any such statement as a promise of outcome. This paragraph does not apply to the factual statements about ServaLabs' own data practices in Sections 8, 9 and 15.6.
 
 ## 18. Data Lifecycle and Compliance Tools
 
@@ -372,6 +387,7 @@ The Software includes advanced features for data management and access control. 
 - **Function:** cryptographic access-segregation mechanisms, including multi-credential encrypted partitions and duress-activated protections, designed to separate classes of data under distinct authentication controls.
 - **Intended Use:** to protect sensitive data against unauthorized access arising from **physical coercion, theft, kidnapping, or extortion**, and to reduce the risk of compelled disclosure of unrelated data sets to criminal actors. **These tools are not represented as a means to defeat a lawful order; refusing a lawful decryption or production order may itself be an offence (e.g., under Section 69 of the IT Act, 2000), and the Customer remains solely responsible for lawful compliance.**
 - **Legal Basis:** may assist the Customer in implementing reasonable security safeguards, subject to the Customer's own legal assessment.
+- **No use against Lawful Process:** a duress, decoy, false or partial credential must never be presented in answer to a lawful demand for access, decryption or production. Doing so is a prohibited use under Sections 13, 19.1 and 19.11.
 
 ### 18.3 Default State; Arming and Activation Attestation
 
@@ -404,7 +420,7 @@ The Customer covenants to use the Product and Software solely for lawful purpose
 
 1. Destroy, alter, or conceal evidence subject to a known legal hold, court order, or active investigation (**spoliation of evidence**);
 2. Evade lawful tax, regulatory, or reporting obligations, including concealing assets from lawful authorities;
-3. Obstruct lawful search-and-seizure operations;
+3. Obstruct, hinder or evade Lawful Process, including any search, survey, seizure, inspection or inquiry, whether by hiding, destroying or altering data, devices or records, by arming, enabling or triggering any feature, or by presenting a duress, decoy, false or partial credential in answer to a demand for access (this item is subject to Section 19.11(a));
 4. Facilitate, conceal, or aid the commission of any criminal offence, including fraud, money laundering, terrorism, drug trafficking, human trafficking, child exploitation, or organized crime;
 5. Violate the terms of service of any third-party platform;
 6. Infringe intellectual-property rights, including piracy, circumvention of technological protection measures, or unauthorized software activation;
@@ -436,7 +452,7 @@ ServaLabs will comply with lawful obligations applicable to it under Indian law 
 
 ### 19.8 Indemnification
 
-The Customer shall defend, indemnify, and hold harmless ServaLabs and its officers, directors, employees, agents, and affiliates from any claims, liabilities, damages, losses, costs, and fees (including reasonable attorneys' fees) arising out of or relating to: the Customer's violation of this Agreement; the Customer's use, misuse, configuration, or deployment of the Product/Software (including use of any secure-erase, data-sanitization, access-control, fleet/remote-administration, or monitoring features and any configuration choices, and any claim by an Authorized User or monitored individual); any allegation that ServaLabs aided, abetted, conspired in, facilitated, or had knowledge of unlawful activity by the Customer (including spoliation of evidence, obstruction of justice, tax evasion, money laundering, IP infringement, or any criminal activity); the Customer's misrepresentations; IP-infringement claims arising from the Customer's data or use; export violations; third-party licence violations; data breaches except to the extent solely caused by ServaLabs' gross negligence or willful misconduct; and any regulatory or law-enforcement action related to the Customer's use. This obligation survives termination indefinitely.
+The Customer shall defend, indemnify, and hold harmless ServaLabs and its officers, directors, employees, agents, and affiliates from any claims, liabilities, damages, losses, costs, and fees (including reasonable attorneys' fees) arising out of or relating to: the Customer's violation of this Agreement; the Customer's use, misuse, configuration, or deployment of the Product/Software (including use of any secure-erase, data-sanitization, access-control, fleet/remote-administration, or monitoring features and any configuration choices, and any claim by an Authorized User or monitored individual); any allegation that ServaLabs aided, abetted, conspired in, facilitated, or had knowledge of unlawful activity by the Customer (including spoliation of evidence, obstruction of justice, tax evasion, money laundering, IP infringement, or any criminal activity); the Customer's misrepresentations; IP-infringement claims arising from the Customer's data or use; export violations; third-party licence violations; data breaches except to the extent caused by ServaLabs' own breach, negligence, defect in the Product or willful misconduct; Customer Security Events (Section 17.8); and any regulatory, law-enforcement or Lawful Process action related to the Customer's use, including any claim, investigation or action against ServaLabs arising from Lawful Process directed at the Customer or from the Customer's response or failure to respond to it, together with ServaLabs' reasonable costs of responding. The indemnity does not cover fines or penalties except to the extent lawfully indemnifiable, and does not apply to the extent a loss is caused by ServaLabs' own breach, negligence, defect in the Product or willful misconduct. This obligation survives termination for as long as a claim may be brought.
 
 ### 19.9 Compensation for Deliberate Misuse of Protected Technology
 
@@ -451,6 +467,18 @@ It is outside the limitation in Section 20, does not limit ServaLabs' other righ
 ### 19.10 Equitable Relief
 
 ServaLabs may seek proportionate interim or other equitable relief from the courts at Ahmedabad, Gujarat, for actual or threatened misuse of Confidential Information, Protected Technology, or technical protection measures, without waiving arbitration. Relief must not restrict rights granted directly by an applicable open-source licence, a protected disclosure, or a non-waivable statutory right.
+
+### 19.11 Lawful Process, Searches and Non-Cooperation
+
+**(a) Customer's responsibility.** The Customer alone is responsible for its response to Lawful Process, including producing passwords, access codes, keys, device access, books and records where the law requires, and for any consequence of cooperating or not cooperating. Nothing in this Agreement requires the Customer to waive a legal right or privilege, or prevents it from asserting one through its advisers or seeking a judicial remedy. The Customer shall not, however, use the Product or Software to give covert effect to non-cooperation.
+
+**(b) No use of features against Lawful Process.** The Customer shall not use, arm, enable, configure or trigger any Section 18 feature, any Fleet action, any duress or decoy credential, any secure-erase function or any other function to hide, withhold, alter, destroy or restrict access to data, devices or records from Lawful Process, and shall not present a duress, decoy, false or partial credential in answer to a lawful demand for access. This applies from the time the Customer receives notice of, or actually knows of, pending or threatened Lawful Process.
+
+**(c) No assistance and no assurance.** ServaLabs cannot and will not help anyone defeat, bypass, delay or anticipate Lawful Process, and the Customer shall not ask it to (Section 19.4). ServaLabs does not warrant that any Product or Software will resist, withstand or defeat Lawful Process, and no statement by anyone to the contrary is authorised or relied on.
+
+**(d) No liability.** ServaLabs is not liable to the Customer, or to anyone claiming through the Customer, for any consequence of Lawful Process directed at the Customer or of the Customer's cooperation or non-cooperation, including seizure of equipment, assessment, penalty, prosecution, contempt, adverse inference, business interruption or loss of data, whether or not a feature worked or was used. ServaLabs' disclosure of records it holds in response to valid Lawful Process is not a breach of this Agreement or the Privacy Policy.
+
+**(e) ServaLabs' rights.** ServaLabs may, without liability, comply with valid Lawful Process; preserve and disclose records it holds; and suspend or refuse activation, update, lease or licence services where it reasonably believes the Product or Software is being used in breach of this Section 19.11 or Section 19.1, or where a court or authority so directs, and may terminate under Section 24.3 on an actual breach. The Customer shall reimburse ServaLabs' reasonable costs of responding to Lawful Process arising from the Customer's conduct or use.
 
 ## 20. Limitation of Liability
 
@@ -500,7 +528,7 @@ The Customer may terminate this Agreement at any time by ceasing all use of the 
 
 ServaLabs may terminate this Agreement (including the licence granted in Section 15.2) with immediate effect by written notice if the Customer materially breaches this Agreement and, where the breach is curable, fails to cure within fifteen (15) days of notice.
 
-**Non-curable breaches.** A breach of Section 1 (Purpose), Section 6.5 (Export & Sanctions), Section 13 (Prohibited Uses), Section 15.3 (entitlement circumvention), Section 15.7 (Protected Technology restrictions), Section 19.1 (Lawful Use Only), or Section 19.5 (reverse engineering and related Protected Technology restrictions) is treated as **not curable**, and ServaLabs may terminate immediately without a cure period. This is consistent with Section 6.5, which entitles ServaLabs to terminate immediately for an export or sanctions violation. Deliberate misuse of Protected Technology does not become curable by later cessation.
+**Non-curable breaches.** A breach of Section 1 (Purpose), Section 6.5 (Export & Sanctions), Section 13 (Prohibited Uses), Section 15.3 (entitlement circumvention), Section 15.7 (Protected Technology restrictions), Section 19.1 (Lawful Use Only), Section 19.11 (Lawful Process), or Section 19.5 (reverse engineering and related Protected Technology restrictions) is treated as **not curable**, and ServaLabs may terminate immediately without a cure period. This is consistent with Section 6.5, which entitles ServaLabs to terminate immediately for an export or sanctions violation. Deliberate misuse of Protected Technology does not become curable by later cessation.
 
 ### 24.4 Effect of Termination
 
