@@ -10,7 +10,7 @@
 
 | Version | Effective date | Summary |
 |---|---|---|
-| 1.14 | 2026-11-02 | Added Customer Security Events (observed or recorded credentials, physical-security and environment failures), Lawful Process, search and non-cooperation terms, a ban on presenting duress or decoy credentials in answer to a lawful demand, aligned the data-loss exclusion with Section 20, changed direct B2B hardware payment to 60% advance / 40% within one day after delivery, and aligned title transfer with payment. |
+| 1.14 | 2026-11-02 | Added Customer Security Events (observed or recorded credentials, physical-security and environment failures), Lawful Process, search and non-cooperation terms, a ban on presenting duress or decoy credentials in answer to a lawful demand, aligned the data-loss exclusion with Section 20, changed direct B2B hardware payment to 60% advance / 40% after dispatch and before delivery, and aligned title transfer with payment. |
 | 1.13 | 2026-09-04 | Distinguished direct B2B and B2C hardware payment milestones: 50% advance / 50% before dispatch for B2B, and 60% advance / 40% on delivery for B2C; aligned the authorised-signatory title. |
 | 1.12 | 2026-09-02 | Aligned licence, trial, checkout, subscription, hosted-service, update, and privacy terms with the operating services; corrected amendment, termination, installation, warranty-clock, and arbitration provisions. |
 | 1.11 | 2026-08-29 | Consolidated hardware, software, channel-sale, and protected-technology terms. |
@@ -105,7 +105,7 @@ Price shall be as specified in the Order or at the point of sale, plus applicabl
 
 ### 5.2 Payment Terms
 
-**Direct B2B hardware Orders.** Unless the Order states otherwise, 60% is due in advance on Order confirmation and the remaining 40% is due within one (1) day after delivery to the Customer.
+**Direct B2B hardware Orders.** Unless the Order states otherwise, 60% is due in advance on Order confirmation and the remaining 40% is due after dispatch and before delivery to the Customer. ServaLabs will notify the Customer when the Order is dispatched, may hold or stop the consignment until the balance has cleared, and extends no credit.
 
 **Direct B2C hardware Orders.** Unless the Order or mandatory consumer law states otherwise, 60% is due in advance on Order confirmation and the remaining 40% is due on delivery to the Customer.
 
