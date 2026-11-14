@@ -1,5 +1,7 @@
 # Weaknesses Ledger
 
+- 2026-11-14 — Added a web-optimized Fleet overview derivative alongside the original: H.264 at the original 1866×868 resolution and 32.832-second duration, with audio retained. The derivative is 1,356,010 bytes versus 27,777,495 bytes for the source; a representative frame was compared visually. The original remains available for other consumers.
+
 - 2026-10-13 — Presentation revision3 uses a full1600×1000 collection poster and
  12-second recording derived from the original approved native browser take,
  replacing the public foreground crop. The previous media stays intact;
