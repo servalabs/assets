@@ -18,6 +18,8 @@ export interface RiskEvent {
   sources: RiskSource[];
   /** Editorial image key, resolved via the bundled asset map (optional). */
   image?: string;
+  /** Audiences this event is most relatable to (e.g. ["IN"]). See exposures.ts. */
+  audiences?: string[];
 }
 
 export interface Scandal {
@@ -67,4 +69,15 @@ export interface RiskMatrixProps {
   youLabel?: string;
   /** Optional flag image URL rendered inside the YOU node. */
   youFlagUrl?: string;
+  /** Opt-in "scroll through companies" mode. Ordered entity keys: the panel
+   *  opens on the first one, and scrolling past the end (or start) of the
+   *  panel's history moves to the next (or previous) entity. Prev/next
+   *  buttons offer the same for touch and keyboard. Omit to keep the
+   *  original click-to-select panel. */
+  scrollChain?: string[];
+  /** Float events tagged with this audience (e.g. "IN") to the top of each
+   *  entity's history and mark them with `featuredAudienceLabel`. */
+  featuredAudience?: string;
+  /** Badge text for featured events (default "Relevant to you"). */
+  featuredAudienceLabel?: string;
 }

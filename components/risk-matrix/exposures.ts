@@ -44,6 +44,11 @@ export interface Exposure {
   sources: RiskSource[];
   /** Editorial image key, resolved via the bundled asset map (optional). */
   image?: string;
+  /** Audiences this event is most relatable to (ISO country codes, e.g. "IN"
+   *  for Indian readers: WhatsApp, Android, Windows, ChatGPT, an Indian
+   *  company cut off). Hosts can float these to the top with the
+   *  RiskMatrix `featuredAudience` prop. Optional; most events have none. */
+  audiences?: string[];
 }
 
 export const ENTITIES: Record<string, EntityMeta> = {
@@ -244,6 +249,7 @@ export const EXPOSURES: Exposure[] = [
   {
     entity: "google",
     headline: "Your phone phones home every four and a half minutes, even idle",
+    audiences: ["IN"],
     explanation:
       "A March 2021 Trinity College Dublin study found Android and iOS phones transmit data to their platform makers every 4.5 minutes on average, even sitting idle — Pixel devices sent about 1MB every 12 hours idle versus 52KB from the iPhone tested.",
     year: "2021",
@@ -267,6 +273,7 @@ export const EXPOSURES: Exposure[] = [
   {
     entity: "google",
     headline: "One US order cut Huawei's phones off Gmail, Maps, and the Play Store",
+    audiences: ["IN"],
     explanation:
       "After the Commerce Department placed Huawei on its Entity List in May 2019, Google was barred from licensing Google Mobile Services to Huawei, cutting new devices off from the Play Store, Gmail, Maps, and YouTube.",
     year: "2019",
@@ -339,6 +346,7 @@ export const EXPOSURES: Exposure[] = [
   {
     entity: "microsoft",
     headline: "Windows sends 'required' diagnostic data to Microsoft — and you can't turn it off",
+    audiences: ["IN"],
     explanation:
       "Windows collects 'required' diagnostic data by default that consumer editions cannot fully turn off, plus additional 'optional' data on browsing and app usage that users can disable — both categories are sent to Microsoft.",
     year: "Ongoing",
@@ -351,6 +359,7 @@ export const EXPOSURES: Exposure[] = [
   {
     entity: "microsoft",
     headline: "Windows' 'Recall' quietly screenshotted everything you did — passwords and card numbers included",
+    audiences: ["IN"],
     explanation:
       "Security researchers found Recall's screenshot database, including credit card and Social Security numbers even with the sensitive-info filter on, could be read as a normal user process. Microsoft delayed release and redesigned it to be opt-in and encrypted after backlash.",
     year: "2024",
@@ -410,6 +419,7 @@ export const EXPOSURES: Exposure[] = [
   {
     entity: "microsoft",
     headline: "Microsoft cut off an Indian company's email and Teams over sanctions",
+    audiences: ["IN"],
     explanation:
       "On July 22, 2025 Microsoft suspended Outlook and Teams access for India's Nayara Energy, 49% owned by Russia's Rosneft, citing EU sanctions, then restored service on July 30 hours before a Delhi High Court hearing.",
     year: "2025",
@@ -436,6 +446,7 @@ export const EXPOSURES: Exposure[] = [
   {
     entity: "meta",
     headline: "WhatsApp encrypts your messages but still collects metadata Meta can share",
+    audiences: ["IN"],
     explanation:
       "WhatsApp message content is end-to-end encrypted and WhatsApp says it doesn't log who's messaging whom, but it still collects metadata — device and IP info, activity timing, call duration — and can share categories of it with other Meta companies.",
     year: "Ongoing",
@@ -498,6 +509,7 @@ export const EXPOSURES: Exposure[] = [
   {
     entity: "amazon",
     headline: "Amazon kept kids' Alexa voice recordings forever, despite parents' deletion requests",
+    audiences: ["IN"],
     explanation:
       "The FTC and DOJ charged Amazon with violating COPPA by keeping children's Alexa voice recordings indefinitely and ignoring parents' deletion requests; Amazon paid a $25 million civil penalty to settle.",
     year: "2023",
@@ -548,6 +560,7 @@ export const EXPOSURES: Exposure[] = [
   {
     entity: "apple",
     headline: "A secret iPhone chip flaw let spyware infect phones with zero clicks",
+    audiences: ["IN"],
     explanation:
       "Kaspersky disclosed in December 2023 that a zero-click iMessage exploit chain used a previously undocumented hardware feature in Apple's A12-A16 chips to bypass kernel memory protection on iPhones. Apple had quietly patched it in July 2023.",
     year: "2023",
@@ -588,6 +601,7 @@ export const EXPOSURES: Exposure[] = [
   {
     entity: "openai",
     headline: "ChatGPT trains on your conversations by default unless you opt out",
+    audiences: ["IN"],
     explanation:
       "By default OpenAI may use content from consumer ChatGPT conversations (Free, Plus, Pro, Go) to train its models unless the user opts out; Business, Enterprise, and API accounts are excluded unless they opt in.",
     year: "Ongoing",

@@ -24,6 +24,7 @@ function buildScandals(): Record<string, Scandal> {
       sources: ex.sources,
     };
     if (ex.image) event.image = ex.image;
+    if (ex.audiences?.length) event.audiences = ex.audiences;
     scandal.events.push(event);
   }
   return out;

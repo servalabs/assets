@@ -1,6 +1,6 @@
-import { Fragment, useState } from "react";
+import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import { AlertTriangle, Globe, Activity, ExternalLink, XCircle } from "lucide-react";
+import { AlertTriangle, Globe, Activity, ExternalLink, XCircle, ChevronLeft, ChevronRight, ChevronsDown } from "lucide-react";
 import { SCANDALS, TECH_ORDER, AGENCY_ORDER } from "./scandals";
 import { logos, editorial } from "./assets";
 import FingerprintMirror from "./FingerprintMirror";
@@ -9,6 +9,15 @@ import "./risk-matrix.css";
 
 const RADIUS = 174;
 const SIDEBAR_PREVIEW_LIMIT = 180;
+/** Wheel distance past the panel's end before it moves to the next entity —
+ *  one deliberate flick, not the tail of the scroll that reached the end. */
+const CHAIN_WHEEL_THRESHOLD = 160;
+/** Pause after a move so trackpad inertia doesn't skip several entities. */
+const CHAIN_COOLDOWN_MS = 750;
+/** Wheel silence that marks the start of a new gesture. */
+const CHAIN_GESTURE_GAP_MS = 180;
+/** Wheel chaining only in the side-by-side layout with a fine pointer. */
+const CHAIN_WIDE_QUERY = "(min-width: 1024px) and (pointer: fine)";
 
 /**
  * Keeps the timeline skimmable without changing the underlying, cited record.
@@ -47,14 +56,103 @@ export default function RiskMatrix({
   fingerprint,
   youLabel = "YOU",
   youFlagUrl,
+  scrollChain,
+  featuredAudience,
+  featuredAudienceLabel = "Relevant to you",
 }: RiskMatrixProps) {
-  const [selectedCompany, setSelectedCompany] = useState<string | null>(null);
+  const chain = useMemo(() => (scrollChain ?? []).filter((key) => SCANDALS[key]), [scrollChain]);
+  const [selectedCompany, setSelectedCompany] = useState<string | null>(() => chain[0] ?? null);
   const [showFingerprint, setShowFingerprint] = useState(false);
   const [isEmbargo, setIsEmbargo] = useState(false);
   const [expandedEvents, setExpandedEvents] = useState<Set<string>>(() => new Set());
   const reduce = useReducedMotion();
+  // State (not a ref): with AnimatePresence mode="wait" the next entity's list
+  // mounts only after the previous one finishes exiting, so the wheel
+  // listener must re-attach when the element itself changes.
+  const [timelineEl, setTimelineEl] = useState<HTMLDivElement | null>(null);
 
   const selectedData = selectedCompany ? SCANDALS[selectedCompany] : null;
+  const chainIndex = selectedCompany ? chain.indexOf(selectedCompany) : -1;
+  const chainOn = chain.length > 1;
+  const prevKey = chainOn && chainIndex > 0 ? chain[chainIndex - 1] : null;
+  const nextKey = chainOn ? (chainIndex < 0 ? chain[0] : chain[chainIndex + 1] ?? null) : null;
+
+  // Featured-audience events first (stable), original order otherwise.
+  const orderedEvents = useMemo(() => {
+    if (!selectedData) return [];
+    if (!featuredAudience) return selectedData.events;
+    const hit = (e: (typeof selectedData.events)[number]) => e.audiences?.includes(featuredAudience) ?? false;
+    return [...selectedData.events.filter(hit), ...selectedData.events.filter((e) => !hit(e))];
+  }, [selectedData, featuredAudience]);
+
+  const goTo = useCallback((key: string | null) => {
+    if (!key) return;
+    setShowFingerprint(false);
+    setSelectedCompany(key);
+    setExpandedEvents(new Set());
+  }, []);
+
+  // Scroll chaining (forward only, side-by-side desktop layout only): when a
+  // NEW downward wheel gesture starts while the history list is already at
+  // its end, it moves to the next entity. The flick that merely reaches the
+  // end never chains (so the page isn't trapped by momentum), scrolling up
+  // never chains (Previous button instead), and narrow / touch layouts use
+  // the buttons. At the chain's end, or for any other wheel, the page
+  // scrolls on as usual.
+  const wheelState = useRef({ acc: 0, lockUntil: 0, lastWheel: 0, armed: false });
+  useEffect(() => {
+    const el = timelineEl;
+    if (!chainOn || !el || typeof window === "undefined") return;
+    const wide = window.matchMedia?.(CHAIN_WIDE_QUERY);
+    wheelState.current.acc = 0;
+    wheelState.current.armed = false;
+    const onWheel = (e: WheelEvent) => {
+      const state = wheelState.current;
+      const now = performance.now();
+      const newGesture = now - state.lastWheel > CHAIN_GESTURE_GAP_MS;
+      state.lastWheel = now;
+      if (wide && !wide.matches) return;
+      if (e.deltaY <= 0 || Math.abs(e.deltaY) < Math.abs(e.deltaX)) {
+        state.acc = 0;
+        state.armed = false;
+        return;
+      }
+      const atBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 2;
+      if (newGesture) state.armed = atBottom;
+      if (!atBottom || !state.armed || !nextKey) {
+        state.acc = 0;
+        return;
+      }
+      e.preventDefault();
+      if (now < state.lockUntil) return;
+      state.acc += e.deltaY;
+      if (state.acc >= CHAIN_WHEEL_THRESHOLD) {
+        state.acc = 0;
+        state.armed = false;
+        state.lockUntil = now + CHAIN_COOLDOWN_MS;
+        goTo(nextKey);
+      }
+    };
+    el.addEventListener("wheel", onWheel, { passive: false });
+    return () => el.removeEventListener("wheel", onWheel);
+  }, [chainOn, nextKey, goTo, timelineEl]);
+
+  // While one entity's list exits and the next mounts, the wheel lands on the
+  // bare panel; hold the page still for that cooldown so the hand-off
+  // doesn't jolt the page.
+  const [panelEl, setPanelEl] = useState<HTMLDivElement | null>(null);
+  useEffect(() => {
+    if (!chainOn || !panelEl) return;
+    const guard = (e: WheelEvent) => {
+      if (performance.now() >= wheelState.current.lockUntil) return;
+      e.preventDefault();
+      // Lenis (the host site's smooth scroll) ignores defaultPrevented but
+      // honours its own flag; a no-op where Lenis isn't present.
+      (e as WheelEvent & { lenisStopPropagation?: boolean }).lenisStopPropagation = true;
+    };
+    panelEl.addEventListener("wheel", guard, { passive: false });
+    return () => panelEl.removeEventListener("wheel", guard);
+  }, [chainOn, panelEl]);
 
   const handleYouClick = () => {
     setSelectedCompany(null);
@@ -129,7 +227,7 @@ export default function RiskMatrix({
                     whileTap={{ scale: 0.95 }}
                     className={`rm-agency-btn ${big ? "lg" : "sm"}`}
                   >
-                    <img src={logos[agency.logo]} alt={agency.name} />
+                    <img src={logos[agency.logo]} alt={agency.name} loading="lazy" decoding="async" />
                   </motion.button>
                 );
               })}
@@ -183,7 +281,7 @@ export default function RiskMatrix({
                           filter: isEmbargo ? "grayscale(100%)" : "none",
                         }}
                       >
-                        <img src={logos[company.logo]} alt={company.name} />
+                        <img src={logos[company.logo]} alt={company.name} loading="lazy" decoding="async" />
                         <span className="rm-node-label">{company.name}</span>
                       </motion.button>
                     </Fragment>
@@ -212,7 +310,7 @@ export default function RiskMatrix({
         </div>
 
         {/* RIGHT: INTELLIGENCE PANEL */}
-        <div className="rm-panel">
+        <div className={`rm-panel${chainOn ? " rm-panel--chain" : ""}`} ref={setPanelEl}>
           <AnimatePresence mode="wait">
             {showFingerprint ? (
               <motion.div
@@ -235,7 +333,7 @@ export default function RiskMatrix({
               >
                 <div className="rm-panel-head">
                   <div className="rm-panel-head-icons">
-                    <img src={logos[selectedData.logo]} alt="" />
+                    <img src={logos[selectedData.logo]} alt="" decoding="async" />
                     <button type="button" onClick={() => setSelectedCompany(null)} className="rm-close" aria-label="Close">
                       <XCircle />
                     </button>
@@ -256,18 +354,24 @@ export default function RiskMatrix({
                     it the host site's Lenis smooth-scroll hijacks the wheel and
                     scrolls the whole page instead of this list. Harmless when no
                     Lenis instance is present (e.g. the WinCommander desktop app). */}
-                <div className="rm-timeline" data-lenis-prevent>
+                <div
+                  ref={setTimelineEl}
+                  className={`rm-timeline${chainOn ? " rm-timeline--chain" : ""}`}
+                  data-lenis-prevent
+                >
                   <h4 className="rm-timeline-title">Compliance &amp; Risk History</h4>
-                  {selectedData.events.map((event, i) => {
+                  {orderedEvents.map((event, i) => {
                     const eventKey = `${selectedCompany ?? "entity"}-${i}`;
+                    const featured = featuredAudience ? event.audiences?.includes(featuredAudience) : false;
                     const expanded = expandedEvents.has(eventKey);
                     const preview = sidebarPreview(event.desc);
                     const canExpand = preview !== event.desc;
 
                     return (
-                    <div key={eventKey} className="rm-event">
+                    <div key={eventKey} className={`rm-event${featured ? " is-featured" : ""}`}>
                       <div className="rm-event-top">
                         <span className="rm-event-year">{event.year}</span>
+                        {featured && <span className="rm-featured">{featuredAudienceLabel}</span>}
                         <span className={`rm-sev rm-sev--${event.severity.toLowerCase()}`}>{event.severity}</span>
                       </div>
                       <h5 className="rm-event-title">{event.title}</h5>
@@ -284,7 +388,7 @@ export default function RiskMatrix({
                       )}
                       {event.image && editorial[event.image] && (
                         <div className="rm-event-img">
-                          <img src={editorial[event.image]} alt={event.title} draggable={false} />
+                          <img src={editorial[event.image]} alt={event.title} draggable={false} loading="lazy" decoding="async" />
                         </div>
                       )}
                       {event.sources.length > 0 && (
@@ -299,11 +403,15 @@ export default function RiskMatrix({
                     </div>
                     );
                   })}
+                  {chainOn && nextKey && (
+                    <button type="button" className="rm-chain-next-hint" onClick={() => goTo(nextKey)}>
+                      <ChevronsDown aria-hidden="true" />
+                      Next: {SCANDALS[nextKey].name}
+                    </button>
+                  )}
                 </div>
 
-                <div className="rm-panel-foot">
-                  <p>⚠ Data is subject to US laws</p>
-                </div>
+                {!chainOn && <PanelFoot />}
               </motion.div>
             ) : (
               <motion.div
@@ -321,8 +429,49 @@ export default function RiskMatrix({
               </motion.div>
             )}
           </AnimatePresence>
+
+          {/* Outside the keyed detail block so it doesn't remount on every
+              move: keyboard focus stays on Previous/Next between companies. */}
+          {chainOn && selectedData && !showFingerprint && (
+            <>
+              <nav className="rm-chain" aria-label="Browse companies">
+                <button
+                  type="button"
+                  className="rm-chain-btn"
+                  onClick={() => goTo(prevKey)}
+                  disabled={!prevKey}
+                  aria-label={prevKey ? `Previous: ${SCANDALS[prevKey].name}` : "No previous company"}
+                >
+                  <ChevronLeft aria-hidden="true" />
+                  {prevKey && <img src={logos[SCANDALS[prevKey].logo]} alt="" />}
+                </button>
+                <span className="rm-chain-count" aria-live="polite">
+                  {chainIndex >= 0 ? `${chainIndex + 1} / ${chain.length}` : `— / ${chain.length}`}
+                </span>
+                <button
+                  type="button"
+                  className="rm-chain-btn"
+                  onClick={() => goTo(nextKey)}
+                  disabled={!nextKey}
+                  aria-label={nextKey ? `Next: ${SCANDALS[nextKey].name}` : "No next company"}
+                >
+                  {nextKey && <img src={logos[SCANDALS[nextKey].logo]} alt="" />}
+                  <ChevronRight aria-hidden="true" />
+                </button>
+              </nav>
+              <PanelFoot />
+            </>
+          )}
         </div>
       </div>
+    </div>
+  );
+}
+
+function PanelFoot() {
+  return (
+    <div className="rm-panel-foot">
+      <p>⚠ Data is subject to US laws</p>
     </div>
   );
 }
