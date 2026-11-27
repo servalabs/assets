@@ -351,6 +351,10 @@
 @container (max-width: 330px) or (max-height: 323px) { .rm-nodes-inner, .rm-agencies { scale: 0.72; } }
 @container (max-width: 296px) or (max-height: 291px) { .rm-nodes-inner, .rm-agencies { scale: 0.64; } }
 @container (max-width: 263px) or (max-height: 259px) { .rm-nodes-inner, .rm-agencies { scale: 0.56; } }
+/* Roomy stages (large screens) grow the orbit instead of leaving it small. */
+@container (min-width: 500px) and (min-height: 460px) { .rm-nodes-inner, .rm-agencies { scale: 1.12; } }
+@container (min-width: 560px) and (min-height: 520px) { .rm-nodes-inner, .rm-agencies { scale: 1.25; } }
+@container (min-width: 640px) and (min-height: 590px) { .rm-nodes-inner, .rm-agencies { scale: 1.42; } }
 
 .rm-panel-empty {
   flex: 1;
