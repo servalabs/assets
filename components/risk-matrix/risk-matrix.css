@@ -381,7 +381,10 @@
 .rm-timeline { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem; }
 .rm-timeline-title { font-size: 12px; text-transform: uppercase; font-weight: 700; color: var(--rm-muted); letter-spacing: 0.08em; border-bottom: 1px solid var(--rm-border); padding-bottom: 0.5rem; margin: 0; }
 
-.rm-event { background: color-mix(in srgb, var(--rm-card-2) 65%, transparent); border: 1px solid var(--rm-border); border-radius: 12px; padding: 0.75rem; transition: border-color 0.2s; }
+/* Optional event-card overrides (unset = the original look): --rm-event-bg,
+   --rm-event-border, --rm-event-shadow, --rm-event-featured-bg,
+   --rm-event-featured-border. Light hosts use them for white cards. */
+.rm-event { background: var(--rm-event-bg, color-mix(in srgb, var(--rm-card-2) 65%, transparent)); border: 1px solid var(--rm-event-border, var(--rm-border)); box-shadow: var(--rm-event-shadow, none); border-radius: 12px; padding: 0.75rem; transition: border-color 0.2s; }
 .rm-event:hover { border-color: color-mix(in srgb, var(--rm-danger) 30%, transparent); }
 .rm-event-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.5rem; }
 .rm-event-year { font-size: 12px; font-weight: 700; color: var(--rm-muted); background: color-mix(in srgb, var(--rm-fg) 6%, transparent); padding: 1px 8px; border-radius: 6px; border: 1px solid var(--rm-border); white-space: nowrap; }
@@ -407,7 +410,11 @@
 /* In chain mode the Previous/Next bar and footer sit after the animated
    detail block, so the detail takes the remaining height instead of 100%. */
 .rm-panel--chain > .rm-detail { height: auto; flex: 1 1 0; }
-.rm-event.is-featured { border-color: color-mix(in srgb, var(--rm-accent) 45%, transparent); background: color-mix(in srgb, var(--rm-accent) 7%, var(--rm-card-2)); }
+.rm-event.is-featured { border-color: var(--rm-event-featured-border, color-mix(in srgb, var(--rm-accent) 45%, transparent)); background: var(--rm-event-featured-bg, color-mix(in srgb, var(--rm-accent) 7%, var(--rm-card-2))); }
+/* highlightMoney: amounts in the text + a "Money" chip beside year/severity. */
+.rm-money { background: var(--rm-money-bg, color-mix(in srgb, var(--rm-warning) 22%, transparent)); color: inherit; font-weight: 700; padding: 0 0.2em; border-radius: 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.rm-money-badge { margin-left: auto; display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 1px 8px; border-radius: 999px; color: var(--rm-money-fg, var(--rm-warning)); background: var(--rm-money-bg, color-mix(in srgb, var(--rm-warning) 14%, transparent)); border: 1px solid color-mix(in srgb, var(--rm-warning) 30%, transparent); white-space: nowrap; }
+.rm-money-badge svg { width: 12px; height: 12px; flex-shrink: 0; }
 .rm-featured { margin-right: auto; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 1px 8px; border-radius: 999px; color: var(--rm-accent); background: color-mix(in srgb, var(--rm-accent) 12%, transparent); border: 1px solid color-mix(in srgb, var(--rm-accent) 30%, transparent); white-space: nowrap; }
 .rm-chain-next-hint { appearance: none; display: flex; align-items: center; justify-content: center; gap: 0.4rem; width: 100%; min-height: 44px; margin-top: 0.25rem; border: 1px dashed var(--rm-border); border-radius: 12px; background: none; color: var(--rm-muted); font: inherit; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; cursor: pointer; transition: color 0.2s, border-color 0.2s; }
 .rm-chain-next-hint:hover { color: var(--rm-accent); border-color: color-mix(in srgb, var(--rm-accent) 40%, transparent); }

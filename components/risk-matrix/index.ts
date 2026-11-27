@@ -1,7 +1,10 @@
 export { default as RiskMatrix } from "./RiskMatrix";
 export { default as FingerprintMirror } from "./FingerprintMirror";
+export { MoneyText } from "./MoneyText";
+export { MONEY_RE, splitMoney, findMoney, hasMoney } from "./money";
 export { SCANDALS, TECH_ORDER, AGENCY_ORDER } from "./scandals";
 export { EXPOSURES, PERCEPTIONS, ENTITIES } from "./exposures";
 export { logos, editorial, indiaFlagUrl, usaFlagUrl } from "./assets";
 export type { Scandal, RiskEvent, RiskSource, Severity, RiskMatrixProps, FingerprintConfig } from "./types";
 export type { Exposure, EntityMeta } from "./exposures";
+export type { MoneySegment } from "./money";

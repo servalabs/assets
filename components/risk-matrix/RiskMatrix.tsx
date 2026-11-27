@@ -1,9 +1,11 @@
 import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import { AlertTriangle, Globe, Activity, ExternalLink, XCircle, ChevronLeft, ChevronRight, ChevronsDown } from "lucide-react";
+import { AlertTriangle, Globe, Activity, ExternalLink, XCircle, ChevronLeft, ChevronRight, ChevronsDown, Banknote } from "lucide-react";
 import { SCANDALS, TECH_ORDER, AGENCY_ORDER } from "./scandals";
 import { logos, editorial } from "./assets";
 import FingerprintMirror from "./FingerprintMirror";
+import { MoneyText } from "./MoneyText";
+import { hasMoney } from "./money";
 import type { RiskMatrixProps } from "./types";
 import "./risk-matrix.css";
 
@@ -59,6 +61,9 @@ export default function RiskMatrix({
   scrollChain,
   featuredAudience,
   featuredAudienceLabel = "Relevant to you",
+  sortEvents,
+  techOrder,
+  highlightMoney = false,
 }: RiskMatrixProps) {
   const chain = useMemo(() => (scrollChain ?? []).filter((key) => SCANDALS[key]), [scrollChain]);
   const [selectedCompany, setSelectedCompany] = useState<string | null>(() => chain[0] ?? null);
@@ -77,13 +82,19 @@ export default function RiskMatrix({
   const prevKey = chainOn && chainIndex > 0 ? chain[chainIndex - 1] : null;
   const nextKey = chainOn ? (chainIndex < 0 ? chain[0] : chain[chainIndex + 1] ?? null) : null;
 
-  // Featured-audience events first (stable), original order otherwise.
+  const orbit = useMemo(
+    () => (techOrder ?? TECH_ORDER).filter((key) => SCANDALS[key] && SCANDALS[key].category === "tech"),
+    [techOrder],
+  );
+
+  // Host sort if given; else featured-audience events first (stable), original order otherwise.
   const orderedEvents = useMemo(() => {
     if (!selectedData) return [];
+    if (sortEvents) return sortEvents([...selectedData.events]);
     if (!featuredAudience) return selectedData.events;
     const hit = (e: (typeof selectedData.events)[number]) => e.audiences?.includes(featuredAudience) ?? false;
     return [...selectedData.events.filter(hit), ...selectedData.events.filter((e) => !hit(e))];
-  }, [selectedData, featuredAudience]);
+  }, [selectedData, featuredAudience, sortEvents]);
 
   const goTo = useCallback((key: string | null) => {
     if (!key) return;
@@ -236,8 +247,8 @@ export default function RiskMatrix({
             {/* orbiting tech giants */}
             <div className="rm-nodes">
               <div className="rm-nodes-inner">
-                {TECH_ORDER.map((key, index) => {
-                  const pos = getPos(index, TECH_ORDER.length);
+                {orbit.map((key, index) => {
+                  const pos = getPos(index, orbit.length);
                   const company = SCANDALS[key];
                   if (!company) return null;
                   const isSelected = selectedCompany === key;
@@ -366,16 +377,24 @@ export default function RiskMatrix({
                     const expanded = expandedEvents.has(eventKey);
                     const preview = sidebarPreview(event.desc);
                     const canExpand = preview !== event.desc;
+                    const money = highlightMoney && hasMoney(event.title, event.desc);
 
                     return (
                     <div key={eventKey} className={`rm-event${featured ? " is-featured" : ""}`}>
                       <div className="rm-event-top">
                         <span className="rm-event-year">{event.year}</span>
                         {featured && <span className="rm-featured">{featuredAudienceLabel}</span>}
+                        {money && (
+                          <span className="rm-money-badge">
+                            <Banknote aria-hidden="true" /> Money
+                          </span>
+                        )}
                         <span className={`rm-sev rm-sev--${event.severity.toLowerCase()}`}>{event.severity}</span>
                       </div>
-                      <h5 className="rm-event-title">{event.title}</h5>
-                      <p className="rm-event-desc">{expanded ? event.desc : preview}</p>
+                      <h5 className="rm-event-title">{highlightMoney ? <MoneyText text={event.title} /> : event.title}</h5>
+                      <p className="rm-event-desc">
+                        {highlightMoney ? <MoneyText text={expanded ? event.desc : preview} /> : expanded ? event.desc : preview}
+                      </p>
                       {canExpand && (
                         <button
                           type="button"

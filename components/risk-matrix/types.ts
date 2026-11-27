@@ -84,4 +84,16 @@ export interface RiskMatrixProps {
   featuredAudience?: string;
   /** Badge text for featured events (default "Relevant to you"). */
   featuredAudienceLabel?: string;
+  /** Custom order for each entity's history. Receives the entity's events in
+   *  data order and returns them in display order (it may reorder, never
+   *  needs to copy). Overrides the `featuredAudience` float-to-top; the
+   *  featured badge is still shown. Pass a stable (module-level) function. */
+  sortEvents?: (events: RiskEvent[]) => RiskEvent[];
+  /** Entity keys for the orbiting ring, in clockwise order from the lower
+   *  left. Defaults to `TECH_ORDER`. Agencies always stay in the centre. */
+  techOrder?: string[];
+  /** Highlight currency amounts ("$5 billion", "€1.2 billion", "₹500 crore")
+   *  in incident headlines and explanations, and show a "Money" chip on those
+   *  incidents. */
+  highlightMoney?: boolean;
 }

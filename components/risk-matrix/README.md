@@ -40,6 +40,19 @@ Verification used for the website integration:
   `audiences` (set in `exposures.ts`) include this code float to the top of
   each history with the label as a badge (servalabs.com: `"IN"`,
   "Relevant in India").
+- `sortEvents?: (events) => events` — custom display order for each history
+  (overrides the featured float; the featured badge stays). servalabs.com:
+  pinned, then CRITICAL → HIGH → UNKNOWN, then rank, then India-relevant.
+- `techOrder?: string[]` — order of the orbiting ring (default `TECH_ORDER`);
+  agencies always stay in the centre.
+- `highlightMoney?: boolean` — marks currency amounts ($, US$, €, £, ₹ with
+  optional million/billion/crore/lakh/bn/m/k) in headlines and explanations
+  and adds a "Money" chip. The helpers are exported for host variants:
+  `MONEY_RE`, `splitMoney`, `findMoney`, `hasMoney`, `<MoneyText>`.
+- Event-card theme vars (all optional; unset = original look):
+  `--rm-event-bg`, `--rm-event-border`, `--rm-event-shadow`,
+  `--rm-event-featured-bg`, `--rm-event-featured-border`, plus
+  `--rm-money-bg` / `--rm-money-fg` for the money highlight.
 
 Layout notes: below 1024px the panel is capped at `min(38rem, 78svh)` and
 scrolls inside; the orbit scales down via container queries so every node
