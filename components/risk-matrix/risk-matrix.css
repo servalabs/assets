@@ -152,6 +152,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Size container: the orbit below scales with the stage's width AND
+     height, so short laptop screens shrink it instead of clipping it. */
+  container-type: size;
 }
 .rm-grid-bg {
   position: absolute;
@@ -343,11 +346,11 @@
    On narrow cards, scale the orbit and the agency cluster together so every
    logo stays inside the card instead of being clipped at the edges. */
 .rm-matrix { container-type: inline-size; }
-@container (max-width: 412px) { .rm-nodes-inner, .rm-agencies { scale: 0.9; } }
-@container (max-width: 370px) { .rm-nodes-inner, .rm-agencies { scale: 0.8; } }
-@container (max-width: 330px) { .rm-nodes-inner, .rm-agencies { scale: 0.72; } }
-@container (max-width: 296px) { .rm-nodes-inner, .rm-agencies { scale: 0.64; } }
-@container (max-width: 263px) { .rm-nodes-inner, .rm-agencies { scale: 0.56; } }
+@container (max-width: 412px) or (max-height: 404px) { .rm-nodes-inner, .rm-agencies { scale: 0.9; } }
+@container (max-width: 370px) or (max-height: 364px) { .rm-nodes-inner, .rm-agencies { scale: 0.8; } }
+@container (max-width: 330px) or (max-height: 323px) { .rm-nodes-inner, .rm-agencies { scale: 0.72; } }
+@container (max-width: 296px) or (max-height: 291px) { .rm-nodes-inner, .rm-agencies { scale: 0.64; } }
+@container (max-width: 263px) or (max-height: 259px) { .rm-nodes-inner, .rm-agencies { scale: 0.56; } }
 
 .rm-panel-empty {
   flex: 1;
@@ -396,8 +399,10 @@
 .rm-event-desc { font-size: 14px; color: var(--rm-muted); line-height: 1.5; margin: 0; }
 .rm-event-more { appearance: none; border: 0; background: none; color: var(--rm-accent); cursor: pointer; font: inherit; font-size: 12px; font-weight: 700; margin-top: 0.35rem; padding: 0; text-decoration: underline; text-underline-offset: 3px; }
 .rm-event-more:hover { color: var(--rm-fg); }
-.rm-event-img { margin-bottom: 0.5rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--rm-border); background: rgba(0, 0, 0, 0.4); aspect-ratio: 16 / 9; }
-.rm-event-img img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+/* Editorial images are shown whole (portraits, document pages and slides all
+   differ in shape): fitted inside a capped height, centred, never cropped. */
+.rm-event-img { margin-bottom: 0.5rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--rm-border); background: color-mix(in srgb, var(--rm-fg) 4%, transparent); padding: 6px; }
+.rm-event-img img { display: block; width: 100%; height: 220px; object-fit: contain; object-position: center; }
 .rm-sources { display: flex; flex-wrap: wrap; gap: 0.4rem; padding-top: 0.5rem; border-top: 1px solid var(--rm-border); }
 .rm-source { display: inline-flex; align-items: center; gap: 0.25rem; font-size: 11px; color: var(--rm-muted); text-decoration: none; padding: 2px 6px; border-radius: 6px; border: 1px solid var(--rm-border); transition: color 0.2s, border-color 0.2s; }
 .rm-source:hover { color: var(--rm-accent); border-color: color-mix(in srgb, var(--rm-accent) 40%, transparent); }
