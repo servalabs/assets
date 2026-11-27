@@ -49,6 +49,13 @@ export interface Exposure {
    *  company cut off). Hosts can float these to the top with the
    *  RiskMatrix `featuredAudience` prop. Optional; most events have none. */
   audiences?: string[];
+  /** How close the incident is to ordinary people's daily life:
+   *  1 = everyday (phones, chats, email, glasses, home cameras, AI chats),
+   *  2 = businesses / organisations / countries, 3 = government or spy background.
+   *  Hosts may sort by it (lower first). */
+  rank?: 1 | 2 | 3;
+  /** Show this incident first for its entity (owner pick). */
+  pin?: boolean;
 }
 
 export const ENTITIES: Record<string, EntityMeta> = {
@@ -56,126 +63,126 @@ export const ENTITIES: Record<string, EntityMeta> = {
     name: "NVIDIA",
     logo: "nvidia-logo.svg",
     color: "#76B900",
-    description: "The Hardware Choke",
+    description: "Chips caught in politics",
     category: "tech",
   },
   google: {
     name: "Google",
     logo: "google-logo.svg",
     color: "#EA4335",
-    description: "The Data Harvester",
+    description: "Collects your data",
     category: "tech",
   },
   microsoft: {
     name: "Microsoft",
     logo: "microsoft-logo.svg",
     color: "#00A4EF",
-    description: "The Corporate Spy",
+    description: "Collects Windows usage data",
     category: "tech",
   },
   meta: {
     name: "Meta",
     logo: "meta-logo.png",
     color: "#1877F2",
-    description: "The Election Rigger",
+    description: "Earns from your data",
     category: "tech",
   },
   amazon: {
     name: "Amazon",
     logo: "amazon-logo.svg",
     color: "#FF9900",
-    description: "The Home Invader",
+    description: "Home cameras and Alexa",
     category: "tech",
   },
   apple: {
     name: "Apple",
     logo: "apple-logo.svg",
     color: "#A2AAAD",
-    description: "The Privacy 'Wolf'",
+    description: "Privacy brand with gaps",
     category: "tech",
   },
   openai: {
     name: "OpenAI",
     logo: "openai-logo.svg",
     color: "#10A37F",
-    description: "The Trojan Horse",
+    description: "Learns from your chats",
     category: "tech",
   },
   zoom: {
     name: "Zoom",
     logo: "zoom-logo.svg",
     color: "#2D8CFF",
-    description: "The China Relay",
+    description: "China server mix-up",
     category: "tech",
   },
   oracle: {
     name: "Oracle",
     logo: "oracle-logo.svg",
     color: "#F80000",
-    description: "The Defense Contractor",
+    description: "Works with US government",
     category: "tech",
   },
   adobe: {
     name: "Adobe",
     logo: "adobe-logo.png",
     color: "#FF0000",
-    description: "The Asset Seizure",
+    description: "Can lock your account",
     category: "tech",
   },
   slack: {
     name: "Slack",
     logo: "slack-logo.svg",
     color: "#4A154B",
-    description: "The Identity Purge",
+    description: "Closes accounts by country",
     category: "tech",
   },
   nsa: {
     name: "NSA",
     logo: "nsa-logo.png",
     color: "#e5e7eb",
-    description: "The Global Ear",
+    description: "US spy agency",
     category: "agency",
   },
   usgov: {
     name: "US Government",
     logo: "usa-flag.jpg",
     color: "#dc2626",
-    description: "The Legal Architect",
+    description: "Sets the US rules",
     category: "agency",
   },
   cia: {
     name: "CIA",
     logo: "cia-logo.png",
     color: "#e5e7eb",
-    description: "The Cyber Weaponizer",
+    description: "Builds hacking tools",
     category: "agency",
   },
   fbi: {
     name: "FBI",
     logo: "fbi-seal.svg",
     color: "#002E6D",
-    description: "The Domestic Operator",
+    description: "US federal police",
     category: "agency",
   },
   rsa: {
     name: "RSA",
     logo: "rsa-logo.svg",
     color: "#CC0000",
-    description: "The Bought Backdoor",
+    description: "Paid to weaken security",
     category: "tech",
   },
   juniper: {
     name: "Juniper Networks",
     logo: "juniper-logo.svg",
     color: "#84B135",
-    description: "The Unlocked Backdoor",
+    description: "Hidden master password",
     category: "tech",
   },
   cisco: {
     name: "Cisco",
     logo: "cisco-logo.svg",
     color: "#049FD9",
-    description: "The Intercepted Router",
+    description: "Devices opened in shipping",
     category: "tech",
   },
 };
@@ -184,9 +191,10 @@ export const EXPOSURES: Exposure[] = [
   // ---- NVIDIA ----
   {
     entity: "nvidia",
-    headline: "Washington turned Nvidia's AI chips into a bargaining chip with China",
+    headline: "The US has limited Nvidia's AI chip sales to China since 2022",
+    rank: 2,
     explanation:
-      "Since October 2022 the US has restricted Nvidia's advanced AI chip exports to China as a policy lever, tightening controls through 2023-2024 before the Trump administration allowed conditional H200 sales in December 2025.",
+      "US government rules, tightened in 2023 and 2024, limit sales of Nvidia's most powerful AI chips to China. In December 2025 the US allowed H200 chip sales, with conditions.",
     year: "2022–25",
     severity: "CRITICAL",
     sources: [
@@ -196,9 +204,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nvidia",
-    headline: "Even gaming GPUs got swept into US-China chip export bans",
+    headline: "US rules also limited sales of Nvidia's RTX 4090 gaming card",
+    rank: 2,
     explanation:
-      "New licensing rules effective November 17, 2023 extended US export controls to Nvidia's consumer RTX 4090 GPU for China, Saudi Arabia, the UAE, and Vietnam, because it shares silicon with restricted data-center chips.",
+      "From November 17, 2023, selling this gaming card to China, Saudi Arabia, the UAE and Vietnam needed US government permission. It is built on the same chip as limited AI chips.",
     year: "2023",
     severity: "CRITICAL",
     sources: [
@@ -208,9 +217,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nvidia",
-    headline: "The US ordered Nvidia to stop shipping AI chips to China overnight",
+    headline: "The US ordered Nvidia to stop selling top AI chips to China",
+    rank: 2,
     explanation:
-      "On October 17, 2023 the Commerce Department banned sales of Nvidia's A100, H100, and China-tailored A800/H800 chips to China, then moved up enforcement to October 23 for immediate cessation of exports.",
+      "On October 17, 2023 the US banned sales to China of Nvidia's A100 and H100 chips, and the A800 and H800 made for China. The ban took effect early, on October 23.",
     year: "2023",
     severity: "CRITICAL",
     sources: [
@@ -222,9 +232,10 @@ export const EXPOSURES: Exposure[] = [
   // ---- Google ----
   {
     entity: "google",
-    headline: "Google once promised a search engine with zero ads, ever",
+    headline: "In 1999 Google promised a search engine with no ads",
+    rank: 2,
     explanation:
-      "A 1999 Google ad marketed its search engine as 'pure' — no ads, no sponsor links, no portal clutter — years before Google built the world's largest digital ad business.",
+      "A 1999 Google advert said its search was 'pure', with no ads and no paid links. Later, Google built the world's biggest online advertising business.",
     year: "1999",
     severity: "CRITICAL",
     sources: [
@@ -235,9 +246,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "google",
-    headline: "Google scanned your Gmail to sell ads for over a decade",
+    headline: "Google scanned your Gmail emails to choose ads for over 10 years",
+    rank: 1,
     explanation:
-      "Advertising made up roughly 77% of Alphabet's 2023 revenue ($237.85B of $307.39B). Google scanned Gmail content to personalize ads until it discontinued the practice for consumer accounts in 2017.",
+      "Google stopped this for personal Gmail accounts in 2017. Ads still bring in most of its money: about 77% of its parent company's income in 2023.",
     year: "Ongoing",
     severity: "CRITICAL",
     sources: [
@@ -248,10 +260,11 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "google",
-    headline: "Your phone phones home every four and a half minutes, even idle",
+    headline: "Android phones send data to Google every 4½ minutes, even when unused",
+    rank: 1,
     audiences: ["IN"],
     explanation:
-      "A March 2021 Trinity College Dublin study found Android and iOS phones transmit data to their platform makers every 4.5 minutes on average, even sitting idle — Pixel devices sent about 1MB every 12 hours idle versus 52KB from the iPhone tested.",
+      "A 2021 Trinity College Dublin study found this, on average, for both Android phones and iPhones. Resting Google Pixel phones sent about 20 times more data than the iPhone tested.",
     year: "2021",
     severity: "HIGH",
     sources: [
@@ -260,9 +273,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "google",
-    headline: "Humans at Google read your Gemini chats",
+    headline: "People working for Google may read your Gemini AI chats",
+    rank: 1,
     explanation:
-      "Google discloses that trained human reviewers may read and annotate Gemini Apps conversations to improve the product, retaining disconnected chat data for up to three years — and warns users not to type anything they wouldn't want a reviewer to see.",
+      "Google says trained reviewers may read Gemini chats to improve it, keeping some for up to three years. It warns users not to type anything they would not want reviewers to see.",
     year: "Ongoing",
     severity: "HIGH",
     sources: [
@@ -272,10 +286,11 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "google",
-    headline: "One US order cut Huawei's phones off Gmail, Maps, and the Play Store",
+    headline: "US order cut new Huawei phones off Gmail, YouTube and Play Store",
+    rank: 1,
     audiences: ["IN"],
     explanation:
-      "After the Commerce Department placed Huawei on its Entity List in May 2019, Google was barred from licensing Google Mobile Services to Huawei, cutting new devices off from the Play Store, Gmail, Maps, and YouTube.",
+      "In May 2019 the US government put Huawei on a trade blacklist. Google could no longer give its apps to Huawei, so new Huawei phones came without Play Store, Gmail, Maps and YouTube.",
     year: "2019",
     severity: "CRITICAL",
     sources: [
@@ -284,9 +299,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "google",
-    headline: "Google paid Texas $1.375 billion over secretly tracked faces and locations",
+    headline: "Google agreed to pay Texas $1.375 billion over face and location data",
+    rank: 1,
     explanation:
-      "Google agreed to pay Texas $1.375 billion, finalized October 2025, resolving claims it collected location data and Incognito browsing activity, plus biometric identifiers like voiceprints and facial geometry via Photos, Assistant, and Nest Hub Max — all without consent.",
+      "The deal, final in October 2025, settled claims Google collected people's locations, private Incognito browsing, voice prints and face shapes through Photos, Assistant and Nest Hub Max without permission.",
     year: "2025",
     severity: "HIGH",
     sources: [
@@ -296,9 +312,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "google",
-    headline: "Google's 'Incognito' mode was tracking you the whole time",
+    headline: "Google kept records of people's private 'Incognito' browsing",
+    rank: 1,
     explanation:
-      "Google agreed in April 2024 to delete or de-identify billions of records of users' private 'Incognito mode' browsing and block third-party cookies in Incognito for five years, with no direct payout to the roughly 136 million affected users.",
+      "In April 2024 Google agreed to delete billions of these records or remove names from them, and to block some outside tracking in Incognito for five years. About 136 million users got no direct payment.",
     year: "2024",
     severity: "CRITICAL",
     sources: [
@@ -308,9 +325,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "google",
-    headline: "Google permanently deleted two dads' accounts over medical photos of their kids — police cleared them, Google didn't restore them",
+    headline: "Google permanently closed two fathers' accounts over medical photos of their children",
+    rank: 1,
     explanation:
-      "Google's automated CSAM scanner flagged medical photos two fathers took of their toddlers at a doctor's request, leading Google to permanently disable their accounts. Police investigations found no crime occurred in either case, but Google never restored the accounts.",
+      "The fathers took photos of their toddlers because a doctor asked. Google's automatic checker for child-abuse images flagged them; police found no crime, but Google never gave the accounts back.",
     year: "2021–22",
     severity: "CRITICAL",
     sources: [
@@ -319,9 +337,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "google",
-    headline: "Turning off 'Location History' didn't actually stop Google from tracking you",
+    headline: "Turning off 'Location History' did not stop Google tracking your location",
+    rank: 1,
     explanation:
-      "Google paid $391.5 million to 40 state attorneys general in a November 2022 settlement resolving claims it kept tracking users' location via 'Web & App Activity' even after they disabled 'Location History,' misleading users from 2014 to 2020.",
+      "In November 2022 Google paid $391.5 million to 40 US states. They said Google kept collecting location through another setting, 'Web & App Activity', and misled users from 2014 to 2020.",
     year: "2022",
     severity: "HIGH",
     sources: [
@@ -333,9 +352,10 @@ export const EXPOSURES: Exposure[] = [
   // ---- Microsoft ----
   {
     entity: "microsoft",
-    headline: "Microsoft, Amazon, Google and Oracle split a $9 billion Pentagon cloud deal",
+    headline: "Microsoft, Amazon, Google and Oracle shared a $9 billion US military deal",
+    rank: 3,
     explanation:
-      "Microsoft won the Pentagon's $10 billion JEDI cloud contract in 2019; after Amazon's legal challenge forced its cancellation, the Pentagon replaced it with the multi-vendor JWCC, splitting up to $9 billion between Microsoft, Amazon, Google, and Oracle in December 2022.",
+      "Microsoft won a $10 billion US military online computing contract in 2019. After Amazon's court challenge it was cancelled; in December 2022 the four companies split up to $9 billion instead.",
     year: "2019/2022",
     severity: "HIGH",
     sources: [
@@ -345,10 +365,11 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "microsoft",
-    headline: "Windows sends 'required' diagnostic data to Microsoft — and you can't turn it off",
+    headline: "Windows sends basic data to Microsoft that you cannot fully switch off",
+    rank: 1,
     audiences: ["IN"],
     explanation:
-      "Windows collects 'required' diagnostic data by default that consumer editions cannot fully turn off, plus additional 'optional' data on browsing and app usage that users can disable — both categories are sent to Microsoft.",
+      "Home versions of Windows send this data about your device by default. Extra data about your web browsing and app use is also sent, but you can turn that part off.",
     year: "Ongoing",
     severity: "HIGH",
     sources: [
@@ -358,10 +379,11 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "microsoft",
-    headline: "Windows' 'Recall' quietly screenshotted everything you did — passwords and card numbers included",
+    headline: "Windows 'Recall' saved screenshots of your screen, even card numbers",
+    rank: 1,
     audiences: ["IN"],
     explanation:
-      "Security researchers found Recall's screenshot database, including credit card and Social Security numbers even with the sensitive-info filter on, could be read as a normal user process. Microsoft delayed release and redesigned it to be opt-in and encrypted after backlash.",
+      "Researchers found Recall's screenshots, including credit card and US ID numbers, could be read without special access. After complaints, Microsoft delayed it, made users choose to turn it on, and protected its data better.",
     year: "2024",
     severity: "CRITICAL",
     sources: [
@@ -371,9 +393,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "microsoft",
-    headline: "A stolen Microsoft key let Chinese hackers read US government email",
+    headline: "Chinese-linked hackers used a stolen Microsoft key to read US government email",
+    rank: 2,
     explanation:
-      "In 2023 the China-linked group Storm-0558 used a stolen Microsoft signing key to forge tokens and read email from roughly 25 organizations, including US government agencies. A federal review board called the intrusion preventable and Microsoft's security culture inadequate.",
+      "In 2023 the hackers read email at about 25 organisations, including US government offices. A US review board said Microsoft could have prevented it and its security culture was not good enough.",
     year: "2023",
     severity: "CRITICAL",
     sources: [
@@ -383,9 +406,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "microsoft",
-    headline: "Microsoft cut off product sales to Russia after the Ukraine invasion",
+    headline: "Microsoft stopped new sales in Russia after it invaded Ukraine",
+    rank: 2,
     explanation:
-      "On March 4, 2022, following Russia's invasion of Ukraine, Microsoft announced it would suspend all new product and service sales in Russia, coordinated with US, EU, and UK sanctions.",
+      "On March 4, 2022, Microsoft stopped all new sales of its products and services in Russia. It acted in step with trade limits placed on Russia by the US, EU and UK.",
     year: "2022",
     severity: "HIGH",
     sources: [
@@ -395,9 +419,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "microsoft",
-    headline: "GitHub locked developers in Iran and Syria out of private repos",
+    headline: "Microsoft's GitHub limited coders in Iran, Syria and Crimea",
+    rank: 2,
     explanation:
-      "In July 2019 Microsoft-owned GitHub restricted private repositories, the Marketplace, and paid private organizations for developers in Iran, Syria, and Crimea, citing US export law; public repositories stayed accessible.",
+      "In July 2019 GitHub, a website where programmers keep their code, blocked private projects and some other services for users in Iran, Syria and Crimea, citing US trade law. Public projects stayed open.",
     year: "2019",
     severity: "HIGH",
     sources: [
@@ -406,9 +431,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "microsoft",
-    headline: "Microsoft was the first tech company the NSA plugged into PRISM",
+    headline: "Leaked papers said Microsoft was first to join a US spy programme",
+    rank: 3,
     explanation:
-      "Leaked NSA documents identified Microsoft as the first tech company to join PRISM, in September 2007, and reported it worked with the NSA on Outlook.com, SkyDrive, and Skype; Microsoft denied giving any government blanket or direct access.",
+      "Leaked papers from the NSA, a US spy agency, said Microsoft joined in September 2007 and worked with it on Outlook.com, SkyDrive and Skype. Microsoft denied giving any government unlimited or direct access.",
     year: "2013",
     severity: "HIGH",
     sources: [
@@ -418,10 +444,11 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "microsoft",
-    headline: "Microsoft cut off an Indian company's email and Teams over sanctions",
+    headline: "Microsoft cut off an Indian company's email and Teams for eight days",
+    rank: 2,
     audiences: ["IN"],
     explanation:
-      "On July 22, 2025 Microsoft suspended Outlook and Teams access for India's Nayara Energy, 49% owned by Russia's Rosneft, citing EU sanctions, then restored service on July 30 hours before a Delhi High Court hearing.",
+      "On July 22, 2025 Microsoft stopped Outlook and Teams for Nayara Energy, 49% owned by Russia's Rosneft, citing EU penalties. Service returned July 30, hours before a Delhi High Court hearing.",
     year: "2025",
     severity: "CRITICAL",
     sources: [
@@ -433,9 +460,10 @@ export const EXPOSURES: Exposure[] = [
   // ---- Meta ----
   {
     entity: "meta",
-    headline: "97% of Meta's revenue comes from ads built on your data",
+    headline: "About 97% of Meta's money comes from ads based on your data",
+    rank: 1,
     explanation:
-      "Per Meta's FY2025 10-K, advertising revenue was about $196.2B of $201.0B total revenue — roughly 97.5% — making Meta's business almost entirely dependent on ads built from user profiling.",
+      "Meta owns Facebook, Instagram and WhatsApp. In 2025 it earned about $196.2 billion from ads out of $201.0 billion in total. Its ads are chosen using what it knows about users.",
     year: "2025",
     severity: "CRITICAL",
     sources: [
@@ -445,10 +473,11 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "meta",
-    headline: "WhatsApp encrypts your messages but still collects metadata Meta can share",
+    headline: "WhatsApp messages are private, but WhatsApp still collects other details",
+    rank: 1,
     audiences: ["IN"],
     explanation:
-      "WhatsApp message content is end-to-end encrypted and WhatsApp says it doesn't log who's messaging whom, but it still collects metadata — device and IP info, activity timing, call duration — and can share categories of it with other Meta companies.",
+      "Only you and the other person can read messages; WhatsApp says it does not record who messages whom. It collects device and internet details, activity times and call length, and may share some with Meta.",
     year: "Ongoing",
     severity: "HIGH",
     sources: [
@@ -458,9 +487,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "meta",
-    headline: "Europe fined Meta a record €1.2 billion for illegal US data transfers",
+    headline: "Europe fined Meta a record €1.2 billion for moving data to America",
+    rank: 2,
     explanation:
-      "Ireland's Data Protection Commission fined Meta a record €1.2 billion in May 2023 for unlawfully transferring EU user data to the US after the CJEU's Schrems II ruling — still the largest GDPR fine ever issued.",
+      "In May 2023 Ireland's data protection office fined Meta for unlawfully sending European users' data to the US after a top EU court ruling. It is still the biggest fine ever under Europe's privacy law.",
     year: "2023",
     severity: "CRITICAL",
     sources: [
@@ -470,9 +500,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "meta",
-    headline: "Facebook let an app harvest millions of users' data for political profiling",
+    headline: "Facebook fined $5 billion after an app took millions of users' data",
+    rank: 1,
     explanation:
-      "Facebook let a third-party app improperly harvest data on tens of millions of users, which was passed to Cambridge Analytica for political profiling. The FTC imposed a then-record $5 billion penalty in July 2019.",
+      "Facebook let an outside app wrongly collect data on tens of millions of users, which went to Cambridge Analytica for political use. The US fine, a record then, came in July 2019.",
     year: "2019",
     severity: "CRITICAL",
     sources: [
@@ -482,9 +513,11 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "meta",
-    headline: "Meta's Ray-Ban glasses beamed users' private footage — including nudity and bathroom moments — to contractors in Nairobi",
+    headline: "Workers in Kenya watched private videos from Meta's Ray-Ban smart glasses",
+    rank: 1,
+    pin: true,
     explanation:
-      "A Swedish newspaper investigation found workers at Sama, a Nairobi-based contractor, reviewed sensitive footage from Ray-Ban Meta smart glasses — including nudity and bathroom moments — prompting a March 2026 US class-action lawsuit against Meta and Luxottica.",
+      "A Swedish newspaper found staff at Sama, a Nairobi company, watched private glasses videos, even nudity and bathroom moments. This led to a US group lawsuit against Meta and Ray-Ban maker Luxottica in March 2026.",
     year: "2026",
     severity: "CRITICAL",
     sources: [
@@ -497,9 +530,10 @@ export const EXPOSURES: Exposure[] = [
   // ---- Amazon ----
   {
     entity: "amazon",
-    headline: "A Ring employee watched thousands of customers' bathroom and bedroom videos",
+    headline: "A Ring camera employee watched thousands of customers' bathroom and bedroom videos",
+    rank: 1,
     explanation:
-      "The FTC found Ring allowed broad, poorly monitored employee access to customers' private videos — one employee viewed thousands of recordings of female users in bathrooms and bedrooms over several months. Ring settled for $5.8 million in refunds.",
+      "A US regulator found Ring gave staff wide, poorly checked access to customers' videos; one viewed thousands of recordings of women in bathrooms and bedrooms over several months. Ring paid $5.8 million in refunds.",
     year: "2023",
     severity: "HIGH",
     sources: [
@@ -508,10 +542,11 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "amazon",
-    headline: "Amazon kept kids' Alexa voice recordings forever, despite parents' deletion requests",
+    headline: "Amazon kept kids' Alexa recordings even when parents asked to delete them",
+    rank: 1,
     audiences: ["IN"],
     explanation:
-      "The FTC and DOJ charged Amazon with violating COPPA by keeping children's Alexa voice recordings indefinitely and ignoring parents' deletion requests; Amazon paid a $25 million civil penalty to settle.",
+      "US authorities said Amazon broke a children's privacy law by keeping kids' Alexa voice recordings with no time limit. Amazon paid a $25 million penalty to settle.",
     year: "2023",
     severity: "HIGH",
     sources: [
@@ -520,9 +555,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "amazon",
-    headline: "Ring gave police doorbell footage without a warrant 11 times in one year",
+    headline: "Ring gave police doorbell videos without owners' permission 11 times in 2022",
+    rank: 1,
     explanation:
-      "Amazon disclosed to Senator Ed Markey that Ring gave police video footage without a warrant or the owner's consent 11 times in 2022, calling each a 'good-faith' emergency call made at its own discretion.",
+      "Amazon told a US senator that in 2022 Ring gave police videos 11 times without a court order or the owner's permission. It said each was a real emergency and Ring's own decision.",
     year: "2022",
     severity: "CRITICAL",
     sources: [
@@ -532,9 +568,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "amazon",
-    headline: "The NSA director during the Snowden leaks joined Amazon's board",
+    headline: "Former head of a US spy agency joined Amazon's board in 2020",
+    rank: 3,
     explanation:
-      "Retired General Keith Alexander, NSA director from 2005-2014 and US Cyber Command commander from 2010-2014, joined Amazon's board in September 2020.",
+      "Retired General Keith Alexander led the NSA, a US spy agency, from 2005 to 2014, and the US military's cyber unit from 2010 to 2014. He joined Amazon's board in September 2020.",
     year: "2020",
     severity: "HIGH",
     sources: [
@@ -544,9 +581,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "amazon",
-    headline: "Amazon built the CIA's own private cloud for $600 million",
+    headline: "Amazon built a private computer system for the CIA for $600 million",
+    rank: 3,
     explanation:
-      "AWS won a roughly $600 million contract to build a private cloud (C2S) for the CIA and allied intelligence agencies; after IBM's protest, a federal court upheld AWS's award in October 2013.",
+      "Amazon won a deal worth about $600 million to build a private online computer system for the CIA and other spy agencies. A US court confirmed Amazon's win in October 2013 after IBM complained.",
     year: "2013",
     severity: "CRITICAL",
     sources: [
@@ -559,10 +597,11 @@ export const EXPOSURES: Exposure[] = [
   // ---- Apple ----
   {
     entity: "apple",
-    headline: "A secret iPhone chip flaw let spyware infect phones with zero clicks",
+    headline: "A hidden iPhone chip flaw let spyware in without any tap",
+    rank: 1,
     audiences: ["IN"],
     explanation:
-      "Kaspersky disclosed in December 2023 that a zero-click iMessage exploit chain used a previously undocumented hardware feature in Apple's A12-A16 chips to bypass kernel memory protection on iPhones. Apple had quietly patched it in July 2023.",
+      "In December 2023 security firm Kaspersky said an iMessage attack needing no tap used a secret feature in Apple's A12–A16 iPhone chips to break key protections. Apple had quietly fixed it in July 2023.",
     year: "2023",
     severity: "CRITICAL",
     sources: [
@@ -573,9 +612,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "apple",
-    headline: "Apple paid $95 million after Siri recorded private conversations by accident",
+    headline: "Apple agreed to pay $95 million over claims Siri recorded private talks",
+    rank: 1,
     explanation:
-      "Apple reached a $95 million settlement over claims Siri was unintentionally activated and recorded private conversations — some allegedly shared with third parties — for anyone who owned a Siri-enabled device between 2014 and 2024.",
+      "People said Siri switched on by accident between 2014 and 2024 and recorded private talks; some were said to be shared with other companies.",
     year: "2025",
     severity: "HIGH",
     sources: [
@@ -586,9 +626,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "apple",
-    headline: "Apple dropped encrypted iCloud backups after the FBI privately objected",
+    headline: "Apple dropped fully private iCloud backups after the FBI privately objected",
+    rank: 1,
     explanation:
-      "Reuters reported Apple dropped a plan to offer end-to-end encrypted iCloud device backups around 2018, after the FBI's cyber crime division privately objected that it would hinder criminal investigations.",
+      "Reuters reported that around 2018 Apple dropped a plan for iCloud phone backups only you could open. The FBI, the US federal police, had privately said this would make crime investigations harder.",
     year: "2020",
     severity: "HIGH",
     sources: [
@@ -600,10 +641,11 @@ export const EXPOSURES: Exposure[] = [
   // ---- OpenAI ----
   {
     entity: "openai",
-    headline: "ChatGPT trains on your conversations by default unless you opt out",
+    headline: "ChatGPT may learn from your chats unless you switch this off",
+    rank: 1,
     audiences: ["IN"],
     explanation:
-      "By default OpenAI may use content from consumer ChatGPT conversations (Free, Plus, Pro, Go) to train its models unless the user opts out; Business, Enterprise, and API accounts are excluded unless they opt in.",
+      "By default, OpenAI may use chats from Free, Plus, Pro and Go ChatGPT accounts to train its AI. Business, Enterprise and developer accounts are left out unless they agree.",
     year: "Ongoing",
     severity: "HIGH",
     sources: [
@@ -613,9 +655,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "openai",
-    headline: "OpenAI actively blocks ChatGPT access from China, Russia, and Iran",
+    headline: "OpenAI blocks ChatGPT and its services in China, Russia and Iran",
+    rank: 2,
     explanation:
-      "OpenAI restricts ChatGPT and API access to an allowlist of supported countries. Starting July 9, 2024 it began actively blocking API traffic from unsupported regions, notably mainland China, Russia, and Iran.",
+      "OpenAI only allows ChatGPT and its developer tools in countries on its approved list. From July 9, 2024 it began blocking developer tool traffic from other places, including mainland China, Russia and Iran.",
     year: "2024",
     severity: "HIGH",
     sources: [
@@ -625,9 +668,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "openai",
-    headline: "OpenAI put the NSA's longest-serving director on its safety board",
+    headline: "OpenAI put a former US spy agency chief on its board",
+    rank: 3,
     explanation:
-      "In June 2024 OpenAI appointed retired General Paul Nakasone — NSA director and US Cyber Command commander from 2018 to 2024 — to its board, including its Safety and Security Committee.",
+      "In June 2024 OpenAI put retired General Paul Nakasone on its board and safety and security committee. He led the NSA, a US spy agency, and the US military's cyber unit from 2018 to 2024.",
     year: "2024",
     severity: "HIGH",
     sources: [
@@ -639,9 +683,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "openai",
-    headline: "OpenAI quietly dropped its ban on military and weapons use",
+    headline: "OpenAI quietly removed its ban on military and weapons use",
+    rank: 3,
     explanation:
-      "On January 10, 2024 OpenAI quietly removed its blanket ban on 'military and warfare' use and weapons development from its usage policy, replacing it with a narrower prohibition on harming people.",
+      "On January 10, 2024 OpenAI removed its full ban on 'military and warfare' use and weapons building from its rules. It replaced this with a narrower rule against harming people.",
     year: "2024",
     severity: "HIGH",
     sources: [
@@ -653,9 +698,10 @@ export const EXPOSURES: Exposure[] = [
   // ---- Zoom ----
   {
     entity: "zoom",
-    headline: "A US-Canada Zoom call's encryption key routed through a Beijing server",
+    headline: "A US–Canada Zoom call's secret key came from a Beijing computer",
+    rank: 1,
     explanation:
-      "Citizen Lab found that in a test call between US and Canadian participants, Zoom's meeting encryption key was distributed from a server apparently located in Beijing. Zoom blamed a mistaken backup-server whitelist and reversed the change.",
+      "In 2020 Citizen Lab, a research group, found the key protecting a test call came from a computer that seemed to be in Beijing. Zoom blamed a backup-server mistake and undid it.",
     year: "2020",
     severity: "CRITICAL",
     sources: [
@@ -665,9 +711,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "zoom",
-    headline: "Zoom claimed 'end-to-end encryption' it wasn't actually providing",
+    headline: "A US regulator said Zoom wrongly claimed calls were fully private",
+    rank: 1,
     explanation:
-      "The FTC alleged Zoom misled users since at least 2016 by claiming 'end-to-end, 256-bit encryption' it didn't actually provide, retaining access to meeting content. Zoom settled in November 2020 with no fine, agreeing to security audits.",
+      "Since at least 2016 Zoom claimed only meeting members could see or hear calls, but Zoom kept access. It agreed to a deal in November 2020: no fine, but security checks.",
     year: "2020",
     severity: "HIGH",
     sources: [
@@ -680,9 +727,10 @@ export const EXPOSURES: Exposure[] = [
   // ---- Oracle ----
   {
     entity: "oracle",
-    headline: "Oracle is named after the CIA project that was its first customer",
+    headline: "Oracle took its name from a CIA project for its first customer",
+    rank: 3,
     explanation:
-      "Oracle Corporation, founded in 1977 by Larry Ellison, Bob Miner, and Ed Oates, took its name from the codename of a CIA database project — the CIA was Oracle's first customer.",
+      "Larry Ellison, Bob Miner and Ed Oates started Oracle in 1977. They named it after the code name of a CIA data storage project, and the CIA was their first customer.",
     year: "1977",
     severity: "HIGH",
     sources: [
@@ -693,8 +741,9 @@ export const EXPOSURES: Exposure[] = [
   {
     entity: "oracle",
     headline: "A former CIA director joined Oracle's board in 2015",
+    rank: 3,
     explanation:
-      "Leon Panetta, CIA Director from 2009-2011 and Defense Secretary from 2011-2013, joined Oracle's board of directors effective January 2015.",
+      "Leon Panetta, who led the CIA from 2009 to 2011 and was US defence minister from 2011 to 2013, joined Oracle's board of directors in January 2015.",
     year: "2015",
     severity: "HIGH",
     sources: [
@@ -706,9 +755,10 @@ export const EXPOSURES: Exposure[] = [
   // ---- Adobe ----
   {
     entity: "adobe",
-    headline: "Adobe cut off every Venezuelan customer's Creative Cloud access overnight",
+    headline: "Adobe moved to cut off every Venezuelan customer over a US order",
+    rank: 1,
     explanation:
-      "In October 2019 Adobe announced it would deactivate all Venezuelan customer accounts, cutting off Creative Cloud and Document Cloud, to comply with a US executive order — then secured a license days later to keep serving Venezuela uninterrupted.",
+      "In October 2019 Adobe said it would close all Venezuelan customer accounts, cutting off Creative Cloud and Document Cloud, to follow a US government order. Days later it got permission to keep serving Venezuela.",
     year: "2019",
     severity: "CRITICAL",
     sources: [
@@ -721,9 +771,10 @@ export const EXPOSURES: Exposure[] = [
   // ---- Slack ----
   {
     entity: "slack",
-    headline: "Slack deactivated accounts just for logging in from sanctioned countries",
+    headline: "Slack closed accounts just for logging in from countries under trade bans",
+    rank: 1,
     explanation:
-      "In December 2018 Slack deactivated accounts it linked by IP address to sanctioned countries, catching people who'd merely traveled through or logged in from them. After backlash, Slack restored most accounts and switched to blocking access only during active connections.",
+      "In December 2018 Slack closed accounts it linked to these countries by internet address, including people who had only travelled there. After complaints, it gave most accounts back and instead blocked only connections from there.",
     year: "2018",
     severity: "HIGH",
     sources: [
@@ -736,9 +787,10 @@ export const EXPOSURES: Exposure[] = [
   // ---- NSA ----
   {
     entity: "nsa",
-    headline: "Almost everything we know about NSA mass surveillance came from one leaker",
+    headline: "Most of what we know about NSA spying came from one man",
+    rank: 3,
     explanation:
-      "Most public knowledge of NSA mass-surveillance capabilities comes from documents Edward Snowden leaked starting in June 2013, when The Guardian and Washington Post published revelations including bulk telephone metadata collection and PRISM.",
+      "Edward Snowden leaked secret NSA papers starting in June 2013. They showed the NSA kept records of who called whom, not just suspects, and took data from big tech companies (PRISM).",
     year: "2013",
     severity: "UNKNOWN",
     sources: [
@@ -748,9 +800,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "The NSA impersonated Facebook servers to secretly inject malware into targets",
+    headline: "The NSA pretended to be Facebook to plant spy software on devices",
+    rank: 1,
     explanation:
-      "According to a 2014 Intercept report, the NSA developed 'QUANTUM' techniques — including impersonating Facebook servers — to hijack web requests and inject malware, using an automation system built to scale to millions of implants.",
+      "A 2014 report said the NSA used tricks (QUANTUM), like pretending to be Facebook's computers, to take over web visits and plant hidden spy software. It built a system meant to handle millions of them.",
     year: "2014",
     severity: "HIGH",
     sources: [
@@ -759,9 +812,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "One NSA tool let analysts search your emails and browsing with a simple query",
+    headline: "An NSA tool let staff search people's emails, chats and web browsing",
+    rank: 1,
     explanation:
-      "XKeyscore is an NSA system, disclosed by Snowden in 2013, that let analysts search vast troves of intercepted emails, chats, and browsing history via simple queries, with oversight applied only after the fact.",
+      "XKeyscore, revealed by Snowden in 2013, let NSA staff search huge amounts of captured emails, chats and web history by typing simple searches. Checks on its use came only afterwards.",
     year: "2013",
     severity: "CRITICAL",
     sources: [
@@ -771,9 +825,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "The NSA pulled user data directly from Google, Apple, and Facebook",
+    headline: "The NSA took user data directly from Google, Apple and Facebook",
+    rank: 1,
     explanation:
-      "The PRISM program let the NSA collect user communications data directly from major tech companies — Microsoft, Google, Facebook, Apple, Yahoo, and others — under Section 702 of FISA, revealed by Snowden documents in June 2013.",
+      "Under a programme called PRISM, revealed in June 2013, the NSA collected users' messages and other data from Microsoft, Google, Facebook, Apple, Yahoo and others, using a US law (Section 702).",
     year: "2013",
     severity: "CRITICAL",
     sources: [
@@ -783,9 +838,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "A secret NSA program worked to break the encryption protecting your bank and email",
+    headline: "The NSA secretly worked to break locks on bank and email data",
+    rank: 1,
     explanation:
-      "Leaked documents revealed BULLRUN, a classified NSA program using supercomputers, court orders, hacking, and covert industry collaboration to defeat encryption protecting commerce, banking, and medical records. GCHQ's parallel program was cracking VPN traffic for dozens of targets by 2010.",
+      "Leaked papers revealed BULLRUN, a secret NSA programme. It used supercomputers, court orders, hacking and secret help from companies to get past the lock that keeps business, banking and medical records private.",
     year: "2013",
     severity: "CRITICAL",
     sources: [
@@ -796,9 +852,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "The NSA spent $800 million pushing tech companies to build exploitable encryption",
+    headline: "The NSA spent over $800 million getting companies to weaken data locks",
+    rank: 2,
     explanation:
-      "A leaked 2013 budget document revealed the NSA's SIGINT Enabling Project, funded over $800 million since 2011, which worked with chipmakers to insert backdoors into encryption chips and influence commercial cryptography standards.",
+      "A leaked 2013 budget paper showed this NSA project, funded since 2011, worked with chip makers to add hidden ways in to chips that lock data, and to shape industry rules for locks.",
     year: "2013",
     severity: "CRITICAL",
     sources: [
@@ -809,9 +866,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "The NSA quietly engineered a flawed encryption standard it could crack",
+    headline: "The NSA quietly pushed a flawed data-locking method it could break",
+    rank: 2,
     explanation:
-      "The NSA pushed the Dual_EC_DRBG random-number generator through NIST standardization, privately working to become its 'sole editor.' Researchers showed in 2007 its constants could let a key-holder predict all future outputs; NIST withdrew it in 2014.",
+      "The NSA pushed a US standards body (NIST) to adopt a random-number tool for data locks. In 2007 researchers showed a secret key-holder could predict its numbers; NIST withdrew it in 2014.",
     year: "2006–14",
     severity: "CRITICAL",
     sources: [
@@ -822,9 +880,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "A leaked NSA catalog listed a 100%-success implant for hacking iPhones",
+    headline: "A leaked NSA list offered hidden spy software for iPhones",
+    rank: 1,
     explanation:
-      "A leaked 2013 NSA catalog revealed DROPOUTJEEP, a software implant for the iPhone offering SMS, contact, voicemail, location, and camera/microphone access, with a claimed 100% installation success rate. Apple denied any collaboration.",
+      "The 2013 leak described DROPOUTJEEP, spy software giving access to an iPhone's texts, contacts, voicemail, location, camera and microphone. The list claimed 100% success installing it; Apple denied working with the NSA.",
     year: "2013",
     severity: "CRITICAL",
     sources: [
@@ -835,9 +894,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "The NSA sold $20,000 USB plugs rigged to secretly hack air-gapped computers",
+    headline: "The NSA listed $20,000 USB plugs for spying on offline computers",
+    rank: 2,
     explanation:
-      "The leaked NSA ANT catalog detailed COTTONMOUTH, covert USB hardware implants — priced around $20,000-25,000 per unit — that hide a radio transceiver to bridge air-gapped networks and enable undetected data exfiltration.",
+      "The leaked NSA catalogue (ANT) described COTTONMOUTH, USB devices costing about $20,000–25,000 each. A hidden radio inside could reach computers kept off any network and quietly take data out.",
     year: "2013",
     severity: "CRITICAL",
     sources: [
@@ -848,9 +908,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "The NSA intercepted shipped routers to secretly implant hacking beacons",
+    headline: "The NSA secretly opened shipped internet equipment to hide spy tools inside",
+    rank: 2,
     explanation:
-      "A leaked 2010 NSA memo described how its Tailored Access Operations unit intercepted US-exported routers and servers in transit, implanted beacons in secret workshops, then resealed and forwarded the repackaged hardware to its destination.",
+      "A leaked 2010 NSA memo said an NSA team stopped internet equipment (routers and servers) being shipped out of the US, added hidden spy tools in secret workshops, then resealed it and sent it on.",
     year: "2010",
     severity: "CRITICAL",
     sources: [
@@ -860,9 +921,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "NSA servers raced real websites to secretly redirect users into traps",
+    headline: "NSA computers answered before real websites to send people to spy software",
+    rank: 2,
     explanation:
-      "Snowden documents revealed the NSA's QUANTUM program: servers positioned on the internet backbone raced legitimate responses to redirect targets to FOXACID, malware that deanonymized Tor users; GCHQ used the same technique against Belgacom engineers and OPEC's Vienna headquarters.",
+      "Snowden papers showed this (QUANTUM): NSA computers on main internet lines replied before real websites, sending chosen people to spy software that revealed who was using Tor, a privacy browser.",
     year: "2013",
     severity: "CRITICAL",
     sources: [
@@ -872,9 +934,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "The NSA tapped Google and Yahoo's private cables between their own data centers",
+    headline: "The NSA tapped private cables linking Google's and Yahoo's own computer centres",
+    rank: 1,
     explanation:
-      "The NSA and GCHQ jointly tapped fiber-optic links between Google and Yahoo data centers worldwide under project MUSCULAR, exploiting the unencrypted point where traffic left public networks. One 30-day count showed over 181 million new records sent to NSA headquarters.",
+      "With Britain's spy agency, the NSA tapped cables between Google and Yahoo computer centres worldwide (MUSCULAR), where data was not locked. In one 30-day count, over 181 million new records went to the NSA.",
     year: "2013",
     severity: "CRITICAL",
     sources: [
@@ -885,9 +948,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "The NSA secretly tracked 97 billion pieces of intelligence in one month",
+    headline: "The NSA collected 97 billion pieces of information worldwide in 30 days",
+    rank: 3,
     explanation:
-      "Boundless Informant is an NSA tool that generated a color-coded heat map of metadata collection by country. Leaked records showed almost 3 billion pieces of US intelligence and 97 billion worldwide collected in one 30-day period.",
+      "An NSA tool (Boundless Informant) showed on a coloured map how much information it gathered by country, like who contacted whom and when. Almost 3 billion pieces were from the US in that period.",
     year: "2013",
     severity: "CRITICAL",
     sources: [
@@ -898,9 +962,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "AT&T let the NSA install surveillance gear in its own internet hubs for decades",
+    headline: "AT&T, a US phone company, put NSA spy equipment in its network",
+    rank: 2,
     explanation:
-      "FAIRVIEW is the NSA's surveillance partnership with AT&T dating to 1985. Documents show AT&T installed NSA equipment in at least 17 US internet hubs, forwarding over a million emails daily and roughly 400 billion metadata records monthly by 2003.",
+      "AT&T worked with the NSA from 1985 (FAIRVIEW), putting NSA equipment in at least 17 key US internet sites. By 2003 it passed on over a million emails a day.",
     year: "1985–2013 (disclosed 2015)",
     severity: "CRITICAL",
     sources: [
@@ -910,9 +975,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "Verizon's fiber cables became the NSA's second-biggest surveillance pipeline",
+    headline: "Verizon's cables became the NSA's second-biggest way of collecting data",
+    rank: 2,
     explanation:
-      "STORMBREW is an NSA program tapping fiber-optic infrastructure via a corporate partner identified as Verizon, confirmed by a 2015 ProPublica/New York Times investigation. It was the NSA's second-largest corporate collection program, after FAIRVIEW.",
+      "Through a company partner identified in 2015 as US phone company Verizon, the NSA tapped internet cables (STORMBREW). Only its AT&T programme (FAIRVIEW) collected more.",
     year: "2013",
     severity: "CRITICAL",
     sources: [
@@ -922,9 +988,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "The NSA vacuumed up 194 million text messages a day, worldwide",
+    headline: "The NSA collected about 194 million text messages a day worldwide",
+    rank: 1,
     explanation:
-      "DISHFIRE is an NSA/GCHQ database that collected roughly 194 million SMS texts per day worldwide by 2011, regardless of whether senders were targets, mining contact lists, geolocation, financial transactions, and border-crossing records.",
+      "By 2011 DISHFIRE, an NSA and British database, was collecting about 194 million texts a day, whether or not senders were suspects. It searched them for contacts, locations, payments and border crossings.",
     year: "2014",
     severity: "CRITICAL",
     sources: [
@@ -934,9 +1001,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "The NSA collects nearly 5 billion cellphone location records every day",
+    headline: "The NSA collected nearly 5 billion mobile phone location records every day",
+    rank: 1,
     explanation:
-      "CO-TRAVELER is an NSA program gathering nearly 5 billion cellphone location records daily from global mobile network cables, used to map which phones travel together and infer hidden associations — incidentally sweeping up Americans abroad.",
+      "Taking them from mobile network cables around the world (CO-TRAVELER), the NSA mapped which phones travel together to find hidden links between people. Americans abroad were caught up too.",
     year: "2013",
     severity: "CRITICAL",
     sources: [
@@ -946,9 +1014,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "Leaked NSA hacking tools escaped into the wild and were never recovered",
+    headline: "NSA hacking tools were leaked to the public and never recovered",
+    rank: 2,
     explanation:
-      "Starting in 2016, the anonymous Shadow Brokers leaked NSA offensive hacking tools; an April 2017 dump included the EternalBlue exploit. Microsoft had quietly patched the underlying flaw a month earlier, suggesting an advance NSA tip-off. No one has ever been charged.",
+      "From 2016, an unknown group (Shadow Brokers) leaked NSA hacking tools; an April 2017 leak included EternalBlue. Microsoft had quietly fixed its weakness a month earlier, possibly warned by the NSA; nobody has been charged.",
     year: "2016–17",
     severity: "CRITICAL",
     sources: [
@@ -958,9 +1027,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "A leaked NSA exploit powered ransomware that crippled hospitals worldwide",
+    headline: "A leaked NSA tool was used in attacks that hit hospitals worldwide",
+    rank: 1,
     explanation:
-      "The leaked NSA EternalBlue exploit powered WannaCry ransomware, which hit 150+ countries in May 2017 and crippled parts of the UK's NHS, and NotPetya, which caused an estimated $10 billion in global damage weeks later.",
+      "The leaked tool powered WannaCry, which locked computers for ransom in over 150 countries in May 2017, including parts of Britain's health service. Weeks later, NotPetya also used it, causing about $10 billion in damage.",
     year: "2017",
     severity: "CRITICAL",
     sources: [
@@ -971,9 +1041,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "NSA-built malware hid inside hard-drive firmware, surviving full disk wipes",
+    headline: "Spy software linked to the NSA hid inside hard drives, surviving wipes",
+    rank: 2,
     explanation:
-      "Kaspersky detailed the 'Equation Group,' active since at least 2001, whose malware reprogrammed hard-drive firmware from major manufacturers, surviving disk wipes and OS reinstalls. Reuters, citing former NSA officials, reported the tools were built by the NSA.",
+      "In 2015 Kaspersky described a group, active since at least 2001, whose spy software hid inside hard drives and stayed even after full erasing. Former NSA officials told Reuters the NSA built it.",
     year: "2015",
     severity: "CRITICAL",
     sources: [
@@ -983,9 +1054,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "Spies stole millions of SIM card encryption keys from one manufacturer",
+    headline: "The NSA and British spies stole millions of SIM card keys",
+    rank: 1,
     explanation:
-      "A leaked GCHQ document describes how NSA and GCHQ's Mobile Handset Exploitation Team penetrated SIM maker Gemalto, harvesting millions of encryption keys within a documented three-month window in 2010, including 300,000 keys from one Somali carrier.",
+      "A leaked British spy paper says the NSA and Britain's GCHQ broke into SIM card maker Gemalto and, in three months of 2010, took millions of keys that keep phone calls private.",
     year: "2010",
     severity: "CRITICAL",
     sources: [
@@ -995,9 +1067,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "The NSA tapped Angela Merkel's personal cellphone for over a decade",
+    headline: "The NSA spied on German leader Merkel's personal phone from 2002",
+    rank: 2,
     explanation:
-      "Der Spiegel reported the NSA monitored German Chancellor Angela Merkel's personal mobile phone since 2002. A separate leaked 2006 memo showed 35 world leaders' numbers were tasked for surveillance. Merkel called Obama to demand an explanation.",
+      "German magazine Der Spiegel reported this. A separate leaked 2006 paper showed 35 world leaders' phone numbers were chosen for spying; Merkel called President Obama to demand an explanation.",
     year: "2002–13",
     severity: "HIGH",
     sources: [
@@ -1009,9 +1082,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "The NSA built a $1.5 billion facility to store intercepted data at massive scale",
+    headline: "The NSA built a $1.5 billion centre to store captured data",
+    rank: 3,
     explanation:
-      "The NSA's Utah Data Center, completed in 2014 at a cost of about $1.5 billion, is a roughly 1-million-square-foot complex reportedly designed to intercept, store, and analyze communications at massive scale as part of the NSA's post-9/11 buildout.",
+      "The NSA's Utah Data Center, finished in 2014, covers about 1 million square feet. Reports say it was built to capture, store and study calls, messages and other communications on a huge scale.",
     year: "2011–2014",
     severity: "CRITICAL",
     sources: [
@@ -1023,9 +1097,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "GCHQ tapped transatlantic cables and fed the raw data to the NSA",
+    headline: "Britain's spy agency tapped internet cables and shared data with the NSA",
+    rank: 2,
     explanation:
-      "GCHQ's TEMPORA program, operational by 2011, tapped transatlantic fiber-optic cables landing in Britain to buffer internet content for up to three days and metadata for thirty, sharing the intercepted data with the NSA.",
+      "By 2011 this programme (TEMPORA) tapped cables under the Atlantic that land in Britain. It stored internet content for up to three days and details of who contacted whom, and when, for thirty.",
     year: "2013",
     severity: "CRITICAL",
     sources: [
@@ -1036,9 +1111,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "GCHQ grabbed webcam stills from 1.8 million Yahoo accounts, nudity included",
+    headline: "British spies took webcam photos from 1.8 million Yahoo video chat accounts",
+    rank: 1,
     explanation:
-      "GCHQ's OPTIC NERVE program, built with NSA support, bulk-collected still webcam images from Yahoo video chats every five minutes regardless of surveillance status, capturing images from 1.8 million accounts in one six-month period; 3-11% contained nudity.",
+      "With NSA help, British spies (OPTIC NERVE) saved a still picture every five minutes from Yahoo video chats, suspects or not. In six months they reached 1.8 million accounts; 3–11% of pictures showed nudity.",
     year: "2014",
     severity: "CRITICAL",
     sources: [
@@ -1049,9 +1125,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "Rogue spyware wiretapped Greece's prime minister — then the engineer who found it died",
+    headline: "Hidden spy software tapped the Greek prime minister's phone in 2004–05",
+    rank: 2,
     explanation:
-      "Between 2004 and 2005 a rootkit wiretapped over 100 phones on Vodafone Greece's network, including the Prime Minister and cabinet, before Ericsson discovered and removed it. The network manager who found it was found dead days later; attribution remains contested.",
+      "It tapped over 100 phones on Vodafone Greece, including those of the Prime Minister and ministers, until Ericsson removed it; who planted it is still disputed. The network manager who found it died days later.",
     year: "2004–05",
     severity: "UNKNOWN",
     sources: [
@@ -1062,9 +1139,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "A former NSA chief said some security flaws are fine to leave unpatched",
+    headline: "A former NSA chief said some security flaws need not be fixed",
+    rank: 3,
     explanation:
-      "A former NSA/CIA director publicly explained the agency's 'NOBUS' (nobody-but-us) reasoning: a vulnerability too hard for anyone but the US to exploit isn't ethically or legally required to be patched, confirming the NSA weighs offensive value against disclosure.",
+      "A former NSA and CIA head explained 'NOBUS' (nobody but us): there is no legal or moral duty to fix a flaw only the US can use. The NSA weighs using flaws against revealing them.",
     year: "2013",
     severity: "HIGH",
     sources: [
@@ -1075,9 +1153,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "nsa",
-    headline: "The NSA was accused of exploiting Heartbleed for years instead of reporting it",
+    headline: "The NSA was accused of using, not reporting, the Heartbleed flaw",
+    rank: 2,
     explanation:
-      "Bloomberg reported the NSA knew of the Heartbleed OpenSSL flaw for at least two years and regularly exploited it for intelligence rather than disclosing it; the NSA and ODNI issued same-day denials.",
+      "Bloomberg said the NSA knew about Heartbleed, a flaw in common website security software, for at least two years and often used it to spy. The NSA denied this the same day.",
     year: "2014",
     severity: "CRITICAL",
     sources: [
@@ -1089,9 +1168,10 @@ export const EXPOSURES: Exposure[] = [
   // ---- US Government ----
   {
     entity: "usgov",
-    headline: "US law can force Google or Facebook to hand over your data stored anywhere",
+    headline: "US law lets US police demand your Google or Facebook data anywhere",
+    rank: 1,
     explanation:
-      "The 2018 US CLOUD Act lets US law enforcement compel American providers like Google or Facebook to produce a user's data via warrant or subpoena, even when it's stored on servers abroad, bypassing the foreign country's own privacy laws.",
+      "A 2018 US law (the CLOUD Act) lets US police order American companies like Google or Facebook to hand over your data, even when stored in another country, going around that country's privacy laws.",
     year: "2018",
     severity: "CRITICAL",
     sources: [
@@ -1100,9 +1180,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "usgov",
-    headline: "A foreign-surveillance law also enables warrantless FBI searches of Americans' messages",
+    headline: "US spy law lets the FBI search Americans' messages without court permission",
+    rank: 1,
     explanation:
-      "Section 702 of FISA, enacted in 2008, nominally authorizes surveillance of non-US persons abroad using US communications providers, but in practice its implementation also sweeps in and enables warrantless FBI searches of Americans' communications.",
+      "A 2008 US law (FISA Section 702) is meant for spying on foreigners abroad using US companies. In practice it also collects Americans' messages, which the FBI can search without a judge's permission.",
     year: "2008",
     severity: "CRITICAL",
     sources: [
@@ -1111,9 +1192,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "usgov",
-    headline: "The government once tried to put a backdoor chip in every phone",
+    headline: "The US government once planned a phone chip that police could unlock",
+    rank: 3,
     explanation:
-      "In 1993 the Clinton White House announced the Clipper Chip, a hardware encryption device whose cryptographic keys were split and escrowed with the government, letting law enforcement decrypt calls under legal authorization. Opposition killed it by 1996.",
+      "In 1993 President Clinton's White House announced the Clipper Chip to lock phone calls, but the government held the keys so police could listen with legal approval. Opposition stopped it by 1996.",
     year: "1993",
     severity: "CRITICAL",
     sources: [
@@ -1125,9 +1207,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "usgov",
-    headline: "A researcher broke the government's phone-encryption backdoor within a year",
+    headline: "In 1994 a researcher found a flaw in the government's phone-lock chip",
+    rank: 3,
     explanation:
-      "In 1994 AT&T Bell Labs cryptographer Matt Blaze showed Clipper's Law Enforcement Access Field relied on a checksum too short to prevent tampering, letting an attacker keep Clipper's encryption while defeating the government's wiretap-escrow mechanism.",
+      "Matt Blaze of AT&T Bell Labs showed the Clipper Chip's police-access part could be tricked. Someone could still use the chip's lock while stopping the government from listening in.",
     year: "1994",
     severity: "HIGH",
     sources: [
@@ -1138,9 +1221,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "usgov",
-    headline: "Bush secretly authorized warrantless spying on Americans' calls and email after 9/11",
+    headline: "After 9/11, President Bush secretly allowed spying on Americans' calls and email",
+    rank: 1,
     explanation:
-      "President Bush authorized STELLARWIND in October 2001, bypassing FISA warrant requirements to collect bulk telephone and internet metadata plus some content on Americans via direct access to telecom carriers. First revealed by the New York Times in 2005.",
+      "In October 2001 Bush approved STELLARWIND to collect, without court permission, mass records of who Americans contacted by phone and internet, plus some content, from phone companies. The New York Times revealed it in 2005.",
     year: "2001–2007",
     severity: "CRITICAL",
     sources: [
@@ -1151,9 +1235,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "usgov",
-    headline: "A 1994 law forced telecoms to build wiretap access into every network",
+    headline: "A 1994 US law made phone networks ready for police listening",
+    rank: 2,
     explanation:
-      "President Clinton signed CALEA in 1994, requiring telecom carriers to build law-enforcement intercept capability directly into their networks. The FCC extended the mandate to broadband and VoIP in 2005.",
+      "President Clinton signed this law (CALEA) in 1994, making phone companies build into their networks a way for police to listen in. In 2005 it was extended to fast internet and internet calls.",
     year: "1994",
     severity: "CRITICAL",
     sources: [
@@ -1164,9 +1249,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "usgov",
-    headline: "Chinese hackers broke into the wiretap systems built for US law enforcement",
+    headline: "Chinese hackers broke into US phone companies' police listening systems",
+    rank: 1,
     explanation:
-      "Chinese state-linked hackers breached the CALEA-mandated lawful-intercept systems at AT&T, Verizon, and other carriers, disclosed in October 2024, obtaining near-complete lists of phone numbers under active US wiretap orders and metadata for over a million users.",
+      "Made public in October 2024: China-linked hackers got into these systems at AT&T, Verizon and others. They took near-complete lists of numbers under US police watch and call details of over a million users.",
     year: "2024",
     severity: "CRITICAL",
     sources: [
@@ -1177,9 +1263,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "usgov",
-    headline: "The FBI collected everyone's phone call records for nearly a decade",
+    headline: "For nearly a decade the US collected almost all Americans' call records",
+    rank: 1,
     explanation:
-      "A secret 2006 FISA Court order re-grounded bulk telephone-metadata collection in Section 215 of the PATRIOT Act, compelling carriers to hand the NSA daily call records for effectively all Americans, retained up to five years, until reforms ended it in 2015.",
+      "A secret 2006 court order (Section 215) made phone companies give the NSA (US spy agency) daily call records for nearly all Americans, kept up to five years. Reforms ended it in 2015.",
     year: "2006",
     severity: "CRITICAL",
     sources: [
@@ -1189,9 +1276,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "usgov",
-    headline: "A student had to sue the government just to publish his own encryption code",
+    headline: "A student sued the US government to publish his own data-locking code",
+    rank: 3,
     explanation:
-      "A PhD student sued the State Department in 1995 after export-control rules required a government license just to publish his encryption source code. A federal judge ruled twice that source code is First Amendment-protected speech.",
+      "In 1995 a PhD student sued because US rules needed a government licence just to publish his code for locking data. A federal judge ruled twice that computer code is protected free speech.",
     year: "1995–99",
     severity: "HIGH",
     sources: [
@@ -1201,9 +1289,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "usgov",
-    headline: "A grand jury investigated the creator of PGP for publishing free encryption",
+    headline: "US officials investigated PGP's creator for giving away free privacy software",
+    rank: 3,
     explanation:
-      "After Phil Zimmermann released PGP encryption freely in 1991, US Customs opened a criminal investigation for suspected arms-export violations, and a federal grand jury weighed charges risking years in prison. The government dropped the case without indictment in 1996.",
+      "In 1991 Phil Zimmermann gave away PGP, a tool that locks messages. US officials investigated him for possibly breaking weapons-export rules; the case was dropped in 1996 without charges.",
     year: "1993–96",
     severity: "HIGH",
     sources: [
@@ -1213,9 +1302,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "usgov",
-    headline: "A Senate bill would pressure platforms to abandon end-to-end encryption",
+    headline: "A proposed US law could push apps to remove chat privacy locks",
+    rank: 1,
     explanation:
-      "The EARN IT Act would strip legal immunity from platforms that don't follow a government-backed 'best practices' commission on child-exploitation content. EFF warned it pressures providers to abandon end-to-end encryption or build client-side scanning; it has stalled without a floor vote.",
+      "The EARN IT Act, still not passed, would remove legal protection from apps ignoring government-backed rules on child abuse material. A privacy group (EFF) warned it pushes apps to drop chat locks or scan phones.",
     year: "2020–22",
     severity: "HIGH",
     sources: [
@@ -1225,9 +1315,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "usgov",
-    headline: "The government finally pulled its own NSA-tainted encryption standard in 2014",
+    headline: "The US removed a security standard after reports its spies weakened it",
+    rank: 2,
     explanation:
-      "In April 2014 NIST formally removed Dual_EC_DRBG from its cryptography guidance, ending its seven-year run as a federally approved random-number generator, after a 2013 New York Times report alleged the NSA had engineered a predictable weakness into it.",
+      "In April 2014 a US standards agency removed a number tool for data locks, approved for seven years, after a 2013 New York Times report said the NSA (US spy agency) built in a weakness.",
     year: "2014",
     severity: "CRITICAL",
     sources: [
@@ -1237,9 +1328,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "usgov",
-    headline: "A federal panel warned NIST it must be able to reject NSA advice",
+    headline: "Experts: a US standards agency must be able to reject spy advice",
+    rank: 3,
     explanation:
-      "After allegations the NSA deliberately weakened a NIST algorithm, an independent panel including Vint Cerf and Ron Rivest reviewed NIST's standards process in 2014, concluding NIST may consult the NSA but \"must be in a position to assess it and reject it when warranted.\"",
+      "After claims the NSA (US spy agency) weakened a tool from NIST (US standards agency), a 2014 expert panel said NIST may consult the NSA but must be able to reject its advice when needed.",
     year: "2014",
     severity: "HIGH",
     sources: [
@@ -1249,9 +1341,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "usgov",
-    headline: "The White House admitted it sometimes keeps hacking flaws secret on purpose",
+    headline: "The White House said it sometimes keeps software security flaws secret",
+    rank: 3,
     explanation:
-      "In April 2014 the White House published the government's first public acknowledgment of how it decides whether to disclose zero-day vulnerabilities — a process \"biased toward responsibly disclosing\" flaws but with \"no hard and fast rules.\"",
+      "In April 2014 the White House first publicly explained how it decides whether to reveal unknown software flaws. It said it leans toward revealing them, but has no fixed rules.",
     year: "2014",
     severity: "HIGH",
     sources: [
@@ -1263,9 +1356,10 @@ export const EXPOSURES: Exposure[] = [
   // ---- CIA ----
   {
     entity: "cia",
-    headline: "The CIA secretly owned an encryption company selling to 100+ governments",
+    headline: "The CIA secretly owned a company selling data-locking machines to governments",
+    rank: 2,
     explanation:
-      "From 1970 until 2018, the CIA and West Germany's BND secretly owned Swiss firm Crypto AG and manipulated its encryption devices, letting them read the classified communications of roughly 100 of the 130 governments that bought its equipment.",
+      "From 1970 to 2018, the CIA and West Germany's spy agency secretly owned Swiss company Crypto AG and rigged its machines. This let them read secret messages of about 100 of the 130 buying governments.",
     year: "2020",
     severity: "CRITICAL",
     sources: [
@@ -1276,9 +1370,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "cia",
-    headline: "WikiLeaks exposed the CIA's entire hacking toolkit for phones and computers",
+    headline: "WikiLeaks published secret CIA files about breaking into phones and computers",
+    rank: 1,
     explanation:
-      "Starting March 2017, WikiLeaks published 'Vault 7,' the largest-ever publication of confidential CIA documents — thousands of files describing the agency's hacking tools, malware, and zero-day exploits for phones and computers.",
+      "From March 2017, WikiLeaks published 'Vault 7', the largest ever release of secret CIA (US spy agency) documents. Thousands of files described the agency's hacking tools and hidden ways into phones and computers.",
     year: "2017",
     severity: "CRITICAL",
     sources: [
@@ -1288,9 +1383,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "cia",
-    headline: "The CIA's venture arm funded the tech that became Google Earth",
+    headline: "The CIA's investment fund backed the company behind Google Earth",
+    rank: 3,
     explanation:
-      "In 2003 the CIA's venture arm, In-Q-Tel, invested in Keyhole Corp., maker of the 3D earth-visualization software EarthViewer. Google acquired Keyhole in 2004 and relaunched it in 2005 as Google Earth.",
+      "In 2003 In-Q-Tel, the CIA's investment fund, invested in Keyhole, maker of 3D world-map software called EarthViewer. Google bought Keyhole in 2004 and relaunched it in 2005 as Google Earth.",
     year: "2003",
     severity: "HIGH",
     sources: [
@@ -1301,9 +1397,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "cia",
-    headline: "A leaked CIA tool disguised its hacks to look like other countries did it",
+    headline: "A leaked CIA tool could make its hacks look like other countries'",
+    rank: 3,
     explanation:
-      "WikiLeaks released 'Marble,' a CIA anti-forensic tool that hides text fragments in malware to hamper attribution, including test strings in Chinese, Russian, Korean, Arabic, and Farsi that could misdirect investigators toward other nations.",
+      "In 2017 WikiLeaks released 'Marble', a CIA tool that hides text in harmful software to confuse investigators. Its test text included Chinese, Russian, Korean, Arabic and Farsi, which could point blame at other nations.",
     year: "2017",
     severity: "CRITICAL",
     sources: [
@@ -1313,9 +1410,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "cia",
-    headline: "The CIA turned smart TVs into hidden microphones that looked switched off",
+    headline: "The CIA made a tool to turn Samsung TVs into hidden microphones",
+    rank: 1,
     explanation:
-      "WikiLeaks revealed 'Weeping Angel,' a CIA tool co-developed with UK intelligence that targeted Samsung smart TVs. Installed via USB, it placed the TV in 'Fake-Off' mode — screen dark, microphone still recording room audio and sending it to the CIA.",
+      "In 2017 WikiLeaks revealed 'Weeping Angel', a CIA and UK spy tool. Put on a Samsung smart TV using USB, it made the TV look switched off while it recorded room sounds for the CIA.",
     year: "2017",
     severity: "CRITICAL",
     sources: [
@@ -1325,9 +1423,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "cia",
-    headline: "The CIA ran a covert hacking base out of a German consulate",
+    headline: "The CIA hid a hacking base inside a US consulate in Germany",
+    rank: 3,
     explanation:
-      "WikiLeaks' 'Year Zero' release revealed the CIA ran a covert hacker base out of its Frankfurt consulate, covering Europe, the Middle East, and Africa. Staff used diplomatic cover to cross Schengen borders unchecked, then used USB sticks to compromise target machines.",
+      "In 2017 WikiLeaks revealed the base, in Frankfurt, covered Europe, the Middle East and Africa. Staff used diplomat status to cross European borders without checks, then used USB sticks to break into target computers.",
     year: "2017",
     severity: "HIGH",
     sources: [
@@ -1338,9 +1437,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "cia",
-    headline: "Leaked CIA code showed it forging fake Kaspersky security certificates",
+    headline: "Leaked CIA code showed it faking Kaspersky's identity to hide its hacks",
+    rank: 3,
     explanation:
-      "WikiLeaks released the source code for 'Hive,' the CIA's command-and-control backend for tasking malware implants. The files showed the CIA forging digital certificates falsely impersonating Kaspersky Lab to evade detection.",
+      "In 2017 WikiLeaks released code for 'Hive', the CIA system that controlled its hacking software. It showed the CIA making fake digital ID cards pretending to be Kaspersky, an antivirus company, to avoid being noticed.",
     year: "2017",
     severity: "CRITICAL",
     sources: [
@@ -1350,9 +1450,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "cia",
-    headline: "A US-Israeli cyberweapon physically destroyed a thousand of Iran's nuclear centrifuges",
+    headline: "A US-Israeli computer attack destroyed about 1,000 machines in Iran's nuclear plant",
+    rank: 2,
     explanation:
-      "A joint US-Israeli sabotage program deployed the Stuxnet worm against Iran's Natanz enrichment plant, destroying roughly 1,000 of 5,000 centrifuges and delaying Iran's nuclear program by an estimated 18 months to two years — the first cyberweapon known to cause physical infrastructure damage.",
+      "A joint US-Israeli programme used Stuxnet, a harmful computer program, on Iran's Natanz nuclear plant, destroying about 1,000 of 5,000 machines and delaying Iran's nuclear work by an estimated 18 months to two years.",
     year: "2010",
     severity: "CRITICAL",
     sources: [
@@ -1364,9 +1465,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "cia",
-    headline: "The CIA was Palantir's only customer for its first three years",
+    headline: "The CIA was Palantir's only customer from 2005 to 2008",
+    rank: 3,
     explanation:
-      "The CIA's venture arm rescued Palantir with two funding rounds after Silicon Valley VCs passed on the startup. From 2005 to 2008 the CIA was Palantir's patron and only customer, helping it expand into defense and commercial markets.",
+      "The CIA's investment fund saved Palantir with two rounds of funding after Silicon Valley investors said no. As its only customer, the CIA helped it grow into defence and business markets.",
     year: "2003–05",
     severity: "HIGH",
     sources: [
@@ -1377,9 +1479,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "cia",
-    headline: "A Swiss encryption firm allegedly sold banks and spies rigged devices",
+    headline: "Report: Swiss firm sold rigged data-locking devices to spies and a bank",
+    rank: 2,
     explanation:
-      "Swiss broadcaster SRF reported that Omnisec AG, Crypto AG's chief Swiss competitor, sold manipulated encryption devices to Swiss intelligence agencies and a major bank; a longtime consultant said NSA representatives sought influence over Omnisec's products in 1989 and were refused.",
+      "Swiss TV reported in 2020 that Omnisec, Crypto AG's rival, sold rigged machines to Swiss spy agencies and a big bank. A consultant said US spies tried influencing its products in 1989 and were refused.",
     year: "2020",
     severity: "HIGH",
     sources: [
@@ -1391,9 +1494,10 @@ export const EXPOSURES: Exposure[] = [
   // ---- FBI ----
   {
     entity: "fbi",
-    headline: "The FBI secretly ran an encrypted phone company used by criminal gangs",
+    headline: "The FBI secretly ran a private-chat phone service used by criminal gangs",
+    rank: 3,
     explanation:
-      "The FBI and Australian Federal Police secretly built and distributed 'Anom,' an encrypted-phone platform marketed to organized crime, with a hidden master key copying every message to FBI servers. Over 12,000 devices reached 300+ syndicates, yielding 800+ arrests.",
+      "The FBI and Australian police secretly built 'Anom', a private-chat phone offered to crime groups, with a hidden key copying every message to the FBI. Over 12,000 phones reached 300+ gangs; 800+ were arrested.",
     year: "2018–21",
     severity: "CRITICAL",
     sources: [
@@ -1404,9 +1508,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "fbi",
-    headline: "The FBI installed a box at your ISP to sniff out targeted email",
+    headline: "The FBI put a system at internet providers to catch targeted emails",
+    rank: 1,
     explanation:
-      "Carnivore was an FBI system installed at an ISP to sniff all packet traffic on a network segment and filter out a target's email. The Wall Street Journal exposed its use against EarthLink in 2000; it was later abandoned for commercial tools.",
+      "Carnivore, an FBI system at internet providers, scanned all data on part of a network to pick out a target's email. Reported in 2000 for its use at EarthLink, it was later abandoned.",
     year: "2000",
     severity: "CRITICAL",
     sources: [
@@ -1416,9 +1521,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "fbi",
-    headline: "FBI keylogging malware waited for suspects to type their encryption password",
+    headline: "Hidden FBI software could record the password suspects used to lock messages",
+    rank: 1,
     explanation:
-      "Magic Lantern was FBI keystroke-logging software, deployable remotely via email or an OS exploit, that activated when a suspect used PGP encryption to capture the passphrase so the FBI could decrypt seized communications.",
+      "Magic Lantern, FBI software recording key presses, could be sent by email or through a hidden way in. It switched on when a suspect used PGP to lock messages, catching the password for the FBI.",
     year: "2001",
     severity: "HIGH",
     sources: [
@@ -1428,9 +1534,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "fbi",
-    headline: "The FBI unmasked a teenage bomb-threat suspect with a fake MySpace link",
+    headline: "The FBI found a teen bomb-threat suspect using a fake MySpace link",
+    rank: 1,
     explanation:
-      "CIPAV was FBI surveillance software delivered via a deceptive MySpace link to unmask an anonymous suspect. A 2007 warrant in a bomb-threat case authorized it to record a target's IP address, running programs, and browser details.",
+      "CIPAV, FBI tracking software, came through a fake MySpace link to identify an unnamed suspect. A 2007 court order in a bomb-threat case let it record a target's internet address, open programs and browser details.",
     year: "2007",
     severity: "HIGH",
     sources: [
@@ -1440,9 +1547,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "fbi",
-    headline: "The FBI ran a seized child abuse site for two weeks to hack visitors",
+    headline: "The FBI took over a child abuse site and hacked its visitors",
+    rank: 3,
     explanation:
-      "After seizing the Tor-hidden child-sexual-abuse-material site Playpen, the FBI kept it running under its own control for nearly two weeks and deployed hacking code to unmask visitors' real IP addresses, infecting more than 1,000 computers worldwide.",
+      "In 2015, after taking control of Playpen, a child abuse website, the FBI kept it running for nearly two weeks. It used hacking code to find visitors' real internet addresses, infecting over 1,000 computers worldwide.",
     year: "2015",
     severity: "CRITICAL",
     sources: [
@@ -1452,9 +1560,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "fbi",
-    headline: "The FBI paid hackers $900,000 to unlock an iPhone Apple wouldn't crack",
+    headline: "The FBI paid about $900,000 to unlock an iPhone after Apple refused",
+    rank: 1,
     explanation:
-      "After Apple refused a 2016 court order to help unlock the San Bernardino shooter's iPhone, the FBI paid a private firm roughly $900,000 for an exploit chain to bypass the passcode limit. No actionable intelligence was recovered from the phone.",
+      "After Apple refused a 2016 court order to help unlock the San Bernardino shooter's iPhone, the FBI paid a private company about $900,000 for a hidden way in. Nothing useful was found on the phone.",
     year: "2016",
     severity: "CRITICAL",
     sources: [
@@ -1465,9 +1574,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "fbi",
-    headline: "The FBI secretly bought and tested NSO's Pegasus spyware in New Jersey",
+    headline: "The FBI secretly bought and tested Pegasus, a tool for hacking phones",
+    rank: 3,
     explanation:
-      "The FBI secretly bought NSO Group's Pegasus spyware in 2019, testing it at a walled-off New Jersey facility with dummy accounts and foreign SIM cards. After two years of deliberation, the FBI decided against operational use in 2021.",
+      "In 2019 the FBI bought Pegasus from NSO Group and tested it in New Jersey with fake accounts and foreign SIM cards. After two years of discussion, it decided in 2021 not to use it.",
     year: "2019",
     severity: "CRITICAL",
     sources: [
@@ -1478,9 +1588,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "fbi",
-    headline: "AT&T employees embedded with police search phone records back to 1987",
+    headline: "AT&T staff help US police search phone records going back to 1987",
+    rank: 1,
     explanation:
-      "Hemisphere embeds AT&T employees with DEA, FBI, and other agents to search call-detail records dating to 1987, adding roughly 4 billion new records daily. Agencies were instructed to conceal its use via 'parallel construction.'",
+      "Through Hemisphere, AT&T staff work with US drug police, the FBI and others to search call records back to 1987, adding about 4 billion records a day. Agencies were told to hide its use.",
     year: "2007–Ongoing",
     severity: "CRITICAL",
     sources: [
@@ -1491,9 +1602,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "fbi",
-    headline: "The FBI director demanded a law forcing backdoors into every phone",
+    headline: "The FBI chief pushed for laws to open locked phones for police",
+    rank: 1,
     explanation:
-      "FBI Director James Comey argued in a 2014 speech that default device encryption from Apple and Google would let criminals evade lawful court-ordered searches, launching a multi-year FBI push for legislated encryption backdoors.",
+      "In a 2014 speech, FBI Director James Comey said Apple and Google locking phones automatically would let criminals escape court-approved searches. This started years of FBI efforts for laws forcing a way past the lock.",
     year: "2014",
     severity: "HIGH",
     sources: [
@@ -1506,9 +1618,10 @@ export const EXPOSURES: Exposure[] = [
   // ---- RSA ----
   {
     entity: "rsa",
-    headline: "The NSA paid RSA $10 million to default to broken encryption",
+    headline: "A US spy agency paid RSA $10 million to use weak security",
+    rank: 3,
     explanation:
-      "Reuters reported the NSA paid RSA Security $10 million to make the likely-backdoored Dual_EC_DRBG the default random-number generator in its widely used BSAFE toolkit starting in 2004, before NIST even standardized the algorithm.",
+      "Reuters reported the NSA paid RSA $10 million to make a random-number tool, likely with a hidden back door, the default in its popular security software from 2004.",
     year: "2004–13",
     severity: "CRITICAL",
     sources: [
@@ -1519,9 +1632,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "rsa",
-    headline: "Researchers found RSA's default encryption had a built-in skeleton key",
+    headline: "Researchers found RSA's default security tool had a hidden master key",
+    rank: 3,
     explanation:
-      "Microsoft researchers showed at a 2007 conference that Dual_EC_DRBG's constants could work as a mathematical skeleton key, letting whoever chose them predict all future outputs. RSA kept it as BSafe's default until 2013, when Snowden leaks confirmed the NSA's role.",
+      "In 2007 Microsoft researchers showed whoever chose its built-in numbers could predict its future results. RSA kept it as the default until 2013, when leaks confirmed the role of the NSA, a US spy agency.",
     year: "2007",
     severity: "HIGH",
     sources: [
@@ -1533,9 +1647,10 @@ export const EXPOSURES: Exposure[] = [
   // ---- Juniper Networks ----
   {
     entity: "juniper",
-    headline: "A hidden master password let anyone log into Juniper firewalls as admin",
+    headline: "A hidden master password let anyone control Juniper's network security boxes",
+    rank: 2,
     explanation:
-      "In 2015 Juniper disclosed 'unauthorized code' in its NetScreen firewall software: a hardcoded master password letting any attacker gain admin access, found by a researcher within six hours, plus a separate flaw enabling passive VPN traffic decryption.",
+      "In 2015 Juniper revealed unauthorised code in its NetScreen software. It included a built-in password giving anyone full control, which a researcher found within six hours, and a flaw letting outsiders secretly read protected connections.",
     year: "2015",
     severity: "CRITICAL",
     sources: [
@@ -1545,9 +1660,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "juniper",
-    headline: "Someone hijacked an NSA-style backdoor in Juniper VPNs for their own spying",
+    headline: "Someone reused a US spy-linked weakness in Juniper devices to spy",
+    rank: 3,
     explanation:
-      "Researchers found the VPN-decryption backdoor worked by altering an encryption constant Juniper itself had introduced in 2008 — suggesting an outside actor repurposed NSA-linked groundwork for its own espionage. Congress pressed Juniper's CEO in 2020 after it still hadn't named a responsible party.",
+      "Researchers found the flaw changed a number Juniper added in 2008, suggesting someone reused work linked to a US spy agency. In 2020 US lawmakers pressed Juniper, which still had not said who did it.",
     year: "2008–20",
     severity: "HIGH",
     sources: [
@@ -1559,9 +1675,10 @@ export const EXPOSURES: Exposure[] = [
   // ---- Cisco ----
   {
     entity: "cisco",
-    headline: "The NSA opened shipped Cisco routers to implant hidden beacons",
+    headline: "US spy agency staff opened Cisco boxes during shipping to add beacons",
+    rank: 3,
     explanation:
-      "Leaked NSA photos showed staff opening a shipped Cisco box to implant a beacon before resealing and forwarding it to the customer. Cisco's CEO wrote to President Obama warning the practice would undermine confidence in US tech.",
+      "Leaked NSA photos showed staff opening a Cisco box, adding a hidden beacon that signals back, then resealing it for the customer. Cisco's boss warned President Obama this would hurt trust in US technology.",
     year: "2014",
     severity: "CRITICAL",
     sources: [
@@ -1571,9 +1688,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "cisco",
-    headline: "Cisco's built-in wiretap feature could be hijacked by any insider",
+    headline: "Cisco's built-in feature for legal listening could be misused by insiders",
+    rank: 2,
     explanation:
-      "A 2010 Black Hat presentation showed Cisco's built-in lawful-intercept architecture let unauthorized insiders activate wiretaps, discover existing surveillance targets, or disable the audit trail, with no lockout on failed logins.",
+      "A 2010 security conference talk showed insiders without permission could start listening in, see who was already being watched, or turn off the activity records, with no lock after wrong passwords.",
     year: "2010",
     severity: "HIGH",
     sources: [
@@ -1583,9 +1701,10 @@ export const EXPOSURES: Exposure[] = [
   },
   {
     entity: "cisco",
-    headline: "A leaked NSA catalog listed permanent backdoor firmware for Cisco firewalls",
+    headline: "Leaked NSA catalogue showed a hidden, permanent way into Cisco security devices",
+    rank: 3,
     explanation:
-      "A leaked NSA hardware/firmware implant catalog listed 'JETPLOW,' firmware giving a permanent backdoor to Cisco PIX and ASA firewalls that persisted across reboots at zero additional cost.",
+      "The leaked catalogue from the NSA, a US spy agency, listed 'JETPLOW', software giving a lasting secret way into Cisco PIX and ASA security devices that survived restarts, at no extra cost.",
     year: "2013",
     severity: "CRITICAL",
     sources: [

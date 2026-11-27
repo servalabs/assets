@@ -20,6 +20,10 @@ export interface RiskEvent {
   image?: string;
   /** Audiences this event is most relatable to (e.g. ["IN"]). See exposures.ts. */
   audiences?: string[];
+  /** 1 = everyday life, 2 = organisations, 3 = government/spy background. */
+  rank?: 1 | 2 | 3;
+  /** Shown first for its entity (see exposures.ts). */
+  pin?: boolean;
 }
 
 export interface Scandal {
